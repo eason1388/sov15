@@ -1341,8 +1341,8 @@
           </div>
         </div>
         <div class="hexagram-controls">
-          <select id="hexagramSelect" class="hexagram-select" onchange="selectHexagram(this.value)"></select>
-          <button class="hexagram-btn" type="button" onclick="drawHexagram()">✦ 隨機起卦 ✦</button>
+          <select id="hexagramSelect" class="hexagram-select"></select>
+          <button class="hexagram-btn" id="hexagramDrawBtn" type="button">✦ 隨機起卦 ✦</button>
         </div>
       </div>
 
@@ -1676,8 +1676,7 @@
       <div class="footer-col">
         <h4>聯絡資訊</h4>
         <div class="footer-contact">
-          <p>LINE / GitHub<br/><a href="https://github.com/jackkok1388" target="_blank">jackkok1388</a></p>
-          <p style="margin-top:10px">Email<br/><a href="mailto:jackkok1388@gmail.com">jackkok1388@gmail.com</a></p>
+          <p>Email<br/><a href="mailto:jackkok1388@gmail.com">jackkok1388@gmail.com</a></p>
         </div>
       </div>
     </div>
@@ -1979,19 +1978,38 @@ const hexagrams=[
 let currentHexagramIndex=0;
 function initHexagrams(){
   const select=document.getElementById('hexagramSelect');
+  const drawBtn=document.getElementById('hexagramDrawBtn');
   if(!select) return;
+
   select.innerHTML='';
+
+  const placeholder=document.createElement('option');
+  placeholder.value='';
+  placeholder.textContent='請選擇一個卦象';
+  placeholder.disabled=true;
+  select.appendChild(placeholder);
+
   hexagrams.forEach((item,idx)=>{
     const option=document.createElement('option');
     option.value=idx;
     option.textContent=`第${idx+1}卦｜${item.name}`;
     select.appendChild(option);
   });
+
+  select.addEventListener('change',e=>{
+    if(e.target.value!=='') renderHexagram(Number(e.target.value));
+  });
+
+  if(drawBtn){
+    drawBtn.addEventListener('click',drawHexagram);
+  }
+
   const dayIndex=(new Date().getDate()-1)%hexagrams.length;
   renderHexagram(dayIndex);
 }
 function renderHexagram(index){
-  currentHexagramIndex=Number(index)||0;
+  currentHexagramIndex=Number.isFinite(Number(index)) ? Number(index) : 0;
+  if(currentHexagramIndex < 0 || currentHexagramIndex >= hexagrams.length) currentHexagramIndex = 0;
   const item=hexagrams[currentHexagramIndex];
   document.getElementById('hexagramNumber').textContent=`第${currentHexagramIndex+1}卦`;
   document.getElementById('hexagramSign').textContent=item.sign;
@@ -2001,15 +2019,28 @@ function renderHexagram(index){
   document.getElementById('hexagramMeaning').textContent=item.meaning;
   document.getElementById('hexagramAdvice').textContent=item.advice;
   document.getElementById('hexagramFortune').textContent=item.fortune;
-  document.getElementById('hexagramSelect').value=String(currentHexagramIndex);
+
+  const select=document.getElementById('hexagramSelect');
+  if(select) select.value=String(currentHexagramIndex);
+
+  const widget=document.querySelector('.hexagram-widget');
+  if(widget){
+    widget.style.boxShadow='0 0 40px rgba(200,168,75,.22)';
+    setTimeout(()=>{ widget.style.boxShadow=''; }, 320);
+  }
 }
 function drawHexagram(){
-  const idx=Math.floor(Math.random()*hexagrams.length);
+  let idx=currentHexagramIndex;
+  while(hexagrams.length > 1 && idx===currentHexagramIndex){
+    idx=Math.floor(Math.random()*hexagrams.length);
+  }
   renderHexagram(idx);
 }
 function selectHexagram(value){
-  renderHexagram(Number(value));
+  if(value!=='') renderHexagram(Number(value));
 }
+window.drawHexagram=drawHexagram;
+window.selectHexagram=selectHexagram;
 
 
 /* ── Balance ── */
