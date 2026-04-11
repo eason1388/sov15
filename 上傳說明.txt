@@ -1,0 +1,30 @@
+隨緣堂最終完整包｜上傳說明
+
+請把這個資料夾內全部檔案，一次上傳到 GitHub 專案根目錄。
+
+最重要的檔案：
+1. index.html               首頁整合版
+2. blog.html                道法專欄列表
+3. articles.json            專欄文章清單
+4. daofa.html               第一篇文章
+5. qingjing.html            修行頻道頁
+6. falu.html                實務頻道頁
+7. youming.html             神秘頻道頁
+8. article-template*.html   之後新增文章可直接複製
+9. robots.txt               搜尋引擎設定
+10. sitemap.xml             網站地圖
+11. .nojekyll               GitHub Pages 輔助檔
+
+上傳後建議：
+- 等 2～5 分鐘再重整網站
+- 如果還看到舊版，請按 Ctrl+F5 強制重整
+
+之後新增文章：
+1. 複製 article-template.html
+2. 改檔名，例如 new-article.html
+3. 改標題、摘要、內文
+4. 在 articles.json 加一筆資料
+5. 上傳新檔案與更新後的 articles.json
+
+聯絡信箱：
+jackkok1388@gmail.com

@@ -325,16 +325,6 @@
     .channel-card.teal::after{box-shadow:inset 0 0 40px rgba(58,202,212,.08)}
     .channel-card.gold::after{box-shadow:inset 0 0 40px rgba(200,168,75,.08)}
     .channel-card:hover{transform:translateY(-5px)}
-    .channel-link{display:block;color:inherit}
-    .channel-more{display:inline-block;margin-top:18px;color:var(--gold-light);letter-spacing:.1em;font-size:.95rem}
-    .channel-detail-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:34px}
-    .channel-detail{background:linear-gradient(180deg,rgba(17,28,53,.95),rgba(9,16,33,.96));border:1px solid var(--border);border-radius:18px;padding:30px 26px;box-shadow:0 20px 50px rgba(0,0,0,.22)}
-    .channel-detail-head{margin-bottom:14px}
-    .detail-mark{display:inline-block;margin-bottom:10px;padding:5px 14px;border:1px solid var(--border-gold);border-radius:999px;color:var(--gold);font-size:.82rem;letter-spacing:.14em}
-    .channel-detail h3{font-family:'Noto Serif TC',serif;font-size:clamp(1.45rem,3.5vw,2rem);line-height:1.5;color:var(--white);margin-bottom:8px}
-    .channel-detail p{color:var(--white-dim);line-height:2.05;margin-bottom:14px}
-    .detail-points{display:flex;flex-wrap:wrap;gap:10px 12px;margin-top:10px}
-    .detail-points span{padding:7px 12px;border-radius:999px;background:rgba(42,109,217,.11);border:1px solid rgba(58,202,212,.22);color:var(--teal);font-size:.9rem}
     .channel-card.blue:hover{border-color:rgba(42,109,217,.55);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-blue)}
     .channel-card.teal:hover{border-color:rgba(58,202,212,.5);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-teal)}
     .channel-card.gold:hover{border-color:rgba(200,168,75,.5);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-gold)}
@@ -596,6 +586,96 @@
     }
     .btn-oracle:hover{box-shadow:var(--glow-gold);transform:translateY(-2px)}
 
+
+    /* ══════════════════════════════
+       I CHING HEXAGRAMS
+    ══════════════════════════════ */
+    #hexagrams{background:var(--bg-deepest)}
+    .hexagram-widget{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border-gold);border-radius:18px;
+      padding:clamp(30px,5vw,46px);
+      max-width:880px;margin:0 auto;position:relative;overflow:hidden;
+      box-shadow:0 12px 50px rgba(0,0,0,.18);
+    }
+    .hexagram-widget::before{
+      content:'䷀';position:absolute;right:24px;top:18px;
+      font-size:180px;opacity:.05;color:var(--gold);pointer-events:none;
+      text-shadow:var(--glow-gold);
+    }
+    .hexagram-top{
+      display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+    .hexagram-badge{
+      display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+      color:var(--teal);font-size:var(--fs-small);letter-spacing:.18em;
+    }
+    .hexagram-sign{
+      font-size:2.8rem;color:var(--gold-light);text-shadow:var(--glow-gold);line-height:1;
+      font-family:'Noto Serif TC',serif;
+    }
+    .hexagram-number{
+      color:var(--gold);font-size:var(--fs-small);letter-spacing:.22em;
+    }
+    .hexagram-controls{
+      display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    }
+    .hexagram-select{
+      min-width:240px;
+      background:rgba(5,10,20,.72);color:var(--white);
+      border:1px solid rgba(200,168,75,.35);border-radius:10px;
+      padding:12px 14px;font-size:.98rem;outline:none;
+    }
+    .hexagram-btn{
+      padding:11px 18px;border:none;border-radius:10px;
+      background:linear-gradient(135deg,var(--gold-dim),var(--gold));
+      color:#0a0e1a;font-weight:700;letter-spacing:.08em;cursor:pointer;
+      transition:all .25s;
+    }
+    .hexagram-btn:hover{transform:translateY(-2px);box-shadow:var(--glow-gold)}
+    .hexagram-title{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.9rem,4.2vw,2.7rem);
+      color:var(--white);letter-spacing:.12em;margin-bottom:8px;
+    }
+    .hexagram-subtitle{
+      color:var(--teal);font-size:1rem;letter-spacing:.18em;margin-bottom:18px;
+    }
+    .hexagram-summary{
+      font-size:1.08rem;color:var(--gold-light);line-height:2.05;letter-spacing:.05em;
+      margin-bottom:20px;
+    }
+    .hexagram-grid{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+      margin-bottom:18px;
+    }
+    .hexagram-box{
+      background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;padding:18px 18px 16px;
+    }
+    .hexagram-box h4{
+      color:var(--gold);font-family:'Noto Serif TC',serif;
+      font-size:1.02rem;letter-spacing:.1em;margin-bottom:8px;
+    }
+    .hexagram-box p{color:var(--white-dim);line-height:1.95}
+    .hexagram-detail{
+      background:rgba(255,255,255,.02);border-radius:14px;padding:18px 20px;
+      border:1px solid rgba(58,202,212,.12);
+    }
+    .hexagram-detail p{color:var(--white-dim);line-height:2}
+    .hexagram-tip{
+      margin-top:18px;color:var(--white-faint);font-size:.94rem;letter-spacing:.05em;
+      text-align:center;
+    }
+    @media (max-width: 768px){
+      .hexagram-grid{grid-template-columns:1fr}
+      .hexagram-top{flex-direction:column}
+      .hexagram-controls{width:100%}
+      .hexagram-select{width:100%;min-width:unset}
+    }
+
+
     /* ══════════════════════════════
        BALANCE
     ══════════════════════════════ */
@@ -809,7 +889,6 @@
        FAB
     ══════════════════════════════ */
     .fab-consult{
-      display:inline-flex;align-items:center;justify-content:center;
       position:fixed;bottom:28px;right:24px;z-index:900;
       padding:14px 24px;
       background:linear-gradient(135deg,var(--blue-mid),var(--blue-bright));
@@ -893,8 +972,10 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#channels">修行頻道</a></li>
       <li><a href="#articles">玄門文章</a></li>
+      <li><a href="blog.html">道法專欄</a></li>
       <li><a href="#fulu">符咒百科</a></li>
       <li><a href="#oracle">每日法語</a></li>
+      <li><a href="#hexagrams">易經卦象</a></li>
       <li><a href="#pricing">價目表</a></li>
       <li><a href="#consult" class="nav-cta">線上諮詢</a></li>
     </ul>
@@ -939,8 +1020,8 @@
       <em>「神行則氣行，神住則氣住。」</em>
     </p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="scrollTo('channels')">探索修行之道</button>
-      <button class="btn-outline" onclick="scrollTo('consult')">預約諮詢</button>
+      <a class="btn-primary" href="#channels">探索修行之道</a>
+      <a class="btn-outline" href="#consult">預約諮詢</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -969,7 +1050,7 @@
       <p class="section-sub">隨緣堂依「體、用、密」三大頻道，廣納修行者與求助者，提供由淺入深的道家玄學指引。</p>
     </div>
     <div class="channels-grid">
-      <a class="channel-card blue reveal channel-link" href="#channel-qingjing">
+      <div class="channel-card blue reveal">
         <span class="channel-icon">🌿</span>
         <div class="tag">核心頻道</div>
         <h3 class="channel-title">清靜經緯</h3>
@@ -982,9 +1063,8 @@
           <li>丹道初探：性命雙修、內丹學說</li>
           <li>玄學基礎：陰陽五行、天人合一</li>
         </ul>
-        <span class="channel-more">展開玄門內容 →</span>
-      </a>
-      <a class="channel-card teal reveal channel-link" href="#channel-falu" style="transition-delay:.12s">
+      </div>
+      <div class="channel-card teal reveal" style="transition-delay:.12s">
         <span class="channel-icon">🔮</span>
         <div class="tag">實務頻道</div>
         <h3 class="channel-title">法露恩光</h3>
@@ -997,9 +1077,8 @@
           <li>符咒請領：護身、鎮宅、招財</li>
           <li>遠距諮詢：八字推衍、能量評估</li>
         </ul>
-        <span class="channel-more">展開科儀內容 →</span>
-      </a>
-      <a class="channel-card gold reveal channel-link" href="#channel-youming" style="transition-delay:.24s">
+      </div>
+      <div class="channel-card gold reveal" style="transition-delay:.24s">
         <span class="channel-icon">🌒</span>
         <div class="tag">神秘頻道</div>
         <h3 class="channel-title">幽冥通牒</h3>
@@ -1012,58 +1091,7 @@
           <li>超拔科儀：引魂安頓、冥陽兩利</li>
           <li>個案研究：真實處理邏輯分享</li>
         </ul>
-        <span class="channel-more">展開幽冥內容 →</span>
-      </a>
-    </div>
-
-    <div class="channel-detail-grid">
-      <article id="channel-qingjing" class="channel-detail reveal">
-        <div class="channel-detail-head">
-          <span class="detail-mark">☯ 清靜經緯</span>
-          <h3>守靜、養炁、存神：把散亂的命，收回自己身上</h3>
-        </div>
-        <p>清靜經緯談的不是表面的放鬆，而是把一個人被外界拉扯過久的心神，重新收攝回來。很多人以為自己只是累、煩、睡不好，但在玄門的語言裡，常常是「神浮、氣散、魄弱」。當心整天掛在恐懼、焦躁、執念、比較與情緒消耗裡，人的元炁就像漏風的燈罩，再多休息都補不回來。</p>
-        <p>這一脈的修持，重的是由粗入細。先調呼吸，再安身，再定念，再談觀照。呼吸不勻，意念就不定；意念不定，心火就不降；心火不降，夜裡自然夢擾、驚醒、胸悶、煩亂。故道門常言：先守一口氣，再談一條路。當呼吸沉下來，雜念會像濁水慢慢沉底，人才開始重新聽見自己真正的聲音。</p>
-        <p>隨緣堂在這個頻道中，會帶入更完整的玄學層次：下丹田養氣、四時節律、陰陽五行對身心狀態的影響，以及如何判斷自己究竟是陽亢、陰盛、氣滯，還是心神失守。你會發現，所謂的「命好不好」，往往不是一張八字就能定完，而是你每日如何耗氣、如何養氣、如何讓內在恢復秩序。</p>
-        <div class="detail-points">
-          <span>✦ 靜坐入門與雜念收攝</span>
-          <span>✦ 胎息、吐納、睡前安魂法</span>
-          <span>✦ 下丹田感應與元炁培養</span>
-          <span>✦ 情緒耗能與氣場修補</span>
-        </div>
-      </article>
-
-      <article id="channel-falu" class="channel-detail reveal" style="transition-delay:.12s">
-        <div class="channel-detail-head">
-          <span class="detail-mark">🔱 法露恩光</span>
-          <h3>以科儀撥亂反正，讓錯位的氣場重新歸位</h3>
-        </div>
-        <p>法露恩光是隨緣堂最貼近現實困境的一脈。許多人不是不努力，而是明明已經拚盡全力，事情仍反覆卡住：人際失和、睡眠失序、家宅不安、財運停滯、反覆驚嚇、病後神弱。玄門看這些問題，不只看「事件」，更看事件背後的場：是不是氣場破了、是不是流年煞動了、是不是居家方位犯沖、是不是本命在某個時間點特別虛。</p>
-        <p>科儀的本質，不是迷信式的形式堆疊，而是用有秩序的方法，將一個人混亂的能量訊號重新整理。符、咒、燈、香、法水、供品、方位、時辰，都是在對應不同層次的場域。收驚重在回魂定魄，祭改重在轉動不順之局，補運重在填補耗損之氣，淨宅則重在空間磁場的梳理。看起來是民俗，深處其實是古人對於場域與身心互動的精細理解。</p>
-        <p>所以我們不會把所有人都套進同一套流程，而是依你的狀況去看：是先穩神，還是先解煞；是先清場，還是先補炁；是要短期安定，還是要長期調整。真正有效的科儀，不是做完當下熱鬧，而是做完之後，人會慢慢覺得房子比較安、睡眠比較沉、心比較定、事比較順。</p>
-        <div class="detail-points">
-          <span>✦ 收驚安神與驚魂回攝</span>
-          <span>✦ 祭改、補運、補財庫</span>
-          <span>✦ 灑淨、淨宅、入厝安宅</span>
-          <span>✦ 依八字與流年個別配置</span>
-        </div>
-      </article>
-
-      <article id="channel-youming" class="channel-detail reveal" style="transition-delay:.24s">
-        <div class="channel-detail-head">
-          <span class="detail-mark">🌘 幽冥通牒</span>
-          <h3>不是獵奇，而是看見那些肉眼之外仍在牽動人生的暗流</h3>
-        </div>
-        <p>幽冥通牒談的是一般人最不敢碰、也最容易混亂想像的一塊：冤親債主、陰煞干擾、宅氣陰沉、夢境異常、反覆撞煞、某些說不清的沉重與壓迫感。隨緣堂在這裡保留一個很重要的原則：先排除身心與醫學問題，再談玄學層面的干擾。因為真正負責任的道門，不會把所有苦都推給鬼神，而是先把可見的部分看清楚，才處理不可見的部分。</p>
-        <p>但也確實有一些狀況，會讓人反覆經歷難以解釋的低迷：換地方後持續惡夢、某些空間特別壓身、明明沒事卻總有被盯視的感覺、家中成員集體情緒失衡、祭祖後反而雜夢增多。玄門對這些現象，會從因果、場域、祖先、冤結、陰陽失衡幾個方向去看，而不是一句「卡到了」草草帶過。</p>
-        <p>這個頻道會放入更多偏玄的內容：陰陽界線、冥陽兩利的觀念、何謂超拔、為何有些執念會成為場、為何某些人特別容易沾染低頻之氣。真正的處理，不是靠恐嚇，而是靠安頓。讓該走的能走、該解的能解、該護的能護，人的心就會慢慢從陰影裡退回光裡。</p>
-        <div class="detail-points">
-          <span>✦ 冤親債主與因果調解觀</span>
-          <span>✦ 夢擾、宅擾、陰煞辨別</span>
-          <span>✦ 超拔安頓與冥陽兩利</span>
-          <span>✦ 先醫學、後玄學的判讀原則</span>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -1292,6 +1320,57 @@
   </div>
 </section>
 
+
+<section id="hexagrams" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☯ 易經卦象 ☯</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">六十四卦靈示</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">以《易經》六十四卦觀天時、地勢、人心與進退之機。可隨機抽取一卦，也可手動查閱全部卦象與其意旨解讀。</p>
+    </div>
+    <div class="hexagram-widget reveal">
+      <div class="hexagram-top">
+        <div>
+          <div class="hexagram-badge">
+            <span>卦象靈示</span>
+            <span class="hexagram-number" id="hexagramNumber">第1卦</span>
+          </div>
+        </div>
+        <div class="hexagram-controls">
+          <select id="hexagramSelect" class="hexagram-select" onchange="selectHexagram(this.value)"></select>
+          <button class="hexagram-btn" id="hexagramDrawBtn" type="button" onclick="drawHexagram()">✦ 隨機起卦 ✦</button>
+        </div>
+      </div>
+
+      <div class="hexagram-sign" id="hexagramSign">䷀</div>
+      <h3 class="hexagram-title" id="hexagramTitle">乾為天</h3>
+      <p class="hexagram-subtitle" id="hexagramMeta">上乾下乾・五行啟示：剛健中正</p>
+      <p class="hexagram-summary" id="hexagramSummary">此卦主開創、主昂揚、主天道運行。當事者宜正心定志，順勢而起，不可怯懦退縮。</p>
+
+      <div class="hexagram-grid">
+        <div class="hexagram-box">
+          <h4>卦意解釋</h4>
+          <p id="hexagramMeaning">象徵純陽之氣充盈，最適合奠基、開局、立願、出征。若心志端正，則可得天時之助。</p>
+        </div>
+        <div class="hexagram-box">
+          <h4>行事建議</h4>
+          <p id="hexagramAdvice">可主動推進、先行佈局、堅守原則。忌驕矜自滿，愈高位愈要自持。</p>
+        </div>
+      </div>
+
+      <div class="hexagram-detail">
+        <p id="hexagramFortune">運勢提示：現階段屬於氣勢初升之局，貴在持續精進、積德養望。若求事業，宜先立方向；若求感情，宜以誠相待；若求家宅，宜先整頓氣場與人心。</p>
+      </div>
+      <p class="hexagram-tip">可從下拉選單查閱六十四卦全部內容；此頁文字為現代白話解讀，方便一般讀者快速理解。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ BALANCE ═══ -->
 <section id="balance" class="section-pad" style="background:var(--bg-dark)">
   <div class="container">
@@ -1509,32 +1588,30 @@
           <li><span class="step-num">5</span>後續追蹤，確保能量調理效果</li>
         </ul>
         <br/>
-        <p style="font-size:1rem;color:var(--teal)">✉ 聯絡方式<br/>
-        Email：<strong style="color:var(--white)"><a href="mailto:jackkok1388@gmail.com" style="color:var(--white)">jackkok1388@gmail.com</a></strong></p>
+        <p style="font-size:1rem;color:var(--teal)">📞 聯絡方式<br/>
+        LINE / GitHub：<strong style="color:var(--white)">jackkok1388</strong><br/>
+        Email：<strong style="color:var(--white)">jackkok1388@gmail.com</strong></p>
       </div>
       <div class="form-card reveal" style="transition-delay:.15s">
         <form id="consultForm" onsubmit="submitForm(event)">
-          <input type="hidden" name="_subject" value="隨緣堂網站新預約通知" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">法名 / 姓名 *</label>
-              <input type="text" name="name" class="form-input" placeholder="您的稱呼" required />
+              <input type="text" class="form-input" placeholder="您的稱呼" required />
             </div>
             <div class="form-group">
               <label class="form-label">聯絡方式 *</label>
-              <input type="email" name="email" class="form-input" placeholder="請填寫可收信的 Email" required />
+              <input type="text" class="form-input" placeholder="LINE ID 或 Email" required />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">農曆 / 國曆生辰</label>
-              <input type="text" name="birthday" class="form-input" placeholder="例：1990年5月10日 午時" />
+              <input type="text" class="form-input" placeholder="例：1990年5月10日 午時" />
             </div>
             <div class="form-group">
               <label class="form-label">性別</label>
-              <select name="gender" class="form-select">
+              <select class="form-select">
                 <option value="">請選擇</option>
                 <option>男（陽命）</option>
                 <option>女（陰命）</option>
@@ -1543,7 +1620,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">諮詢類別 *</label>
-            <select name="category" class="form-select" required>
+            <select class="form-select" required>
               <option value="">請選擇最相符的困境</option>
               <option>收驚安神（驚嚇、失眠、心神不寧）</option>
               <option>祭改化煞（流年不利、事業受阻）</option>
@@ -1556,14 +1633,14 @@
           </div>
           <div class="form-group">
             <label class="form-label">困境描述 *</label>
-            <textarea name="message" class="form-textarea" placeholder="請簡述您目前遇到的困境、持續時間，以及您希望得到的幫助……" required></textarea>
+            <textarea class="form-textarea" placeholder="請簡述您目前遇到的困境、持續時間，以及您希望得到的幫助……" required></textarea>
           </div>
           <button type="submit" class="form-submit">✦ 提交初診申請 ✦</button>
-          <p class="form-disclaimer">送出後資料會寄到隨緣堂信箱。<br/>玄學服務為心靈慰藉，不替代專業醫療。</p>
+          <p class="form-disclaimer">提交即代表您同意我們以提供玄學輔助為目的使用您的資料。<br/>玄學服務為心靈慰藉，不替代專業醫療。</p>
         </form>
         <div class="form-success" id="formSuccess">
           <p>🌙 申請已收到</p>
-          <p style="font-size:1rem;color:var(--white-dim);margin-top:12px">若畫面顯示送出成功，預約內容已寄出。<br/>若未收到回覆，也可直接來信至 jackkok1388@gmail.com。</p>
+          <p style="font-size:1rem;color:var(--white-dim);margin-top:12px">貧道將在三個工作天內與您聯繫。<br/>福生無量天尊。</p>
         </div>
       </div>
     </div>
@@ -1782,7 +1859,7 @@
 
 /* ── Nav ── */
 function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
-function goSection(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
+function scrollTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').style.background=window.scrollY>60?'rgba(4,7,15,.97)':'rgba(4,7,15,.88)';
 });
@@ -1823,12 +1900,149 @@ function newOracle(){
     el.style.transition='opacity .5s';el.style.opacity='1';
   },260);
 }
-(function(){
+function initOracleDate(){
   const d=new Date();
   const days=['日','一','二','三','四','五','六'];
-  document.getElementById('oracleDate').textContent=
-    `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日　星期${days[d.getDay()]}`;
-})();
+  const dateEl=document.getElementById('oracleDate');
+  if(dateEl){
+    dateEl.textContent=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日　星期${days[d.getDay()]}`;
+  }
+}
+
+/* ── I Ching Hexagrams ── */
+const hexagrams=[
+  {name:'乾為天', sign:'䷀', meta:'上乾下乾・五行啟示：剛健中正', summary:'此卦主開創、主昂揚、主天道運行。當事者宜正心定志，順勢而起，不可怯懦退縮。', meaning:'象徵純陽之氣充盈，最適合奠基、開局、立願、出征。若心志端正，則可得天時之助。', advice:'可主動推進、先行佈局、堅守原則。忌驕矜自滿，愈高位愈要自持。', fortune:'運勢提示：現階段屬於氣勢初升之局，貴在持續精進、積德養望。若求事業宜主攻，若求修行宜立願，若求人際宜以德服人。'},
+  {name:'坤為地', sign:'䷁', meta:'上坤下坤・五行啟示：厚德承載', summary:'此卦主包容、承接、滋養、順勢。與其強出頭，不如厚積能量，讓萬物自然生長。', meaning:'象徵大地之德，柔順而不軟弱，能承萬物而不爭。適合養成、守成、穩固根基。', advice:'宜低調行事、厚實準備、先穩後發。忌消極拖延，柔順不等於失去原則。', fortune:'運勢提示：目前更適合沉澱、累積、整合資源。若求感情宜溫柔守信，若求家宅宜安內，若求財運宜穩定現金流。'},
+  {name:'水雷屯', sign:'䷂', meta:'上坎下震・五行啟示：初生多阻', summary:'此卦主萌芽之難，萬事起頭多有雜亂與波折，像幼苗破土，艱辛卻蘊含生機。', meaning:'象徵開始階段雖有混沌與阻力，但並非壞兆，而是必經的鍛鍊與試煉。', advice:'宜先找方向、先求穩定支援，不宜躁進。忌一下子攤大局。', fortune:'運勢提示：現況像剛起步的局，要忍住焦躁。把基礎打穩，後面反而能轉危為機。'},
+  {name:'山水蒙', sign:'䷃', meta:'上艮下坎・五行啟示：啟蒙求教', summary:'此卦主迷惘、學習、啟蒙，表示尚在摸索階段，最忌自以為是。', meaning:'象徵心智未明，事情看不透，須藉由有經驗者指引，方能少走冤枉路。', advice:'宜請益、進修、回到基本功。忌逞強亂判斷。', fortune:'運勢提示：現在不是比誰衝得快，而是比誰學得穩。只要肯學，迷霧終會散去。'},
+  {name:'水天需', sign:'䷄', meta:'上坎下乾・五行啟示：守時待機', summary:'此卦主等待時機，並非什麼都不做，而是先蓄勢、再出手。', meaning:'象徵雲在天上將雨未雨，時機正在醞釀。妄動則亂，耐心則成。', advice:'宜養精蓄銳、觀察情勢、預備方案。忌急著逼結果。', fortune:'運勢提示：近期有事可成，但需掌握節奏。等一等，不是錯失，而是讓時機自己成熟。'},
+  {name:'天水訟', sign:'䷅', meta:'上乾下坎・五行啟示：爭端辨明', summary:'此卦主爭議、誤會、立場對撞。能談則談，能退則退，不宜硬碰硬。', meaning:'象徵氣不相合，容易產生口舌官非，若一意爭勝，反而兩敗俱傷。', advice:'宜釐清證據、就事論事、找中立者協調。忌情緒化對抗。', fortune:'運勢提示：目前最重要的是止爭，不是求贏。修口德、避衝突，才能保全自身。'},
+  {name:'地水師', sign:'䷆', meta:'上坤下坎・五行啟示：整隊用眾', summary:'此卦主組織、紀律、領導與出征。若無規矩與核心，眾人反成烏合。', meaning:'象徵要帶兵、帶團隊、帶局勢，必須先正己，再談號令。', advice:'宜建立規範、明確分工、慎選領頭人。忌多頭馬車。', fortune:'運勢提示：當前局面需要秩序與紀律。若你是主事者，要先讓自己站穩。'},
+  {name:'水地比', sign:'䷇', meta:'上坎下坤・五行啟示：親附同心', summary:'此卦主結盟、合作、歸附、互信。成事關鍵在於找到可長久相依的人。', meaning:'象徵水依附於地，彼此有承載與流動，關係若真誠，則能穩定長久。', advice:'宜慎選合作對象、建立信任、以誠待人。忌濫交或拖泥帶水。', fortune:'運勢提示：近期貴人在關係之中。善緣可成助力，錯緣則會消耗氣場。'},
+  {name:'風天小畜', sign:'䷈', meta:'上巽下乾・五行啟示：小蓄待發', summary:'此卦主小有積累、暫時節制、柔和牽引。雖未大成，卻正逐步聚能。', meaning:'象徵雲氣積蓄未雨，事情有進展但尚未到爆發時。', advice:'宜持續累積、保持耐性、細節管理。忌躁進求大成。', fortune:'運勢提示：眼前屬於小進小成之局，把握每一步，未來才有大開展。'},
+  {name:'天澤履', sign:'䷉', meta:'上乾下兌・五行啟示：慎行有禮', summary:'此卦主行走於險處，外表看似平順，實則步步要有分寸。', meaning:'象徵踩在虎尾之上，並非不能前進，而是必須守禮守度。', advice:'宜謙遜守規、審慎前行、注意言行。忌冒犯權威或輕率失禮。', fortune:'運勢提示：局面可行，但務必要小心。越細膩，越能避開隱形風險。'},
+  {name:'地天泰', sign:'䷊', meta:'上坤下乾・五行啟示：通達亨泰', summary:'此卦主天地交泰、上下相通，是非常吉順的和合之象。', meaning:'象徵陰陽調和、內外通氣，事情容易順暢推進，人心也較和。', advice:'宜把握機會、擴展合作、推進重要事務。忌安逸鬆懈。', fortune:'運勢提示：這是可乘勢而上的好時段，但越順時越要記得修德守成。'},
+  {name:'天地否', sign:'䷋', meta:'上乾下坤・五行啟示：閉塞不通', summary:'此卦主阻隔、氣滯、上下不通。不是硬闖的時候，而是辨識問題來源的時候。', meaning:'象徵天高地低而不交，彼此各走各路，形成閉塞。', advice:'宜減少擴張、先整理內部、保持清明。忌逞強破局。', fortune:'運勢提示：最近可能有卡關感。與其抱怨命運，不如先把自身系統調整好。'},
+  {name:'天火同人', sign:'䷌', meta:'上乾下離・五行啟示：同道聚義', summary:'此卦主志同道合、群體合作、共同願景。適合與理念一致者同行。', meaning:'象徵在光明之下聚集眾志，只要方向一致，便能形成很強的力量。', advice:'宜公開透明、廣結善緣、找同頻夥伴。忌結黨私心。', fortune:'運勢提示：你的助力來自群體。選對圈層，事情會比單打獨鬥順很多。'},
+  {name:'火天大有', sign:'䷍', meta:'上離下乾・五行啟示：盛大豐有', summary:'此卦主豐盛、掌握資源、光明顯達，是大有收穫之象。', meaning:'象徵光照天下，資源與機會開始聚集，但能否守得住，仍看德行。', advice:'宜善用資源、廣施恩惠、心懷節制。忌炫耀與揮霍。', fortune:'運勢提示：近期有得到、收成、出名或增長的機會，愈有成就愈要穩住心。'},
+  {name:'地山謙', sign:'䷎', meta:'上坤下艮・五行啟示：虛懷受益', summary:'此卦主謙遜藏鋒，真正有實力的人，不必逞口舌之強。', meaning:'象徵高山藏於地中，越有本事，越懂得收斂與穩定。', advice:'宜低調做人、高標做事、讓功於人。忌自滿。', fortune:'運勢提示：這是一個以退為進的吉卦。守住謙德，反而更容易得人心與天助。'},
+  {name:'雷地豫', sign:'䷏', meta:'上震下坤・五行啟示：悅而有備', summary:'此卦主喜悅、鼓舞、人心振奮，但歡喜中也要有準備。', meaning:'象徵春雷動地，萬物有生氣，適合啟動群眾、提升士氣。', advice:'宜整合資源、振奮團隊、趁勢推動。忌樂極生懈。', fortune:'運勢提示：運勢正在抬頭，心情也會比較開朗。把歡喜化成行動，效果更大。'},
+  {name:'澤雷隨', sign:'䷐', meta:'上兌下震・五行啟示：應時而動', summary:'此卦主順勢而行、隨機應變。不是盲從，而是看懂時勢之後調整步伐。', meaning:'象徵雷動於下、澤悅於上，動中有和，最適合靈活配合。', advice:'宜觀察趨勢、借力使力、彈性調整。忌固執不變。', fortune:'運勢提示：現在比的不是誰最強，而是誰最會順勢。懂得轉身，就是智慧。'},
+  {name:'山風蠱', sign:'䷑', meta:'上艮下巽・五行啟示：整舊更新', summary:'此卦主積弊、陳病、舊問題浮現，正是整頓與翻修的時刻。', meaning:'象徵器物生蟲，若不處理，問題只會越積越深。', advice:'宜斷捨離、清理舊帳、修補制度。忌拖延。', fortune:'運勢提示：此刻遇見問題不是壞事，因為它讓你看見必須修的地方。修得越徹底，後運越清。'},
+  {name:'地澤臨', sign:'䷒', meta:'上坤下兌・五行啟示：親臨施惠', summary:'此卦主接近、監督、照拂、上位者下臨。適合用真誠與實際行動靠近人心。', meaning:'象徵大地臨澤，帶來滋養與管理，是推進與關懷並行之象。', advice:'宜親自了解、主動照顧、先近後成。忌只發號施令。', fortune:'運勢提示：你越願意放下身段、貼近實況，越容易掌握真正的關鍵。'},
+  {name:'風地觀', sign:'䷓', meta:'上巽下坤・五行啟示：觀察省思', summary:'此卦主觀看、審視、反省，提醒先看清全局，再決定下一步。', meaning:'象徵風吹大地，處處可見痕跡。觀，不只是看別人，更是看自己。', advice:'宜靜觀局勢、回看自身、整理價值觀。忌倉促下判。', fortune:'運勢提示：這段時間先別急著硬做，多看、多想、多沉澱，答案會更清楚。'},
+  {name:'火雷噬嗑', sign:'䷔', meta:'上離下震・五行啟示：果斷除障', summary:'此卦主決斷、清障、依法處理。凡有卡點，就要咬開、切開、處理掉。', meaning:'象徵口中有物，不咬斷便無法吞嚥，代表事情需靠果決來推進。', advice:'宜依法依理、果斷解決、清除阻礙。忌優柔寡斷。', fortune:'運勢提示：近期若有糾結問題，不妨乾脆處理。越拖，越耗氣。'},
+  {name:'山火賁', sign:'䷕', meta:'上艮下離・五行啟示：文飾有度', summary:'此卦主修飾、美感、門面、禮儀。可以美化，但不能只剩表面。', meaning:'象徵火光照山，外表鮮明可觀，內在仍要有實。', advice:'宜整理形象、修正文案、注重包裝。忌華而不實。', fortune:'運勢提示：最近適合改善外在呈現，但真正能讓人信服的，仍是內在品質。'},
+  {name:'山地剝', sign:'䷖', meta:'上艮下坤・五行啟示：剝落去舊', summary:'此卦主剝離、衰退、去除不合之物。表面失去，未必不是保全。', meaning:'象徵外殼逐漸剝落，提醒去蕪存菁，接受該結束的部份。', advice:'宜保守、減法、停損、撤除虛耗。忌逞強維持空殼。', fortune:'運勢提示：有些東西正在離開你，這不是純粹失去，而是為新局清場。'},
+  {name:'地雷復', sign:'䷗', meta:'上坤下震・五行啟示：回歸再起', summary:'此卦主回來、恢復、重啟，一陽來復，是從谷底重新轉生的象。', meaning:'象徵微弱生機重新出現，再黑的夜也開始出現曙光。', advice:'宜回到初心、重新整理、從小處復原。忌操之過急。', fortune:'運勢提示：你正在走出低潮。別急著大衝，先把那一道微光保住。'},
+  {name:'天雷無妄', sign:'䷘', meta:'上乾下震・五行啟示：真誠無妄', summary:'此卦主真心、正念、自然之道。心若不妄，事自不偏。', meaning:'象徵天雷震動，一切講求真實與正當，不容虛假。', advice:'宜誠實、守本分、順自然規律。忌投機取巧。', fortune:'運勢提示：當前最能保你平安的，不是技巧，而是端正與真誠。'},
+  {name:'山天大畜', sign:'䷙', meta:'上艮下乾・五行啟示：蓄德養勢', summary:'此卦主大蓄、儲備、內在實力累積。越大的局，越要先藏力。', meaning:'象徵山中藏天之勢，氣力甚大，但不輕易外放。', advice:'宜讀書進修、養德蓄財、耐心等待。忌逞強出鋒頭。', fortune:'運勢提示：表面慢，不代表沒進展。你正在累積日後能翻盤的大力量。'},
+  {name:'山雷頤', sign:'䷚', meta:'上艮下震・五行啟示：養正其源', summary:'此卦主養生、養德、養口、養人。你如何餵養自己，就會成為什麼樣的人。', meaning:'象徵口與飲食，也延伸到精神食糧與言語能量。', advice:'宜調整作息、節制飲食、慎言慎語。忌嘴上失德。', fortune:'運勢提示：運勢要好，先養身、養氣、養口德。根源正了，其他自然穩。'},
+  {name:'澤風大過', sign:'䷛', meta:'上兌下巽・五行啟示：承重過大', summary:'此卦主負擔過重、結構過壓，提醒你現況有超載跡象。', meaning:'象徵大木彎曲，表示責任、情緒或壓力超過可承受範圍。', advice:'宜調整結構、分散壓力、果斷修正。忌死撐。', fortune:'運勢提示：再強的人也有上限。該減壓就減壓，硬撐只會折損元氣。'},
+  {name:'坎為水', sign:'䷜', meta:'上坎下坎・五行啟示：陷中求明', summary:'此卦主重重險阻、情緒波動、內在試煉。真正的出路在於守心與守信。', meaning:'象徵水重重相續，險中有險，但水也最懂得找路。', advice:'宜謹慎、守紀律、一步一步過關。忌恐慌失序。', fortune:'運勢提示：眼前不算輕鬆，但你只要不亂，反而能在困局中磨出真本事。'},
+  {name:'離為火', sign:'䷝', meta:'上離下離・五行啟示：光明附麗', summary:'此卦主文明、光亮、名聲、辨明是非。適合用清晰與智慧照亮局面。', meaning:'象徵火光相續，重點在依附正道，否則光也會變成灼傷。', advice:'宜講清楚、重誠信、守原則。忌虛華與情緒化。', fortune:'運勢提示：你有被看見的機會。越站在光裡，越要保持內在清明。'},
+  {name:'澤山咸', sign:'䷞', meta:'上兌下艮・五行啟示：感應相牽', summary:'此卦主感情、感應、互動共鳴，兩方之間容易產生吸引與影響。', meaning:'象徵心意互通、氣場互感，因此一切關係都格外重要。', advice:'宜真誠互動、保持界線、珍惜善緣。忌被情緒牽著走。', fortune:'運勢提示：近期在人際與情感上有明顯波動，好的感應能成助力，壞的感應也要學會切斷。'},
+  {name:'雷風恆', sign:'䷟', meta:'上震下巽・五行啟示：恆久有常', summary:'此卦主持續、恆心、長久之道。不是一時衝刺，而是能走多遠。', meaning:'象徵雷風相與，動中有持續，最適合建立長期規律。', advice:'宜固定節奏、長期耕耘、守住承諾。忌三分鐘熱度。', fortune:'運勢提示：接下來最有力量的不是爆發，而是穩定累積。持之以恆，自見成果。'},
+  {name:'天山遯', sign:'䷠', meta:'上乾下艮・五行啟示：知退保身', summary:'此卦主退守、抽離、保存實力。退，不是輸，而是有智慧地避耗。', meaning:'象徵天在山上，宜遠小人、避是非，留待後機。', advice:'宜低調撤離、減少纏鬥、保護核心資源。忌逞強停留。', fortune:'運勢提示：此刻最吉的動作可能不是往前，而是先退一步，換一條更乾淨的路。'},
+  {name:'雷天大壯', sign:'䷡', meta:'上震下乾・五行啟示：盛勢當持', summary:'此卦主力量增長、氣勢強盛，但力量越大，越要守法守度。', meaning:'象徵雷在天上，勢能驚人，若能正用，則成大助；若亂用，則成反噬。', advice:'宜把強勢放在正事上，切忌霸道。', fortune:'運勢提示：你現在有衝勁、有資源、有底氣，但別用蠻力，要用正力。'},
+  {name:'火地晉', sign:'䷢', meta:'上離下坤・五行啟示：日出而進', summary:'此卦主上升、進階、被看見，像太陽升地，逐步明朗。', meaning:'象徵光明逐步擴展，適合升職、曝光、推案、進修提升。', advice:'宜主動呈現成果、穩健前進、把握提攜。忌得意忘形。', fortune:'運勢提示：整體運有向上之勢，尤其利名聲、事業與被賞識。'},
+  {name:'地火明夷', sign:'䷣', meta:'上坤下離・五行啟示：藏光避傷', summary:'此卦主光明受傷，提醒才華與真心暫時不宜全露。', meaning:'象徵光被地覆，適合韜光養晦、保護自己，不宜過度張揚。', advice:'宜低調、沉潛、保密。忌逞強露鋒。', fortune:'運勢提示：你不是沒有光，而是現在的環境未必適合你全開。先保護火種。'},
+  {name:'風火家人', sign:'䷤', meta:'上巽下離・五行啟示：家內有序', summary:'此卦主家道、角色秩序、內部治理。先把家與團隊整好，外運才會穩。', meaning:'象徵風行火上，家中規矩若明，人心才安。', advice:'宜明確分工、修補關係、重建家宅秩序。忌角色混亂。', fortune:'運勢提示：最近很多事情的根，可能在家庭、團隊或內部系統。安內，就是轉運。'},
+  {name:'火澤睽', sign:'䷥', meta:'上離下兌・五行啟示：異中求同', summary:'此卦主分歧、看法不同、各有立場。不是硬要一致，而是先找到可溝通處。', meaning:'象徵火與澤性質相反，代表彼此距離感與差異性。', advice:'宜就小同先合作、保留彈性。忌硬逼他人接受。', fortune:'運勢提示：最近人際或合作上易有分歧，重點不是消滅差異，而是善用差異。'},
+  {name:'水山蹇', sign:'䷦', meta:'上坎下艮・五行啟示：遇阻知止', summary:'此卦主難行、阻塞、道路艱困。遇到牆時，不是硬撞，而是找繞路。', meaning:'象徵前有山、上有水，行路艱難，必須借助外力與智慧。', advice:'宜求助、轉向、先解決眼前障礙。忌硬拚。', fortune:'運勢提示：這一段確實不順，但卡住本身就是提醒：方法要換，不是命不好。'},
+  {name:'雷水解', sign:'䷧', meta:'上震下坎・五行啟示：解困釋結', summary:'此卦主解除、鬆綁、化開、雨過天晴。事情開始有鬆動的可能。', meaning:'象徵雷雨過後萬物舒展，最適合解決積壓已久的結。', advice:'宜和解、處理舊結、把未完事項清掉。忌再製造新糾結。', fortune:'運勢提示：近期有機會鬆一口氣。該談的談、該放的放，局面會慢慢開。'},
+  {name:'山澤損', sign:'䷨', meta:'上艮下兌・五行啟示：減法成福', summary:'此卦主減少、節制、讓出部分利益，以換取更穩的大局。', meaning:'象徵減去多餘，讓核心更純粹。捨得，有時才是真得。', advice:'宜精簡、節流、清理雜事。忌貪多。', fortune:'運勢提示：眼下最好的路，不是再加，而是先減。減掉耗氣之物，運就回來。'},
+  {name:'風雷益', sign:'䷩', meta:'上巽下震・五行啟示：增益助長', summary:'此卦主增長、加持、得助，屬於有提升空間的吉象。', meaning:'象徵風雷相助，事情容易因貴人、方法或資源而變好。', advice:'宜擴充、學習新法、善用外援。忌自私獨占。', fortune:'運勢提示：近期很適合投資自己、增加技能、擴大善緣，正向循環正在形成。'},
+  {name:'澤天夬', sign:'䷪', meta:'上兌下乾・五行啟示：決斷去穢', summary:'此卦主決裂、斷除、揭露。當該切斷的東西存在時，就不能再拖。', meaning:'象徵澤上於天，陽氣欲決，意指必須清除內部隱患。', advice:'宜果斷、公開、明白處理。忌優柔寡斷。', fortune:'運勢提示：現在的課題是斷，不是忍。切掉耗損，才能開新局。'},
+  {name:'天風姤', sign:'䷫', meta:'上乾下巽・五行啟示：猝然相遇', summary:'此卦主突來之緣、突發之機，也可能是意外干擾。', meaning:'象徵忽然相遇，未必長久，但影響力強，因此更要有辨識力。', advice:'宜慎選接觸、觀察來路。忌一時衝動就投入。', fortune:'運勢提示：近期可能遇到新機會、新人、新局，但不是每個出現都值得深交。'},
+  {name:'澤地萃', sign:'䷬', meta:'上兌下坤・五行啟示：聚眾成局', summary:'此卦主匯聚、集結、群體能量上升。人多就有勢，但也更需中心。', meaning:'象徵眾水歸澤，人事物開始向某一點聚攏。', advice:'宜整合人脈、辦活動、建立核心。忌人多無主。', fortune:'運勢提示：你最近容易聚人氣、聚資源。若能定住主心骨，成果會很不錯。'},
+  {name:'地風升', sign:'䷭', meta:'上坤下巽・五行啟示：循序上升', summary:'此卦主穩步提升，不是暴衝，而是一階一階往上長。', meaning:'象徵木生於地，柔和卻有穿透力，最適合長線發展。', advice:'宜循序漸進、累積信用、保持韌性。忌急功近利。', fortune:'運勢提示：近期是慢慢升的局，別小看每一步，累積起來很可觀。'},
+  {name:'澤水困', sign:'䷮', meta:'上兌下坎・五行啟示：困中守志', summary:'此卦主受困、受壓、身心受限。困局考驗的是心志與德行。', meaning:'象徵水陷澤中，外表還撐著，內部卻已緊繃。', advice:'宜節省氣力、守住信念、找出口。忌自我消耗。', fortune:'運勢提示：現在不容易，但不是沒路。先顧住元氣，再慢慢破困。'},
+  {name:'水風井', sign:'䷯', meta:'上坎下巽・五行啟示：深處有源', summary:'此卦主根源、基礎資源、井然有序。提醒回到真正能長久供應你的來源。', meaning:'象徵井水養人，井若不修，水再多也取不到。', advice:'宜整理系統、修基礎、深耕專業。忌只追表面成果。', fortune:'運勢提示：近期的關鍵不在表面衝刺，而在重新整理你的根本資源與能力。'},
+  {name:'澤火革', sign:'䷰', meta:'上兌下離・五行啟示：變革換骨', summary:'此卦主改革、換局、脫皮、改朝換代。該變就得變。', meaning:'象徵火在澤中，舊結構已難維繫，新的秩序正在形成。', advice:'宜明確改革、更新做法、果斷轉型。忌半調子。', fortune:'運勢提示：眼下正是改命式的轉折期，真正的危險不是變，而是不敢變。'},
+  {name:'火風鼎', sign:'䷱', meta:'上離下巽・五行啟示：鍊化成器', summary:'此卦主成器、轉化、文化與滋養。像鼎一般，把材料煉成可用之物。', meaning:'象徵烹煮與養成，代表你正經歷質變，適合建立名望與內容。', advice:'宜提煉核心、升級品質、厚植口碑。忌急著求快。', fortune:'運勢提示：這是很適合做品牌、做內容、做專業鍛鍊的卦，久煉自成器。'},
+  {name:'震為雷', sign:'䷲', meta:'上震下震・五行啟示：驚動而醒', summary:'此卦主震動、驚醒、突發事件，也主從驚中成長。', meaning:'象徵雷聲連連，表面受驚，實則喚醒沉睡之氣。', advice:'宜穩神定心、快速應變、把意外化成覺悟。忌驚慌失措。', fortune:'運勢提示：最近可能有突然事件，但它也是提醒你該醒、該變、該行動。'},
+  {name:'艮為山', sign:'䷳', meta:'上艮下艮・五行啟示：止而後定', summary:'此卦主停止、安定、止念、止欲。有時真正的功課就是停下來。', meaning:'象徵雙山相對，靜而不動，最適合修身、閉關、斷念。', advice:'宜止損、靜心、暫停過多計畫。忌停而不明。', fortune:'運勢提示：現在先停，比亂動更有力量。停住雜念，才看得見真方向。'},
+  {name:'風山漸', sign:'䷴', meta:'上巽下艮・五行啟示：漸進成形', summary:'此卦主循序漸進、慢慢成熟，像鳥築巢，不疾不徐。', meaning:'象徵一步一腳印，適合婚姻、事業、修行等長線議題。', advice:'宜穩定規劃、持續投入、尊重節奏。忌求速成。', fortune:'運勢提示：這不是一夕翻盤的局，而是穩穩長成的局，慢就是快。'},
+  {name:'雷澤歸妹', sign:'䷵', meta:'上震下兌・五行啟示：配合失序', summary:'此卦主關係中的不對等、時機未熟、角色錯位。', meaning:'象徵婚嫁之事若失其序，容易留下後患。凡合作與情感皆要看名分與時機。', advice:'宜看清角色、確認承諾、不要只憑一時感覺。忌草率結合。', fortune:'運勢提示：感情或合作若過快推進，可能藏有隱憂。先釐清，再投入。'},
+  {name:'雷火豐', sign:'䷶', meta:'上震下離・五行啟示：盛極宜守', summary:'此卦主豐盛、高潮、光亮鼎盛。盛時最怕迷失。', meaning:'象徵雷火交作，聲勢與能見度都很強，屬高峰之象。', advice:'宜把握高峰、快速完成關鍵事。忌因盛而亂。', fortune:'運勢提示：近期可能很忙、很亮眼、很有成果，但越亮越要記得自持。'},
+  {name:'火山旅', sign:'䷷', meta:'上離下艮・五行啟示：客中自持', summary:'此卦主旅行、漂泊、寄居、異地求生。外在不穩，更需內在有主。', meaning:'象徵火在山上，停留不久，因此行事宜簡潔而有禮。', advice:'宜低調、守界線、照顧安全感。忌逞強擴張。', fortune:'運勢提示：最近可能有移動、轉換、漂浮感。要記得：身在外，心更要定。'},
+  {name:'巽為風', sign:'䷸', meta:'上巽下巽・五行啟示：柔入滲透', summary:'此卦主滲透、影響、溝通、柔和進入。硬攻未必有用，柔進反而能成。', meaning:'象徵風行無孔不入，代表語言、策略、細膩與持續影響力。', advice:'宜善溝通、慢慢布局、以柔克剛。忌搖擺不定。', fortune:'運勢提示：眼前適合用柔性的方式做事，繞進去，比硬撞更有效。'},
+  {name:'兌為澤', sign:'䷹', meta:'上兌下兌・五行啟示：悅而後通', summary:'此卦主喜悅、溝通、口才、社交魅力。氣場開展，人也較願意靠近。', meaning:'象徵雙澤相通，交流順暢，但喜悅也不能流於表面。', advice:'宜善用口才、建立和氣、適度社交。忌只說不做。', fortune:'運勢提示：近期利溝通、談判、感情互動，但要把真心放進話語中。'},
+  {name:'風水渙', sign:'䷺', meta:'上巽下坎・五行啟示：化散鬱結', summary:'此卦主疏散、化解、打開鬱結。適合把緊繃的氣場散開。', meaning:'象徵風吹水面，積壓之物開始流動，很多僵局能慢慢化開。', advice:'宜溝通、淨化空間、旅行轉換、重整能量。忌再把自己悶住。', fortune:'運勢提示：這是有利於化開悶局的卦。動一動、清一清、說一說，運就會轉。'},
+  {name:'水澤節', sign:'䷻', meta:'上坎下兌・五行啟示：節制有度', summary:'此卦主節制、規範、界線。不是壓抑，而是適度。', meaning:'象徵水澤有節，凡事有節度，才能長久穩定。', advice:'宜立規矩、守預算、安排節奏。忌放縱或過度緊縮。', fortune:'運勢提示：接下來重點在拿捏分寸。守住界線，運勢反而更穩。'},
+  {name:'風澤中孚', sign:'䷼', meta:'上巽下兌・五行啟示：誠信感通', summary:'此卦主真誠、信任、內外一致。人若真，氣場就會正。', meaning:'象徵內心有信，外在人自然願意跟隨，是很重內在純度的卦。', advice:'宜說到做到、直心待人、修內在一致性。忌虛情假意。', fortune:'運勢提示：你此刻最強的法器不是技巧，而是真誠。真，最能穿透人心。'},
+  {name:'雷山小過', sign:'䷽', meta:'上震下艮・五行啟示：小事細修', summary:'此卦主小處調整、細節補正。大事未必宜硬做，小事先做好更重要。', meaning:'象徵飛鳥過而不宜太高，代表宜守小節，不宜妄圖大躍進。', advice:'宜修細節、補漏洞、重視小問題。忌越級冒進。', fortune:'運勢提示：最近愈把小事做好，愈能避開大麻煩。細節，就是護身符。'},
+  {name:'水火既濟', sign:'䷾', meta:'上坎下離・五行啟示：已成仍慎', summary:'此卦主完成、到位、看似圓滿。但事情做成之後，更要防鬆懈。', meaning:'象徵水火得位，一切暫時有序，然而穩中最怕失守。', advice:'宜善後、維護、檢查後續。忌以為大功告成就放掉。', fortune:'運勢提示：事情多半能成，但真正高手是在成之後仍守得住。'},
+  {name:'火水未濟', sign:'䷿', meta:'上離下坎・五行啟示：未完待續', summary:'此卦主未完成、還差一步、正在跨越。現在不是結局，而是接近成局。', meaning:'象徵火在水上，尚未調和，說明局勢還在動，尚需時間與調整。', advice:'宜耐心收尾、反覆校正、不要提早定論。忌半途而廢。', fortune:'運勢提示：你其實離成功不遠，但越到最後越要穩。把最後一步走好，就是改命。'}
+];
+let currentHexagramIndex=0;
+function initHexagrams(){
+  const select=document.getElementById('hexagramSelect');
+  const drawBtn=document.getElementById('hexagramDrawBtn');
+  if(!select) return;
+
+  select.innerHTML='';
+
+  const placeholder=document.createElement('option');
+  placeholder.value='';
+  placeholder.textContent='請選擇一個卦象';
+  placeholder.disabled=true;
+  select.appendChild(placeholder);
+
+  hexagrams.forEach((item,idx)=>{
+    const option=document.createElement('option');
+    option.value=idx;
+    option.textContent=`第${idx+1}卦｜${item.name}`;
+    select.appendChild(option);
+  });
+
+  select.addEventListener('change',e=>{
+    if(e.target.value!=='') renderHexagram(Number(e.target.value));
+  });
+
+  if(drawBtn){
+    drawBtn.addEventListener('click',drawHexagram);
+  }
+
+  const dayIndex=(new Date().getDate()-1)%hexagrams.length;
+  renderHexagram(dayIndex);
+}
+function renderHexagram(index){
+  currentHexagramIndex=Number.isFinite(Number(index)) ? Number(index) : 0;
+  if(currentHexagramIndex < 0 || currentHexagramIndex >= hexagrams.length) currentHexagramIndex = 0;
+  const item=hexagrams[currentHexagramIndex];
+  document.getElementById('hexagramNumber').textContent=`第${currentHexagramIndex+1}卦`;
+  document.getElementById('hexagramSign').textContent=item.sign;
+  document.getElementById('hexagramTitle').textContent=item.name;
+  document.getElementById('hexagramMeta').textContent=item.meta;
+  document.getElementById('hexagramSummary').textContent=item.summary;
+  document.getElementById('hexagramMeaning').textContent=item.meaning;
+  document.getElementById('hexagramAdvice').textContent=item.advice;
+  document.getElementById('hexagramFortune').textContent=item.fortune;
+
+  const select=document.getElementById('hexagramSelect');
+  if(select) select.value=String(currentHexagramIndex);
+
+  const widget=document.querySelector('.hexagram-widget');
+  if(widget){
+    widget.style.boxShadow='0 0 40px rgba(200,168,75,.22)';
+    setTimeout(()=>{ widget.style.boxShadow=''; }, 320);
+  }
+}
+function drawHexagram(){
+  let idx=currentHexagramIndex;
+  while(hexagrams.length > 1 && idx===currentHexagramIndex){
+    idx=Math.floor(Math.random()*hexagrams.length);
+  }
+  renderHexagram(idx);
+}
+function selectHexagram(value){
+  if(value!=='') renderHexagram(Number(value));
+}
+window.drawHexagram=drawHexagram;
+window.selectHexagram=selectHexagram;
+
 
 /* ── Balance ── */
 function toggleCheck(item){
@@ -1851,48 +2065,17 @@ function updateBalance(){
   else{msg.textContent='輕微陰盛，注意保暖補陽';svc.innerHTML='推薦：<a href="#articles">氣脈養生專區</a>';}
 }
 
-/* ── Form ── */
-async function submitForm(e){
-  e.preventDefault();
-  const form=e.target;
-  const data=new FormData(form);
-  const submitBtn=form.querySelector('.form-submit');
-  const success=document.getElementById('formSuccess');
-  const original=submitBtn.textContent;
-  submitBtn.disabled=true;
-  submitBtn.textContent='✦ 傳送中，請稍候… ✦';
-  try{
-    const res=await fetch('https://formsubmit.co/ajax/jackkok1388@gmail.com',{
-      method:'POST',
-      body:data,
-      headers:{'Accept':'application/json'}
-    });
-    const result=await res.json().catch(()=>({success:false}));
-    if(res.ok && result.success !== false){
-      form.reset();
-      form.style.display='none';
-      success.style.display='block';
-      success.innerHTML='<p>🌙 預約已送出</p><p style="font-size:1rem;color:var(--white-dim);margin-top:12px">內容已嘗試寄送到隨緣堂信箱。第一次使用時，請記得去 jackkok1388@gmail.com 收取並點擊 FormSubmit 的啟用確認信；完成一次啟用後，後續表單才會正常送達。若仍未收到，也可直接寄信到 jackkok1388@gmail.com。</p>';
-    }else{
-      throw new Error('send_failed');
-    }
-  }catch(err){
-    const subject='隨緣堂網站預約：'+(data.get('name')||'未填姓名');
-    const body=`姓名：${data.get('name')||''}
-Email：${data.get('email')||''}
-生辰：${data.get('birthday')||''}
-性別：${data.get('gender')||''}
-諮詢類別：${data.get('category')||''}
 
-困境描述：
-${data.get('message')||''}`;
-    window.location.href=`mailto:jackkok1388@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    success.style.display='block';
-    success.innerHTML='<p>⚠ 網站表單送信未完成</p><p style="font-size:1rem;color:var(--white-dim);margin-top:12px">已改用您的本機郵件程式開啟備援寄信內容。若您沒有設定郵件軟體，請直接來信至 jackkok1388@gmail.com。</p>';
-  }finally{
-    submitBtn.disabled=false;
-    submitBtn.textContent=original;
-  }
+window.addEventListener('DOMContentLoaded',()=>{
+  initOracleDate();
+  initHexagrams();
+});
+
+/* ── Form ── */
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('consultForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
 }
 </script>
 </body>
