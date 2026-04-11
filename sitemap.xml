@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://eason1388.github.io/sov8/</loc>
-  </url>
-  <url>
-    <loc>https://eason1388.github.io/sov8/blog.html</loc>
-  </url>
-  <url>
-    <loc>https://eason1388.github.io/sov8/daofa.html</loc>
-  </url>
-  <url>
-    <loc>https://eason1388.github.io/sov8/qingjing.html</loc>
-  </url>
-  <url>
-    <loc>https://eason1388.github.io/sov8/falu.html</loc>
-  </url>
-  <url>
-    <loc>https://eason1388.github.io/sov8/youming.html</loc>
-  </url>
+  <url><loc>https://eason1388.github.io/sov8/</loc></url>
+  <url><loc>https://eason1388.github.io/sov8/blog.html</loc></url>
+  <url><loc>https://eason1388.github.io/sov8/daofa.html</loc></url>
+  <url><loc>https://eason1388.github.io/sov8/qingjing.html</loc></url>
+  <url><loc>https://eason1388.github.io/sov8/falu.html</loc></url>
+  <url><loc>https://eason1388.github.io/sov8/youming.html</loc></url>
 </urlset>
