@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>隨緣堂｜道家玄學・修行・濟世</title>
-  <meta name="keywords" content="隨緣堂,收驚,祭改,送厄,安魂,驅邪,避邪,養生,法事,道法,道家,玄學,淨宅,家宅淨化,補運,補財庫,元辰宮,易經,黃帝陰符經" />
-  <meta name="description" content="隨緣堂：正統道家玄學，融合修行養氣、祭改收驚、冥陽調和，以理性玄學觀點廣渡有緣人。" />
+  <meta name="keywords" content="隨緣堂,收驚,祭改,送厄,安魂,驅邪,避邪,養生,法事,道法,道家,玄學,淨宅,家宅淨化,補運,補財庫,元辰宮,易經,黃帝陰符經,太乙金華宗旨" />
+  <meta name="description" content="隨緣堂：正統道家玄學，融合修行養氣、祭改收驚、冥陽調和、太乙金華宗旨與陰符經義理，以理性玄學觀點廣渡有緣人。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -843,6 +843,95 @@
       .section-pad{padding:60px 0}
     }
 
+
+    /* ══════════════════════════════
+       TAIYI SECTION
+    ══════════════════════════════ */
+    #taiyi{background:var(--bg-mid)}
+    .taiyi-intro{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border-gold);
+      border-radius:12px;padding:30px 32px;margin-bottom:30px;
+      color:var(--white-dim);line-height:2.1;
+      font-size:clamp(.98rem,2vw,1.06rem);
+      box-shadow:0 16px 40px rgba(0,0,0,.25);
+    }
+    .taiyi-intro strong{color:var(--gold-light)}
+    .taiyi-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+      margin-bottom:28px;
+    }
+    .taiyi-card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:26px 24px;
+      transition:all .35s;
+      position:relative;
+      overflow:hidden;
+    }
+    .taiyi-card:hover{
+      transform:translateY(-4px);
+      border-color:var(--border-gold);
+      box-shadow:var(--glow-gold);
+    }
+    .taiyi-card::before{
+      content:'金華';
+      position:absolute;right:14px;top:8px;
+      font-family:'Noto Serif TC',serif;
+      font-size:2.7rem;color:rgba(200,168,75,.05);
+      letter-spacing:.08em;
+    }
+    .taiyi-card h3{
+      font-family:'Noto Serif TC',serif;
+      color:var(--gold-light);
+      font-size:clamp(1.05rem,2.5vw,1.25rem);
+      margin-bottom:12px;
+      letter-spacing:.08em;
+    }
+    .taiyi-card p{
+      color:var(--white-dim);
+      font-size:clamp(.95rem,2vw,1rem);
+      line-height:2;
+      margin-bottom:10px;
+    }
+    .taiyi-long{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:clamp(24px,4vw,42px);
+      box-shadow:0 20px 48px rgba(0,0,0,.24);
+    }
+    .taiyi-long h3{
+      font-family:'Noto Serif TC',serif;
+      color:var(--white);
+      font-size:clamp(1.15rem,2.8vw,1.45rem);
+      margin:22px 0 10px;
+      letter-spacing:.08em;
+    }
+    .taiyi-long p{
+      color:var(--white-dim);
+      line-height:2.12;
+      font-size:clamp(.98rem,2vw,1.05rem);
+      margin-bottom:14px;
+    }
+    .taiyi-quote{
+      background:rgba(200,168,75,.06);
+      border:1px solid var(--border-gold);
+      border-radius:10px;
+      padding:18px 22px;
+      margin:16px 0 22px;
+    }
+    .taiyi-quote p{
+      margin:0;
+      color:var(--gold-light);
+      font-family:'Noto Serif TC',serif;
+      letter-spacing:.08em;
+    }
+
+
     /* ══════════════════════════════
        HEXAGRAM DIVIDER
     ══════════════════════════════ */
@@ -866,14 +955,14 @@
 
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta property="og:title" content="隨緣堂｜收驚・祭改・安魂・驅邪・養生・道法專欄" />
-  <meta property="og:description" content="隨緣堂提供道家玄學與修行內容，含收驚、祭改、送厄、安魂、驅邪、養生、家宅淨化、易經卦象、黃帝陰符經專欄與道法文章。" />
+  <meta property="og:description" content="隨緣堂提供道家玄學與修行內容，含收驚、祭改、送厄、安魂、驅邪、養生、家宅淨化、易經卦象、黃帝陰符經專欄、太乙金華宗旨與道法文章。" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="隨緣堂" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:url" content="https://eason1388.github.io/sov8/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="隨緣堂｜收驚・祭改・安魂・驅邪・養生・道法專欄" />
-  <meta name="twitter:description" content="隨緣堂提供道家玄學與修行內容，含收驚、祭改、送厄、安魂、驅邪、養生、家宅淨化、易經卦象、黃帝陰符經專欄與道法文章。" />
+  <meta name="twitter:description" content="隨緣堂提供道家玄學與修行內容，含收驚、祭改、送厄、安魂、驅邪、養生、家宅淨化、易經卦象、黃帝陰符經專欄、太乙金華宗旨與道法文章。" />
   <link rel="canonical" href="https://eason1388.github.io/sov8/" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"隨緣堂","url":"https://eason1388.github.io/sov8/","email":"mailto:jackkok1388@gmail.com"},{"@type":"WebSite","name":"隨緣堂","url":"https://eason1388.github.io/sov8/","inLanguage":"zh-TW","publisher":{"@type":"Organization","name":"隨緣堂"}}]}</script>
 
@@ -902,6 +991,7 @@
       <li><a href="#oracle">每日法語</a></li>
       <li><a href="#pricing">價目表</a></li>
       <li><a href="yinfu-zhuanlan.html">陰符經專欄</a></li>
+      <li><a href="#taiyi">太乙金華宗旨</a></li>
       <li><a href="#consult" class="nav-cta">線上諮詢</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
@@ -1437,6 +1527,93 @@
   </div>
 </section>
 
+
+<!-- ═══ 太乙金華宗旨 ═══ -->
+<section id="taiyi" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☉ 太乙金華宗旨 ☉</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">回光守中，金華自現</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">整理《太乙金華宗旨》核心義理，從天心、元神、識神、回光守中到回光調息，幫助有緣者由淺入深理解道家性命修煉的樞機。</p>
+    </div>
+
+    <div class="taiyi-intro reveal">
+      <p><strong>《太乙金華宗旨》</strong> 是道門極重要的性功典籍，核心不在追逐奇異境界，而在於<strong>「回光、守中、調息、辨識神與元神」</strong>。其工夫重點，是將外散之神光回返祖竅，使心不逐物、氣不妄馳，久之則光華凝聚，內在自得一條返本還元之路。首頁這一欄先放入重點整理與原文精華，之後也可以再擴寫成獨立專欄。</p>
+    </div>
+
+    <div class="taiyi-grid">
+      <div class="taiyi-card reveal">
+        <span class="tag">第一要義</span>
+        <h3>天心</h3>
+        <p>天心可視為身中最核心的中樞與祖竅。回光之法，首重注想天心，令散亂之神識返回中心，周身之氣自然上朝。</p>
+        <p>一旦主人翁歸位，內在秩序便會重新建立，這也是《太乙金華宗旨》最關鍵的入門方向。</p>
+      </div>
+      <div class="taiyi-card reveal" style="transition-delay:.08s">
+        <span class="tag">第二要義</span>
+        <h3>元神與識神</h3>
+        <p>元神偏真性與本來靈明，識神則偏分別、情緒與外馳。修持不是把人變得遲鈍，而是讓識神不再奪權，使元神重新作主。</p>
+        <p>當二目回光、凝守元宮，內在較不易被外境牽動，這就是制魄斷識的開始。</p>
+      </div>
+      <div class="taiyi-card reveal" style="transition-delay:.16s">
+        <span class="tag">第三要義</span>
+        <h3>回光守中</h3>
+        <p>回光不是死盯某點，而是把原本一直向外流散的注意力、氣機與神光，重新回到中宮與祖竅。</p>
+        <p>守中之久，神火自生，意土凝定，才談得上百日築基、由粗入細的真正修持。</p>
+      </div>
+      <div class="taiyi-card reveal" style="transition-delay:.24s">
+        <span class="tag">第四要義</span>
+        <h3>回光調息</h3>
+        <p>昏沉與散亂，是初學者最常見的兩大病。宗旨指出，可藉由「寄心於息」讓心息相依，心細則息細，息細則心更易安定。</p>
+        <p>調息不是硬控呼吸，而是讓耳光、目光慢慢內收，回到微微照聽、不外走也不內馳的狀態。</p>
+      </div>
+    </div>
+
+    <div class="taiyi-long reveal">
+      <span class="tag">原文精華整理</span>
+      <h3>一、天心：回光之門</h3>
+      <div class="taiyi-quote">
+        <p>「金華即光也……回光之功，全用逆法，注想天心。」</p>
+      </div>
+      <p>《太乙金華宗旨》開篇便指出，天心是回光工夫的核心。儒家可稱虛中，佛家可稱靈台，道家則稱祖土、黃庭、玄關或先天竅。名稱雖異，所指卻相近：都是那個能讓神意收攝、令生命中樞重新穩定的地方。</p>
+      <p>一旦開始回光，周身之氣就像臣子朝王一般回到中心。這裡最重要的不是「想像很多」，而是把外散的心神慢慢收回，不再任憑識神四處奔馳。</p>
+
+      <h3>二、元神、識神：誰在主導你的人生？</h3>
+      <div class="taiyi-quote">
+        <p>「今凝守元宮，如英明之主在上，二目回光，如左有大臣盡心輔弼。」</p>
+      </div>
+      <p>宗旨很清楚地把元神與識神區分開來。元神近乎本來面目，識神則和情緒、分別、慾望與習氣相連。人若長期讓識神作主，便容易隨境而走，情緒起伏、心神耗散、精氣外漏。</p>
+      <p>所以回光並不只是打坐技巧，而是一種奪回主位的修持。當元神能重新坐鎮，識神便不再像悍將挾天子以令諸侯，整個人也會慢慢從混亂回到有主有序的狀態。</p>
+
+      <h3>三、回光守中：用逆法返本還元</h3>
+      <div class="taiyi-quote">
+        <p>「金華之道，全用逆法。」</p>
+      </div>
+      <p>所謂逆法，不是逆天而行，而是逆轉平常人一味向外消耗的模式。一般人眼逐物、耳逐聲、心逐境，一整天精神都在外漏。回光守中，就是把這股向外奔散的能量轉回來。</p>
+      <p>宗旨強調，初下手時不用勉強追求奇特感應，只需循序漸進，把目光、耳光與意念慢慢收攝至中宮。回之既久，光自凝，氣自定，火候也會自然成熟。</p>
+
+      <h3>四、回光調息：治昏沉與散亂</h3>
+      <div class="taiyi-quote">
+        <p>「故回光兼之以調息，此法全用耳光。一是目光，一是耳光。」</p>
+      </div>
+      <p>宗旨對初學者很實際的一個提醒，就是修持過程裡最常遇到的不是神通，而是昏沉與散亂。散亂代表神馳外境，昏沉則是神未清、魄用事。要治這兩者，最穩的方法之一就是調息。</p>
+      <p>這裡的調息，不是強制拉長呼吸，而是讓心寄於息，使心息相依。當息變細，心就不容易粗浮；當心變細，息也更容易自然安穩。這是一種由粗入細、非常可實踐的路。</p>
+
+      <h3>五、百日築基：光從有意到自然</h3>
+      <div class="taiyi-quote">
+        <p>「百日立基，非百日也……一息立基，非呼吸之謂也。息者自心也。」</p>
+      </div>
+      <p>百日築基並不是死板的天數，而是在告訴修行者：根基的建立，來自持續不斷的回光與守中。只要每一息都能更接近收攝、更接近中心，那麼築基其實就在當下進行。</p>
+      <p>也因此，《太乙金華宗旨》雖然談玄，落點卻很實。它不是叫人逃離人間，而是要人在日用之中學會返照、不被萬境拖走。如此行之，才是真正把金華宗旨帶進生命裡。</p>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ CONSULT ═══ -->
 <section id="consult" class="section-pad">
   <div class="container">
@@ -1546,6 +1723,7 @@
           <li><a href="#consult">收驚解厄</a></li>
           <li><a href="#consult">祭改化煞</a></li>
           <li><a href="#pricing">服務價目表</a></li>
+          <li><a href="#taiyi">太乙金華宗旨</a></li>
           <li><a href="#fulu">符咒百科</a></li>
           <li><a href="#consult">在線諮詢</a></li>
         </ul>
