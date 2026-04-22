@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://eason1388.github.io/sov13/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,6 +55,7 @@
       --muted:#9ea8c8;
       --muted-2:#67708f;
       --shadow:0 28px 90px rgba(0,0,0,.34);
+      --shadow-soft:0 18px 48px rgba(0,0,0,.22);
       --radius-xl:30px;
       --radius-lg:22px;
       --radius-md:16px;
@@ -75,8 +76,8 @@
     }
     a{color:inherit;text-decoration:none}
     button{font:inherit}
-    .container{width:min(var(--max), calc(100% - 36px));margin:0 auto;position:relative;z-index:2}
-    .section-pad{padding:92px 0}
+    .container{width:min(var(--max), calc(100% - 40px));margin:0 auto;position:relative;z-index:2}
+    .section-pad{padding:108px 0}
     .text-center{text-align:center}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
     .reveal.visible{opacity:1;transform:none}
@@ -109,21 +110,21 @@
 
     #navbar{
       position:fixed;top:0;left:0;right:0;z-index:100;
-      background:rgba(4,7,15,.86);
+      background:linear-gradient(180deg, rgba(4,7,15,.92), rgba(4,7,15,.78));
       border-bottom:1px solid rgba(70,120,210,.16);
       backdrop-filter:blur(14px);
     }
     .nav-inner{
       width:min(var(--max), calc(100% - 36px));
       margin:0 auto;
-      min-height:74px;
+      min-height:78px;
       display:flex;align-items:center;justify-content:space-between;gap:18px;
     }
     .nav-logo{
       font-family:"Noto Serif TC",serif;
-      font-size:1.7rem;
+      font-size:1.76rem;
       font-weight:900;
-      letter-spacing:.16em;
+      letter-spacing:.18em;
       color:var(--gold);
       text-shadow:0 0 18px rgba(201,167,76,.3);
     }
@@ -140,8 +141,9 @@
     }
     .nav-links a{
       color:var(--muted);
-      font-size:.96rem;
-      letter-spacing:.08em;
+      font-size:.92rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
     }
     .nav-links a:hover{color:var(--gold-soft)}
     .nav-cta{
@@ -157,7 +159,7 @@
       min-height:100vh;
       display:flex;align-items:center;justify-content:center;
       position:relative;overflow:hidden;
-      padding:124px 0 88px;
+      padding:138px 0 112px;
     }
     .hero-bg{
       position:absolute;inset:0;z-index:0;
@@ -213,47 +215,93 @@
 
     .hero-shell{
       position:relative;z-index:2;
-      width:min(980px,100%);
+      width:min(1060px,100%);
       text-align:center;
+    }
+    .hero-shell::before,
+    .hero-shell::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      width:min(120px,14vw);
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(201,167,76,.7), transparent);
+      opacity:.8;
+    }
+    .hero-shell::before{left:0;transform:translate(-20%, -50%)}
+    .hero-shell::after{right:0;transform:translate(20%, -50%)}
+    .hero-gate{
+      width:min(780px,100%);
+      margin:0 auto;
+      padding:48px 42px 36px;
+      border-radius:36px;
+      background:
+        linear-gradient(180deg, rgba(11,18,34,.72), rgba(8,13,24,.56)),
+        radial-gradient(circle at top, rgba(201,167,76,.08), transparent 44%);
+      border:1px solid rgba(201,167,76,.2);
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.03),
+        0 0 0 10px rgba(10,15,28,.14),
+        var(--shadow);
+      backdrop-filter:blur(10px);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-gate::before{
+      content:"";
+      position:absolute;
+      inset:18px;
+      border:1px solid rgba(201,167,76,.14);
+      border-radius:28px;
+      pointer-events:none;
+    }
+    .hero-gate::after{
+      content:"";
+      position:absolute;
+      inset:auto 14% 0;
+      height:70px;
+      background:radial-gradient(circle at center, rgba(58,202,212,.18), transparent 70%);
+      filter:blur(16px);
+      pointer-events:none;
     }
     .hero-tag{
       color:var(--teal);
-      font-size:clamp(.84rem,2vw,.98rem);
-      letter-spacing:.42em;
-      margin-bottom:22px;
+      font-size:clamp(.8rem,1.8vw,.92rem);
+      letter-spacing:.48em;
+      margin-bottom:18px;
     }
     .hero-title{
       font-family:"Noto Serif TC",serif;
-      font-size:clamp(4rem,12vw,8rem);
-      line-height:1.04;
+      font-size:clamp(4.3rem,12vw,8.8rem);
+      line-height:1;
       font-weight:900;
-      letter-spacing:.18em;
+      letter-spacing:.22em;
       text-shadow:0 0 54px rgba(70,120,210,.54),0 0 110px rgba(70,120,210,.22);
-      margin-bottom:14px;
+      margin:0 0 18px;
     }
     .hero-subtitle{
       font-family:"Noto Serif TC",serif;
-      font-size:clamp(1rem,2.5vw,1.35rem);
+      font-size:clamp(1rem,2.5vw,1.28rem);
       color:var(--gold);
-      letter-spacing:.34em;
-      margin-bottom:28px;
+      letter-spacing:.4em;
+      margin-bottom:24px;
     }
     .hero-desc{
-      max-width:520px;
-      margin:0 auto 34px;
+      max-width:440px;
+      margin:0 auto 26px;
       color:var(--muted);
-      font-size:clamp(.98rem,2vw,1.08rem);
-      line-height:2;
+      font-size:clamp(.96rem,1.9vw,1.04rem);
+      line-height:2.05;
     }
     .hero-btns{
       display:flex;justify-content:center;gap:16px;flex-wrap:wrap;
-      margin-bottom:30px;
+      margin-bottom:22px;
     }
     .btn-primary,
     .btn-outline{
       display:inline-flex;align-items:center;justify-content:center;
-      min-height:52px;padding:0 28px;border-radius:10px;
-      letter-spacing:.12em;font-weight:700;
+      min-height:54px;padding:0 30px;border-radius:12px;
+      letter-spacing:.14em;font-weight:700;
       transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
     }
     .btn-primary:hover,.btn-outline:hover{transform:translateY(-2px)}
@@ -269,22 +317,32 @@
     }
     .hero-quiet{
       color:var(--muted-2);
-      font-size:.88rem;
-      letter-spacing:.24em;
+      font-size:.82rem;
+      letter-spacing:.3em;
     }
     .hero-scroll{
-      margin-top:42px;
+      margin-top:34px;
       color:var(--muted);
       font-size:var(--fs-small);
-      letter-spacing:.24em;
+      letter-spacing:.32em;
       animation:float-y 2.2s ease-in-out infinite;
+    }
+    .hero-mantra{
+      margin:0 auto 12px;
+      width:max-content;
+      max-width:100%;
+      color:var(--gold-soft);
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(1.1rem,2.2vw,1.4rem);
+      letter-spacing:.24em;
+      opacity:.92;
     }
     @keyframes float-y{
       0%,100%{transform:translateY(0)}
       50%{transform:translateY(10px)}
     }
 
-    .section-head{max-width:720px;margin:0 auto 50px;text-align:center}
+    .section-head{max-width:720px;margin:0 auto 58px;text-align:center}
     .section-kicker{
       display:inline-block;
       padding:5px 14px;
@@ -293,13 +351,13 @@
       color:var(--gold);
       font-size:.82rem;
       letter-spacing:.18em;
-      margin-bottom:16px;
+      margin-bottom:18px;
     }
     .section-title{
       font-family:"Noto Serif TC",serif;
       font-size:clamp(1.8rem,4vw,3rem);
       line-height:1.22;
-      margin-bottom:14px;
+      margin-bottom:16px;
       letter-spacing:.08em;
     }
     .section-sub{
@@ -310,13 +368,13 @@
 
     #paths{background:rgba(7,13,25,.72)}
     .path-grid{
-      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
     }
     .path-card{
       background:linear-gradient(180deg,rgba(17,28,54,.94),rgba(10,17,31,.98));
       border:1px solid var(--line);
       border-radius:var(--radius-xl);
-      padding:28px;
+      padding:30px;
       box-shadow:var(--shadow);
       position:relative;overflow:hidden;
     }
@@ -344,14 +402,14 @@
 
     #articles{background:var(--bg)}
     .article-grid{
-      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
     }
     .article-card{
       background:linear-gradient(180deg,rgba(16,27,52,.96),rgba(8,13,24,.98));
       border:1px solid rgba(70,120,210,.18);
       border-radius:var(--radius-lg);
-      padding:24px;
-      box-shadow:var(--shadow);
+      padding:26px;
+      box-shadow:var(--shadow-soft);
     }
     .article-card .meta{
       color:var(--teal);
@@ -384,7 +442,7 @@
       background:linear-gradient(180deg,rgba(17,27,50,.96),rgba(8,13,24,.98));
       border:1px solid var(--line-gold);
       border-radius:var(--radius-xl);
-      padding:36px 28px;
+      padding:42px 34px;
       box-shadow:var(--shadow);
       position:relative;overflow:hidden;
     }
@@ -425,13 +483,13 @@
 
     #pricing{background:var(--bg)}
     .pricing-stage{
-      display:grid;grid-template-columns:1.06fr .94fr;gap:24px;
+      display:grid;grid-template-columns:1.04fr .96fr;gap:26px;
     }
     .pricing-ritual{
       background:linear-gradient(180deg,rgba(16,27,52,.97),rgba(8,13,24,.98));
       border:1px solid rgba(201,167,76,.2);
-      border-radius:var(--radius-xl);
-      padding:32px;
+      border-radius:34px;
+      padding:38px;
       box-shadow:var(--shadow);
       position:relative;overflow:hidden;
     }
@@ -443,62 +501,108 @@
         radial-gradient(circle at bottom left, rgba(58,202,212,.08), transparent 30%);
       pointer-events:none;
     }
+    .pricing-ritual::after{
+      content:"啟壇";
+      position:absolute;
+      top:22px;right:24px;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.4rem;
+      letter-spacing:.2em;
+      color:rgba(240,220,162,.18);
+      transform:rotate(8deg);
+      pointer-events:none;
+    }
     .pricing-ritual h3{
       font-family:"Noto Serif TC",serif;
-      font-size:1.7rem;
+      font-size:1.86rem;
       color:var(--gold-soft);
-      margin-bottom:10px;
-      letter-spacing:.06em;
+      margin-bottom:12px;
+      letter-spacing:.08em;
     }
     .pricing-ritual p{
       color:var(--muted);
-      margin-bottom:18px;
+      margin-bottom:20px;
+    }
+    .pricing-ritual-head{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-end;
+      padding-bottom:20px;
+      margin-bottom:8px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .pricing-ritual-mark{
+      color:var(--teal-soft);
+      font-size:.78rem;
+      letter-spacing:.34em;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
     .pricing-list{
       display:grid;gap:14px;
-      margin-top:20px;
+      margin-top:18px;
     }
     .pricing-item{
       display:flex;justify-content:space-between;gap:18px;
-      padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);
+      padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06);
+      align-items:flex-start;
     }
     .pricing-item:last-child{border-bottom:none}
-    .pricing-name{color:var(--white)}
-    .pricing-note{color:var(--muted);font-size:.9rem}
+    .pricing-name{
+      color:var(--white);
+      font-family:"Noto Serif TC",serif;
+      font-size:1.04rem;
+      margin-bottom:4px;
+      letter-spacing:.03em;
+    }
+    .pricing-note{color:var(--muted);font-size:.9rem;max-width:26ch}
     .pricing-price{
       color:var(--teal-soft);
       white-space:nowrap;
       font-weight:700;
-      letter-spacing:.06em;
+      letter-spacing:.08em;
+      font-size:1.02rem;
+      padding-top:2px;
     }
     .pricing-grid{
-      display:grid;gap:20px;
+      display:grid;gap:22px;
     }
     .pricing-card{
       background:linear-gradient(180deg,rgba(16,26,48,.96),rgba(9,15,28,.98));
       border:1px solid rgba(70,120,210,.18);
-      border-radius:var(--radius-lg);
-      padding:24px;
+      border-radius:26px;
+      padding:28px;
       box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .pricing-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(145deg, rgba(201,167,76,.08), transparent 46%);
+      pointer-events:none;
     }
     .pricing-card small{
-      display:block;color:var(--teal);letter-spacing:.22em;margin-bottom:10px;font-size:.8rem
+      display:block;color:var(--teal);letter-spacing:.28em;margin-bottom:12px;font-size:.78rem
     }
     .pricing-card h4{
       font-family:"Noto Serif TC",serif;
       color:var(--gold-soft);
-      font-size:1.24rem;
-      margin-bottom:10px;
+      font-size:1.38rem;
+      margin-bottom:12px;
     }
     .pricing-card p{
       color:var(--muted);
-      margin-bottom:12px;
-      font-size:.95rem;
+      margin-bottom:14px;
+      font-size:.96rem;
+      line-height:1.95;
     }
     .pricing-card strong{
       color:var(--white);
-      font-size:1.08rem;
-      letter-spacing:.06em;
+      font-size:1.04rem;
+      letter-spacing:.08em;
     }
 
     #contact{background:rgba(7,12,21,.78)}
@@ -510,13 +614,13 @@
       background:linear-gradient(180deg,rgba(16,27,52,.97),rgba(8,13,24,.98));
       border:1px solid rgba(70,120,210,.16);
       border-radius:var(--radius-xl);
-      padding:30px;
+      padding:32px;
       box-shadow:var(--shadow);
     }
     .contact-card h3,.contact-form h3{
       font-family:"Noto Serif TC",serif;
       color:var(--gold-soft);
-      font-size:1.55rem;
+      font-size:1.6rem;
       margin-bottom:12px;
       letter-spacing:.06em;
     }
@@ -595,7 +699,7 @@
     .float-cta{
       position:fixed;
       right:24px;bottom:24px;z-index:90;
-      min-height:54px;padding:0 22px;
+      min-height:56px;padding:0 24px;
       display:inline-flex;align-items:center;justify-content:center;
       border-radius:999px;
       background:linear-gradient(135deg,#2d61cb,#1f4695);
@@ -608,14 +712,136 @@
     @media (max-width: 1024px){
       .path-grid,.article-grid{grid-template-columns:1fr}
       .pricing-stage,.contact-shell{grid-template-columns:1fr}
+      .hero-shell::before,.hero-shell::after{display:none}
+      .hero-gate{width:min(760px,100%)}
     }
     @media (max-width: 760px){
-      .nav-inner{min-height:86px;align-items:flex-start;flex-direction:column;padding:12px 0}
-      .nav-links{gap:10px 14px;flex-wrap:wrap}
-      .hero-title{letter-spacing:.12em}
-      .hero-subtitle{letter-spacing:.2em}
+      .container{width:min(var(--max), calc(100% - 24px))}
+      .section-pad{padding:84px 0}
+      .nav-inner{
+        min-height:72px;
+        align-items:center;
+        flex-direction:row;
+        padding:10px 0;
+      }
+      .nav-logo{font-size:1.34rem;letter-spacing:.12em}
+      .nav-logo span{font-size:.66rem;letter-spacing:.24em;margin-top:-3px}
+      .nav-links{
+        gap:8px 10px;
+        justify-content:flex-end;
+        max-width:62%;
+      }
+      .nav-links a{
+        font-size:.74rem;
+        letter-spacing:.12em;
+      }
+      .nav-cta{
+        padding:9px 12px;
+        border-radius:9px;
+      }
+      #hero{
+        min-height:auto;
+        padding:118px 0 74px;
+      }
+      .bagua-wrap{
+        width:min(520px,100vw);
+        height:min(520px,100vw);
+        opacity:.86;
+      }
+      .hero-gate{
+        padding:34px 18px 26px;
+        border-radius:26px;
+      }
+      .hero-gate::before{inset:12px;border-radius:20px}
+      .hero-tag{
+        font-size:.72rem;
+        letter-spacing:.32em;
+        margin-bottom:14px;
+      }
+      .hero-mantra{
+        font-size:1rem;
+        letter-spacing:.16em;
+      }
+      .hero-title{
+        font-size:3.1rem;
+        letter-spacing:.1em;
+        margin-bottom:12px;
+      }
+      .hero-subtitle{
+        font-size:.92rem;
+        letter-spacing:.22em;
+        margin-bottom:18px;
+      }
+      .hero-desc{
+        max-width:290px;
+        font-size:.92rem;
+        margin-bottom:20px;
+      }
+      .hero-btns{
+        gap:10px;
+        margin-bottom:18px;
+      }
+      .btn-primary,.btn-outline{
+        width:100%;
+        min-height:50px;
+        padding:0 20px;
+        font-size:.92rem;
+      }
+      .hero-quiet{
+        font-size:.72rem;
+        letter-spacing:.22em;
+      }
+      .hero-scroll{
+        margin-top:22px;
+        font-size:.76rem;
+        letter-spacing:.24em;
+      }
+      .section-head{
+        margin-bottom:36px;
+      }
+      .section-kicker{
+        margin-bottom:14px;
+        font-size:.76rem;
+      }
+      .section-title{
+        font-size:1.72rem;
+        margin-bottom:12px;
+      }
+      .section-sub{
+        font-size:.94rem;
+      }
+      .path-card,.article-card,.pricing-card,.contact-card,.contact-form{
+        padding:22px 18px;
+      }
+      .oracle-widget{
+        padding:28px 18px;
+      }
+      .oracle-widget::before{
+        right:12px;
+        top:8px;
+        font-size:4rem;
+      }
+      .pricing-ritual{
+        padding:24px 18px;
+        border-radius:28px;
+      }
+      .pricing-ritual-head{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+      }
+      .pricing-item{
+        gap:12px;
+        padding:16px 0;
+      }
+      .pricing-note{
+        max-width:none;
+      }
       .form-row{grid-template-columns:1fr}
-      .float-cta{right:14px;left:14px;bottom:14px}
+      .float-cta{
+        right:14px;left:14px;bottom:14px;
+        min-height:52px;
+      }
       .footer-inner{align-items:flex-start}
     }
   </style>
@@ -660,17 +886,20 @@
     </div>
 
     <div class="container hero-shell">
-      <p class="hero-tag">✦ 玄 門 清 修 ・ 科 儀 濟 世 ✦</p>
-      <h1 class="hero-title">隨緣堂</h1>
-      <p class="hero-subtitle">守 中 ・ 養 氣 ・ 解 厄 ・ 護 宅</p>
-      <p class="hero-desc">
-        不以喧嘩示神異。以清、定、正，行有緣之事。
-      </p>
-      <div class="hero-btns">
-        <a class="btn-primary" href="#contact">進入諮詢</a>
-        <a class="btn-outline" href="#articles">先讀文章</a>
+      <div class="hero-gate">
+        <p class="hero-tag">✦ 玄 門 清 修 ・ 科 儀 濟 世 ✦</p>
+        <p class="hero-mantra">Enter in stillness</p>
+        <h1 class="hero-title">隨緣堂</h1>
+        <p class="hero-subtitle">守 中 ・ 養 氣 ・ 解 厄 ・ 護 宅</p>
+        <p class="hero-desc">
+          不以喧嘩示神異。以清、定、正，行有緣之事。
+        </p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="#contact">進入諮詢</a>
+          <a class="btn-outline" href="#articles">先讀文章</a>
+        </div>
+        <p class="hero-quiet">星幕之下，先定心，再問事。</p>
       </div>
-      <p class="hero-quiet">星幕之下，先定心，再問事。</p>
       <div class="hero-scroll">↓ 向 下 啟 門 ↓</div>
     </div>
   </section>
@@ -756,8 +985,13 @@
       </div>
       <div class="pricing-stage">
         <div class="pricing-ritual reveal">
-          <h3>常見科儀</h3>
-          <p>以下為公開參考價。實際仍依個案、距離、時程與法事內容調整。</p>
+          <div class="pricing-ritual-head">
+            <div>
+              <h3>常見科儀</h3>
+              <p>以下為公開參考價。實際仍依個案、距離、時程與法事內容調整。</p>
+            </div>
+            <div class="pricing-ritual-mark">Ritual menu</div>
+          </div>
           <div class="pricing-list">
             <div class="pricing-item">
               <div>
