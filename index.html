@@ -3,804 +3,1907 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>隨緣堂｜道法修持、玄學整理與線上諮詢</title>
-  <meta name="description" content="隨緣堂整理道法、養氣、清靜修持、家宅與護身文章，並提供清楚的線上諮詢入口，讓來訪者能先閱讀、再判斷是否需要進一步交流。" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta property="og:title" content="隨緣堂｜道法修持、玄學整理與線上諮詢" />
-  <meta property="og:description" content="以清楚的導覽、文章入口與聯絡方式，整理隨緣堂的道法修持內容與諮詢資訊。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="隨緣堂" />
-  <meta property="og:locale" content="zh_TW" />
-  <meta property="og:url" content="https://eason1388.github.io/sov8/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://eason1388.github.io/sov8/" />
+  <title>隨緣堂｜道家玄學・修行・濟世</title>
+  <meta name="description" content="隨緣堂：正統道家玄學，融合修行養氣、祭改收驚、冥陽調和、太乙金華宗旨、陰符經義理與性命修煉，以理性玄學觀點廣渡有緣人。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "隨緣堂",
-        "url": "https://eason1388.github.io/sov8/"
-      },
-      {
-        "@type": "Organization",
-        "name": "隨緣堂",
-        "url": "https://eason1388.github.io/sov8/"
-      },
-      {
-        "@type": "ContactPage",
-        "name": "隨緣堂線上諮詢",
-        "url": "https://eason1388.github.io/sov8/#contact"
-      }
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#07111f;
-      --bg-soft:#0d1b31;
-      --panel:#10223f;
-      --panel-soft:rgba(16,34,63,.72);
-      --line:rgba(111,188,255,.18);
-      --gold:#d4b05f;
-      --gold-soft:#f3ddb0;
-      --teal:#6ad8d2;
-      --teal-deep:#2d8a87;
-      --text:#edf3ff;
-      --muted:#adc0de;
-      --muted-2:#7f95b7;
-      --shadow:0 22px 70px rgba(0,0,0,.28);
-      --radius-xl:28px;
-      --radius-lg:20px;
-      --radius-md:14px;
-      --max:1180px;
+    :root {
+      --bg-deepest:#04070f; --bg-dark:#080d1a; --bg-mid:#0d1528;
+      --bg-card:#111c35; --bg-card2:#152040;
+      --blue-bright:#2a6dd9; --blue-mid:#1e4fa0; --blue-dim:#162f6b;
+      --teal:#3acad4; --teal-dim:#1e7a82;
+      --gold:#c8a84b; --gold-light:#e5c97a; --gold-dim:#7a6228;
+      --white:#eef0f8; --white-dim:#9aa3be; --white-faint:#4a5270;
+      --border:rgba(42,109,217,.25); --border-gold:rgba(200,168,75,.35);
+      --glow-blue:0 0 28px rgba(42,109,217,.5);
+      --glow-teal:0 0 22px rgba(58,202,212,.45);
+      --glow-gold:0 0 22px rgba(200,168,75,.45);
+      /* ── font sizes ── */
+      --fs-body: 1.05rem;
+      --fs-small: 0.92rem;
+      --fs-xs: 0.82rem;
     }
-
-    *{box-sizing:border-box}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
-      margin:0;
-      font-family:"Noto Sans TC",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top, rgba(55,105,192,.28), transparent 38%),
-        radial-gradient(circle at 80% 20%, rgba(212,176,95,.14), transparent 24%),
-        linear-gradient(180deg, #09111f 0%, #060b14 100%);
-      line-height:1.8;
+      font-family:'Noto Sans TC',sans-serif;
+      font-size:var(--fs-body);
+      background:var(--bg-deepest);
+      color:var(--white);
+      line-height:1.9;
+      overflow-x:hidden;
     }
+    a{color:var(--teal);text-decoration:none;transition:color .3s}
+    a:hover{color:var(--gold-light)}
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{width:min(var(--max), calc(100% - 32px));margin:0 auto}
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:8px 14px;
-      border:1px solid rgba(212,176,95,.24);
-      border-radius:999px;
-      color:var(--gold-soft);
-      font-size:.86rem;
-      letter-spacing:.12em;
-      background:rgba(212,176,95,.06);
-    }
+    /* ── canvas layers ── */
+    #starfield,#particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+    #starfield{opacity:.5}
+    #particles{opacity:.7}
+
+    /* ── utility ── */
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+    .section-pad{padding:88px 0}
+    .text-center{text-align:center}
+
+    .ornament{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+    .ornament.center{justify-content:center}
+    .ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent)}
+    .ornament-sym{color:var(--gold);font-size:1.15rem;letter-spacing:3px;white-space:nowrap}
+
     .section-title{
-      margin:0 0 14px;
-      font-family:"Noto Serif TC",serif;
-      font-size:clamp(2rem, 4vw, 3.2rem);
-      line-height:1.2;
-      letter-spacing:.04em;
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.9rem,4.5vw,2.8rem);
+      font-weight:700;color:var(--white);
+      margin-bottom:14px;letter-spacing:.08em;
     }
-    .section-copy{
-      margin:0;
-      max-width:760px;
-      color:var(--muted);
-      font-size:1.02rem;
+    .section-sub{
+      color:var(--white-dim);
+      font-size:clamp(1rem,2.2vw,1.1rem);
+      max-width:620px;margin:0 auto 52px;
+      letter-spacing:.04em;line-height:2;
     }
-    .grid{display:grid;gap:22px}
-    .card{
-      background:linear-gradient(180deg, rgba(17,35,64,.92), rgba(9,18,35,.98));
-      border:1px solid var(--line);
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow);
+    .tag{
+      display:inline-block;padding:4px 14px;
+      border:1px solid var(--border-gold);border-radius:20px;
+      font-size:var(--fs-xs);color:var(--gold);
+      letter-spacing:.12em;margin-bottom:14px;
+    }
+    .glow-divider{
+      width:90px;height:2px;margin:0 auto 20px;
+      background:linear-gradient(90deg,transparent,var(--teal),transparent);
+      box-shadow:var(--glow-teal);
     }
 
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(18px);
-      background:rgba(5,10,19,.82);
-      border-bottom:1px solid rgba(111,188,255,.1);
+    /* ══════════════════════════════
+       FLOATING SYMBOLS LAYER
+    ══════════════════════════════ */
+    .sym-layer{
+      position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;
     }
-    .site-nav{
-      min-height:74px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      padding:14px 0;
+    .sym{
+      position:absolute;
+      font-size:clamp(1.2rem,3vw,2.2rem);
+      opacity:0;
+      animation:sym-float 18s ease-in-out infinite;
+      color:var(--gold);
+      text-shadow:0 0 14px rgba(200,168,75,.6);
+      user-select:none;
     }
-    .brand{
-      font-family:"Noto Serif TC",serif;
-      font-weight:900;
-      font-size:1.75rem;
-      letter-spacing:.12em;
+    @keyframes sym-float{
+      0%  {opacity:0;transform:translateY(0) rotate(0deg)}
+      10% {opacity:.18}
+      50% {opacity:.22;transform:translateY(-60px) rotate(180deg)}
+      90% {opacity:.18}
+      100%{opacity:0;transform:translateY(-130px) rotate(360deg)}
+    }
+
+    /* ══════════════════════════════
+       NAVBAR
+    ══════════════════════════════ */
+    #navbar{
+      position:fixed;top:0;left:0;right:0;z-index:999;
+      padding:0 20px;
+      background:rgba(4,7,15,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border);
+      transition:background .4s;
+    }
+    .nav-inner{
+      max-width:1140px;margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      height:66px;
+    }
+    .nav-logo{
+      font-family:'Noto Serif TC',serif;
+      font-size:1.65rem;font-weight:900;
+      color:var(--gold);letter-spacing:.14em;
+      text-shadow:var(--glow-gold);
+    }
+    .nav-logo span{
+      color:var(--teal);font-size:.82rem;display:block;
+      letter-spacing:.32em;font-weight:300;margin-top:-5px;
+    }
+    .nav-links{display:flex;gap:26px;list-style:none}
+    .nav-links a{
+      color:var(--white-dim);
+      font-size:1rem;
+      letter-spacing:.06em;transition:color .3s;
+    }
+    .nav-links a:hover{color:var(--gold-light)}
+    .nav-cta{
+      padding:9px 22px;
+      border:1px solid var(--teal-dim);border-radius:4px;
+      color:var(--teal)!important;
+      font-size:.92rem!important;letter-spacing:.1em;
+      transition:all .3s!important;
+    }
+    .nav-cta:hover{background:var(--teal-dim);color:var(--white)!important;box-shadow:var(--glow-teal)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+    .nav-toggle span{width:26px;height:2px;background:var(--gold);border-radius:2px;transition:all .3s}
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    #hero{
+      min-height:100vh;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:120px 20px 90px;
+      position:relative;overflow:hidden;
+    }
+    .hero-bg{
+      position:absolute;inset:0;z-index:0;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% 50%,rgba(22,47,107,.6) 0%,transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%,rgba(58,202,212,.1) 0%,transparent 60%),
+        radial-gradient(ellipse 50% 50% at 80% 20%,rgba(200,168,75,.07) 0%,transparent 60%);
+    }
+
+    /* Animated bagua ring */
+    .bagua-wrap{
+      position:absolute;top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      width:min(650px,92vw);height:min(650px,92vw);
+      z-index:1;pointer-events:none;
+    }
+    .ring{
+      position:absolute;inset:0;border-radius:50%;
+    }
+    .ring-1{border:1px solid rgba(42,109,217,.18);animation:spin 70s linear infinite}
+    .ring-2{inset:30px;border:1px solid rgba(200,168,75,.12);animation:spin 48s linear infinite reverse}
+    .ring-3{inset:60px;border:1px solid rgba(58,202,212,.1);animation:spin 30s linear infinite}
+    .ring-4{inset:90px;border:1px solid rgba(42,109,217,.08);animation:spin 90s linear infinite reverse}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* Bagua text symbols on ring */
+    .bagua-sym{
+      position:absolute;
+      font-size:clamp(1.1rem,2.5vw,1.6rem);
+      color:var(--gold);
+      text-shadow:0 0 12px rgba(200,168,75,.7);
+      animation:pulse-sym 3s ease-in-out infinite alternate;
+    }
+    @keyframes pulse-sym{
+      0%{text-shadow:0 0 8px rgba(200,168,75,.5)}
+      100%{text-shadow:0 0 22px rgba(200,168,75,.95),0 0 40px rgba(200,168,75,.3)}
+    }
+
+    /* Taiji centre */
+    .taiji-centre{
+      position:absolute;top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      font-size:clamp(3.5rem,8vw,6rem);
+      animation:taiji-spin 20s linear infinite;
+      opacity:.18;
+      z-index:1;
+      filter:drop-shadow(0 0 16px var(--gold));
+    }
+    @keyframes taiji-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+    /* Energy lines */
+    .energy-line{
+      position:absolute;top:50%;left:50%;
+      width:0;height:1px;
+      background:linear-gradient(90deg,transparent,var(--teal),transparent);
+      transform-origin:left center;
+      animation:energy-pulse 4s ease-in-out infinite;
+      opacity:.3;
+    }
+    @keyframes energy-pulse{
+      0%,100%{width:0;opacity:0}
+      50%{width:min(280px,40vw);opacity:.4}
+    }
+
+    .hero-tag{
+      color:var(--teal);
+      font-size:clamp(.88rem,2vw,1rem);
+      letter-spacing:.42em;margin-bottom:22px;
+      opacity:.9;position:relative;z-index:2;
+    }
+    .hero-title{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(4rem,14vw,8.5rem);
+      font-weight:900;color:var(--white);
+      letter-spacing:.18em;line-height:1.1;
+      margin-bottom:12px;
+      text-shadow:0 0 60px rgba(42,109,217,.7),0 0 120px rgba(42,109,217,.3);
+      position:relative;z-index:2;
+    }
+    .hero-subtitle{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1rem,2.8vw,1.45rem);
+      color:var(--gold);letter-spacing:.38em;
+      margin-bottom:30px;font-weight:300;
+      position:relative;z-index:2;
+    }
+    .hero-desc{
+      color:var(--white-dim);
+      font-size:clamp(1rem,2.2vw,1.15rem);
+      max-width:500px;line-height:2.1;
+      margin:0 auto 44px;letter-spacing:.05em;
+      position:relative;z-index:2;
+    }
+    .hero-btns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+    .btn-primary{
+      padding:15px 36px;
+      background:linear-gradient(135deg,var(--blue-mid),var(--blue-bright));
+      border:none;border-radius:4px;
+      color:var(--white);font-size:1rem;font-weight:600;
+      letter-spacing:.14em;cursor:pointer;transition:all .3s;
+      box-shadow:var(--glow-blue);
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(42,109,217,.7)}
+    .btn-outline{
+      padding:14px 36px;background:transparent;
+      border:1px solid var(--border-gold);border-radius:4px;
+      color:var(--gold);font-size:1rem;letter-spacing:.14em;
+      cursor:pointer;transition:all .3s;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .btn-outline:hover{background:rgba(200,168,75,.1);box-shadow:var(--glow-gold)}
+    .hero-scroll{
+      position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+      display:flex;flex-direction:column;align-items:center;gap:8px;
+      color:var(--white-faint);font-size:.8rem;letter-spacing:.2em;
+      animation:bounce 2.5s ease-in-out infinite;z-index:2;
+    }
+    .scroll-arrow{width:1px;height:40px;background:linear-gradient(to bottom,var(--teal-dim),transparent)}
+    @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+
+    /* ══════════════════════════════
+       QUOTE BAR
+    ══════════════════════════════ */
+    .quote-bar{
+      background:linear-gradient(90deg,var(--bg-mid),var(--bg-card),var(--bg-mid));
+      border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+      padding:26px 20px;text-align:center;position:relative;z-index:2;
+      overflow:hidden;
+    }
+    .quote-bar::before{
+      content:'';position:absolute;top:0;left:-100%;
+      width:60%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(200,168,75,.05),transparent);
+      animation:shimmer 6s ease-in-out infinite;
+    }
+    @keyframes shimmer{to{left:200%}}
+    .quote-bar p{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1rem,2.5vw,1.25rem);
+      color:var(--gold);letter-spacing:.2em;font-weight:300;
+    }
+    .quote-bar span{color:var(--white-dim);font-size:var(--fs-small)}
+
+    /* ══════════════════════════════
+       CHANNELS
+    ══════════════════════════════ */
+    #channels{background:var(--bg-dark)}
+    .channels-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:26px;
+    }
+    .channel-card{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:10px;padding:38px 30px;
+      transition:all .4s;position:relative;overflow:hidden;
+    }
+    .channel-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    }
+    .channel-card.blue::before{background:linear-gradient(90deg,transparent,var(--blue-bright),transparent)}
+    .channel-card.teal::before{background:linear-gradient(90deg,transparent,var(--teal),transparent)}
+    .channel-card.gold::before{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    /* Animated glow on hover */
+    .channel-card::after{
+      content:'';position:absolute;inset:0;border-radius:10px;
+      opacity:0;transition:opacity .4s;pointer-events:none;
+    }
+    .channel-card.blue::after{box-shadow:inset 0 0 40px rgba(42,109,217,.08)}
+    .channel-card.teal::after{box-shadow:inset 0 0 40px rgba(58,202,212,.08)}
+    .channel-card.gold::after{box-shadow:inset 0 0 40px rgba(200,168,75,.08)}
+    .channel-card:hover{transform:translateY(-5px)}
+    .channel-card.blue:hover{border-color:rgba(42,109,217,.55);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-blue)}
+    .channel-card.teal:hover{border-color:rgba(58,202,212,.5);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-teal)}
+    .channel-card.gold:hover{border-color:rgba(200,168,75,.5);box-shadow:0 20px 60px rgba(0,0,0,.5),var(--glow-gold)}
+    .channel-icon{font-size:3rem;margin-bottom:18px;display:block;line-height:1}
+    .channel-title{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.2rem,2.8vw,1.45rem);
+      font-weight:700;color:var(--white);
+      margin-bottom:6px;letter-spacing:.09em;
+    }
+    .channel-en{font-size:var(--fs-xs);color:var(--teal);letter-spacing:.28em;margin-bottom:16px}
+    .channel-desc{color:var(--white-dim);font-size:clamp(.95rem,2vw,1rem);line-height:2;margin-bottom:22px}
+    .channel-list{list-style:none}
+    .channel-list li{
+      color:var(--white-faint);font-size:clamp(.9rem,1.8vw,.98rem);
+      padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);
+      display:flex;align-items:center;gap:10px;line-height:1.6;
+    }
+    .channel-list li::before{content:'✦';color:var(--gold-dim);font-size:.65rem;flex-shrink:0}
+
+    /* ══════════════════════════════
+       ANIMATED TRIGRAMS ROW
+    ══════════════════════════════ */
+    .trigrams-row{
+      display:flex;justify-content:center;align-items:center;
+      gap:clamp(14px,4vw,40px);
+      padding:36px 20px;
+      background:var(--bg-mid);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      position:relative;z-index:2;overflow:hidden;
+    }
+    .trigrams-row::before{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(90deg,var(--bg-mid),transparent 20%,transparent 80%,var(--bg-mid));
+      z-index:1;pointer-events:none;
+    }
+    .trigram-item{
+      display:flex;flex-direction:column;align-items:center;gap:5px;
+      animation:trig-glow 4s ease-in-out infinite alternate;
+    }
+    .trigram-item:nth-child(2){animation-delay:.5s}
+    .trigram-item:nth-child(3){animation-delay:1s}
+    .trigram-item:nth-child(4){animation-delay:1.5s}
+    .trigram-item:nth-child(5){animation-delay:2s}
+    .trigram-item:nth-child(6){animation-delay:2.5s}
+    .trigram-item:nth-child(7){animation-delay:3s}
+    .trigram-item:nth-child(8){animation-delay:3.5s}
+    @keyframes trig-glow{
+      0%{opacity:.45;transform:scale(1)}
+      100%{opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 8px var(--gold))}
+    }
+    .trigram-sym{
+      font-size:clamp(1.6rem,4vw,2.6rem);
       color:var(--gold);
     }
-    .brand small{
-      display:block;
-      margin-top:-4px;
-      font-family:"Noto Sans TC",sans-serif;
-      font-size:.72rem;
-      letter-spacing:.28em;
-      color:var(--teal);
-    }
-    .nav-links{
-      display:flex;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:10px 18px;
-    }
-    .nav-links a{
-      color:var(--muted);
-      font-size:.96rem;
-    }
-    .nav-links a:hover{color:var(--text)}
-    .nav-links .nav-cta{
-      padding:11px 16px;
-      border:1px solid rgba(106,216,210,.34);
-      border-radius:999px;
-      color:var(--teal);
-      background:rgba(106,216,210,.07);
+    .trigram-name{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(.7rem,1.5vw,.88rem);
+      color:var(--white-dim);letter-spacing:.1em;
     }
 
-    .hero{
-      padding:80px 0 38px;
+    /* ══════════════════════════════
+       ARTICLES
+    ══════════════════════════════ */
+    #articles{background:var(--bg-deepest)}
+    .article-full{
+      background:var(--bg-mid);border:1px solid var(--border);
+      border-radius:12px;padding:clamp(28px,5vw,56px);
+      margin-bottom:40px;position:relative;overflow:hidden;
     }
-    .hero-grid{
+    /* Chi energy corner decoration */
+    .article-full::before{
+      content:'道';
+      position:absolute;top:-10px;right:20px;
+      font-family:'Noto Serif TC',serif;
+      font-size:8rem;color:rgba(200,168,75,.04);
+      line-height:1;pointer-events:none;
+      font-weight:900;
+    }
+    .article-full h2{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.45rem,3.5vw,2.1rem);
+      font-weight:900;color:var(--white);
+      letter-spacing:.06em;margin-bottom:10px;
+    }
+    .article-meta{color:var(--teal);font-size:var(--fs-small);letter-spacing:.15em;margin-bottom:30px}
+    .article-full h3{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.1rem,2.5vw,1.25rem);
+      color:var(--gold);margin:30px 0 12px;letter-spacing:.07em;
+    }
+    .article-full p{
+      color:var(--white-dim);
+      font-size:clamp(1rem,2vw,1.08rem);
+      line-height:2.15;margin-bottom:16px;
+    }
+    .highlight{
+      background:rgba(42,109,217,.12);
+      border-left:3px solid var(--blue-bright);
+      padding:18px 22px;border-radius:0 6px 6px 0;
+      margin:22px 0;
+    }
+    .highlight p{color:var(--white);margin:0;font-style:italic;font-size:clamp(1rem,2vw,1.08rem)}
+    .gold-quote{
+      background:rgba(200,168,75,.06);
+      border:1px solid var(--border-gold);
+      border-radius:6px;padding:22px 28px;
+      margin:26px 0;text-align:center;
+      position:relative;overflow:hidden;
+    }
+    .gold-quote::before{
+      content:'"';
+      position:absolute;top:-10px;left:12px;
+      font-size:6rem;color:rgba(200,168,75,.08);
+      font-family:serif;line-height:1;
+    }
+    .gold-quote p{
+      font-family:'Noto Serif TC',serif;
+      color:var(--gold);
+      font-size:clamp(1.05rem,2.5vw,1.25rem);
+      letter-spacing:.12em;margin:0;
+      text-shadow:var(--glow-gold);
+    }
+
+    /* ══════════════════════════════
+       FULU
+    ══════════════════════════════ */
+    #fulu{background:var(--bg-dark)}
+    .fulu-intro{
+      background:var(--bg-card);border:1px solid var(--border-gold);
+      border-radius:10px;padding:38px 44px;margin-bottom:52px;text-align:center;
+    }
+    .fulu-intro p{
+      color:var(--white-dim);
+      font-size:clamp(1rem,2.2vw,1.1rem);
+      line-height:2.1;max-width:720px;margin:0 auto;
+    }
+    .fulu-grid{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:26px;
-      align-items:stretch;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:22px;
     }
-    .hero-copy,
-    .hero-panel{
-      padding:34px;
+    .fulu-card{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:10px;padding:30px 26px;
+      transition:all .35s;position:relative;overflow:hidden;
     }
-    .hero-copy{
+    /* Animated shimmer on hover */
+    .fulu-card::before{
+      content:'';position:absolute;top:0;left:-100%;
+      width:50%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(200,168,75,.06),transparent);
+      transition:left .5s;
+    }
+    .fulu-card:hover::before{left:150%}
+    .fulu-card:hover{
+      border-color:var(--border-gold);
+      box-shadow:var(--glow-gold);
+      transform:translateY(-4px);
+    }
+    .fulu-icon{font-size:2.5rem;margin-bottom:14px}
+    .fulu-name{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.05rem,2.5vw,1.2rem);
+      font-weight:700;color:var(--gold);
+      margin-bottom:5px;letter-spacing:.09em;
+    }
+    .fulu-en{font-size:var(--fs-xs);color:var(--teal);letter-spacing:.22em;margin-bottom:14px}
+    .fulu-desc{color:var(--white-dim);font-size:clamp(.95rem,2vw,1.02rem);line-height:2}
+    .fulu-attr{
+      display:inline-block;margin-top:14px;padding:4px 12px;
+      border-radius:14px;font-size:var(--fs-xs);letter-spacing:.1em;
+      border:1px solid rgba(200,168,75,.25);color:var(--gold-dim);
+    }
+
+    /* Principles */
+    .fulu-principles{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+      gap:22px;margin-top:52px;
+    }
+    .principle-box{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border);border-radius:10px;padding:30px;
+    }
+    .principle-box h4{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.05rem,2.5vw,1.18rem);
+      color:var(--white);margin-bottom:14px;letter-spacing:.09em;
+    }
+    .principle-box p{color:var(--white-dim);font-size:clamp(.95rem,2vw,1.02rem);line-height:2}
+    .warning-box{
+      background:rgba(156,42,42,.08);border:1px solid rgba(156,42,42,.3);
+      border-radius:10px;padding:24px 32px;margin-top:34px;text-align:center;
+    }
+    .warning-box p{
+      font-family:'Noto Serif TC',serif;
+      color:#e08080;
+      font-size:clamp(1rem,2.2vw,1.1rem);
+      line-height:2.1;letter-spacing:.06em;
+    }
+
+    /* ══════════════════════════════
+       CHI FLOW ANIMATION SECTION
+    ══════════════════════════════ */
+    .chi-flow-section{
+      background:var(--bg-deepest);
+      padding:70px 20px;position:relative;overflow:hidden;
+      text-align:center;z-index:2;
+    }
+    .chi-canvas-wrap{
+      position:relative;width:min(400px,90vw);height:min(400px,90vw);
+      margin:30px auto 0;
+    }
+    #chiCanvas{width:100%;height:100%}
+    .chi-label{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.1rem,2.8vw,1.35rem);
+      color:var(--white-dim);letter-spacing:.1em;margin-top:20px;
+    }
+
+    /* ══════════════════════════════
+       ORACLE
+    ══════════════════════════════ */
+    #oracle{background:var(--bg-dark)}
+    .oracle-widget{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border-gold);border-radius:14px;
+      padding:clamp(36px,6vw,60px) clamp(28px,5vw,52px);
+      text-align:center;max-width:720px;margin:0 auto;
+      position:relative;overflow:hidden;
+    }
+    .oracle-widget::before{
+      content:'☯';position:absolute;top:50%;left:50%;
+      transform:translate(-50%,-50%);
+      font-size:380px;opacity:.025;color:var(--gold);
+      pointer-events:none;font-family:serif;
+      animation:taiji-spin 30s linear infinite;
+    }
+    .oracle-date{font-size:var(--fs-small);color:var(--teal);letter-spacing:.22em;margin-bottom:22px}
+    .oracle-text{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.2rem,3.5vw,1.75rem);
+      color:var(--gold-light);letter-spacing:.13em;line-height:2;
+      margin-bottom:12px;text-shadow:var(--glow-gold);
+      min-height:90px;display:flex;align-items:center;justify-content:center;
+    }
+    .oracle-source{
+      font-size:var(--fs-small);color:var(--white-faint);
+      letter-spacing:.12em;margin-bottom:30px;
+    }
+    .btn-oracle{
+      padding:12px 32px;
+      background:linear-gradient(135deg,var(--gold-dim),var(--gold));
+      border:none;border-radius:4px;color:#0a0e1a;
+      font-size:1rem;font-weight:700;letter-spacing:.14em;
+      cursor:pointer;transition:all .3s;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .btn-oracle:hover{box-shadow:var(--glow-gold);transform:translateY(-2px)}
+
+    /* ══════════════════════════════
+       BALANCE
+    ══════════════════════════════ */
+    #balance{background:var(--bg-deepest)}
+    .balance-grid{
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:28px;margin-bottom:36px;
+    }
+    .balance-col{background:var(--bg-card);border-radius:10px;padding:30px}
+    .balance-col h4{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.1rem,2.8vw,1.25rem);
+      margin-bottom:18px;letter-spacing:.1em;
+    }
+    .balance-col.yang h4{color:#e8a040}
+    .balance-col.yin h4{color:var(--teal)}
+    .check-item{
+      display:flex;align-items:flex-start;gap:12px;
+      padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04);
+      cursor:pointer;
+    }
+    .check-box{
+      width:20px;height:20px;flex-shrink:0;
+      border:1px solid var(--white-faint);border-radius:3px;
+      display:flex;align-items:center;justify-content:center;
+      transition:all .2s;
+    }
+    .check-box.checked{background:var(--teal);border-color:var(--teal)}
+    .check-box.checked::after{content:'✓';font-size:.8rem;color:white}
+    .check-label{color:var(--white-dim);font-size:clamp(.95rem,2vw,1.02rem);line-height:1.7}
+    .balance-result{background:var(--bg-card2);border-radius:10px;padding:28px}
+    .balance-bar-wrap{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+    .balance-bar{flex:1;height:10px;background:rgba(255,255,255,.06);border-radius:5px;overflow:hidden}
+    .balance-fill{height:100%;border-radius:5px;transition:width .6s ease}
+    .fill-yang{background:linear-gradient(90deg,#e8a040,#f5c840)}
+    .fill-yin{background:linear-gradient(90deg,var(--teal-dim),var(--teal))}
+    .balance-label{font-size:var(--fs-small);color:var(--white-faint);width:30px}
+    .balance-msg{
+      font-family:'Noto Serif TC',serif;
+      color:var(--gold);
+      font-size:clamp(1.05rem,2.5vw,1.2rem);
+      letter-spacing:.07em;text-align:center;
+    }
+    .balance-service{font-size:var(--fs-small);color:var(--white-faint);margin-top:10px;text-align:center}
+    .balance-service a{color:var(--teal)}
+
+
+    /* ══════════════════════════════
+       PRICING
+    ══════════════════════════════ */
+    #pricing{background:var(--bg-deepest)}
+    .pricing-intro{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border-gold);
+      border-radius:12px;padding:28px 30px;margin-bottom:28px;
+      color:var(--white-dim);font-size:clamp(.98rem,2vw,1.06rem);line-height:2;
+      text-align:center;
+    }
+    .pricing-board{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:14px;overflow:hidden;
+      box-shadow:0 18px 48px rgba(0,0,0,.28);
+    }
+    .pricing-scroll{overflow-x:auto}
+    .pricing-table{width:100%;border-collapse:collapse;min-width:980px}
+    .pricing-table thead th{
+      background:linear-gradient(135deg,var(--blue-dim),var(--bg-card2));
+      color:var(--gold-light);font-family:'Noto Serif TC',serif;
+      font-size:1rem;letter-spacing:.08em;padding:18px 16px;
+      border-bottom:1px solid var(--border-gold);text-align:left;
+    }
+    .pricing-table tbody td{
+      padding:16px 16px;vertical-align:top;
+      border-bottom:1px solid rgba(255,255,255,.05);
+      color:var(--white-dim);font-size:.98rem;line-height:1.9;
+    }
+    .pricing-table tbody tr:hover{background:rgba(58,202,212,.03)}
+    .pricing-group{
+      color:var(--gold);font-family:'Noto Serif TC',serif;font-weight:700;
+      letter-spacing:.08em;min-width:170px;
+    }
+    .pricing-service{color:var(--white);font-weight:700}
+    .pricing-price{color:var(--teal);font-weight:700;white-space:nowrap}
+    .pricing-note{color:var(--white-faint)}
+    .pricing-foot{
+      padding:18px 24px;background:rgba(200,168,75,.05);
+      border-top:1px solid var(--border-gold);color:var(--white-faint);
+      font-size:var(--fs-small);line-height:1.9;
+    }
+    @media(max-width:720px){
+      .pricing-intro{padding:22px 18px}
+      .pricing-foot{padding:16px 18px}
+    }
+
+    /* ══════════════════════════════
+       CONSULT
+    ══════════════════════════════ */
+    #consult{background:var(--bg-dark)}
+    .consult-wrap{
+      display:grid;grid-template-columns:1fr 1.4fr;
+      gap:52px;align-items:start;
+    }
+    .consult-info h3{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.3rem,3vw,1.6rem);
+      font-weight:700;color:var(--white);
+      margin-bottom:20px;letter-spacing:.07em;
+    }
+    .consult-info p{color:var(--white-dim);font-size:clamp(.95rem,2vw,1.05rem);line-height:2.1;margin-bottom:30px}
+    .consult-steps{list-style:none}
+    .consult-steps li{
+      display:flex;align-items:flex-start;gap:15px;
+      padding:13px 0;border-bottom:1px solid rgba(255,255,255,.05);
+      color:var(--white-dim);
+      font-size:clamp(.95rem,2vw,1.02rem);
+    }
+    .step-num{
+      width:28px;height:28px;flex-shrink:0;
+      background:var(--blue-dim);border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:var(--fs-small);color:var(--teal);font-weight:700;
+    }
+    .form-card{
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:12px;padding:clamp(28px,5vw,44px);
+    }
+    .form-group{margin-bottom:22px}
+    .form-label{
+      display:block;
+      font-size:var(--fs-small);color:var(--white-dim);
+      letter-spacing:.1em;margin-bottom:8px;
+    }
+    .form-input,.form-select,.form-textarea{
+      width:100%;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);border-radius:5px;
+      padding:13px 16px;color:var(--white);
+      font-size:1rem;
+      font-family:'Noto Sans TC',sans-serif;
+      transition:border .3s;outline:none;
+    }
+    .form-input:focus,.form-select:focus,.form-textarea:focus{
+      border-color:var(--teal-dim);background:rgba(58,202,212,.04);
+    }
+    .form-select{appearance:none;cursor:pointer}
+    .form-select option{background:var(--bg-card)}
+    .form-textarea{resize:vertical;min-height:120px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .form-submit{
+      width:100%;padding:15px;
+      background:linear-gradient(135deg,var(--blue-mid),var(--blue-bright));
+      border:none;border-radius:5px;
+      color:var(--white);font-size:1.05rem;font-weight:600;
+      letter-spacing:.15em;cursor:pointer;transition:all .3s;
+      font-family:'Noto Sans TC',sans-serif;
+    }
+    .form-submit:hover{box-shadow:var(--glow-blue);transform:translateY(-2px)}
+    .form-disclaimer{font-size:var(--fs-xs);color:var(--white-faint);text-align:center;margin-top:14px;line-height:1.8}
+    .form-success{display:none;text-align:center;padding:22px;color:var(--teal);font-family:'Noto Serif TC',serif;font-size:1.1rem;letter-spacing:.1em}
+    .disclaimer{
+      background:linear-gradient(90deg,rgba(42,109,217,.07),rgba(58,202,212,.05),rgba(42,109,217,.07));
+      border:1px solid var(--border);border-radius:10px;
+      padding:24px 32px;margin-top:56px;text-align:center;
+    }
+    .disclaimer p{color:var(--white-faint);font-size:var(--fs-small);line-height:2}
+    .disclaimer strong{color:var(--gold-dim)}
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer{
+      background:var(--bg-deepest);
+      border-top:1px solid var(--border);
+      padding:56px 20px 30px;
+      position:relative;z-index:2;
+    }
+    .footer-inner{max-width:1140px;margin:0 auto}
+    .footer-top{
+      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:44px;margin-bottom:44px;
+    }
+    .footer-brand h2{
+      font-family:'Noto Serif TC',serif;
+      font-size:1.8rem;font-weight:900;
+      color:var(--gold);letter-spacing:.15em;
+      text-shadow:var(--glow-gold);margin-bottom:14px;
+    }
+    .footer-brand p{color:var(--white-faint);font-size:var(--fs-small);line-height:2;max-width:250px}
+    .footer-col h4{
+      font-size:var(--fs-small);color:var(--white-dim);
+      letter-spacing:.22em;margin-bottom:18px;text-transform:uppercase;
+    }
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:10px}
+    .footer-col a{color:var(--white-faint);font-size:var(--fs-small);transition:color .3s}
+    .footer-col a:hover{color:var(--teal)}
+    .footer-contact{color:var(--white-faint);font-size:var(--fs-small);line-height:2.1}
+    .footer-contact a{color:var(--teal)}
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.04);padding-top:26px;
+      display:flex;justify-content:space-between;align-items:center;
+      flex-wrap:wrap;gap:14px;
+    }
+    .footer-copy{color:var(--white-faint);font-size:var(--fs-xs);letter-spacing:.07em}
+    .footer-mantra{
+      font-family:'Noto Serif TC',serif;
+      color:var(--gold-dim);font-size:var(--fs-small);letter-spacing:.2em;
+    }
+
+    /* ══════════════════════════════
+       FAB
+    ══════════════════════════════ */
+    .fab-consult{
+      position:fixed;bottom:28px;right:24px;z-index:900;
+      padding:14px 24px;
+      background:linear-gradient(135deg,var(--blue-mid),var(--blue-bright));
+      border-radius:50px;border:none;
+      color:var(--white);font-size:1rem;font-weight:600;
+      letter-spacing:.1em;cursor:pointer;
+      box-shadow:0 4px 24px rgba(0,0,0,.5),var(--glow-blue);
+      transition:all .3s;font-family:'Noto Sans TC',sans-serif;
+    }
+    .fab-consult:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 40px rgba(42,109,217,.65)}
+
+    /* ══════════════════════════════
+       SCROLL REVEAL
+    ══════════════════════════════ */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media(max-width:860px){
+      .nav-links{
+        display:none;flex-direction:column;
+        position:absolute;top:66px;left:0;right:0;
+        background:rgba(4,7,15,.97);padding:22px 20px;
+        gap:18px;border-bottom:1px solid var(--border);
+      }
+      .nav-links.open{display:flex}
+      .nav-toggle{display:flex}
+      .consult-wrap{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr 1fr}
+      .form-row{grid-template-columns:1fr}
+      .balance-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column;text-align:center}
+      .hero-title{letter-spacing:.12em}
+      .trigrams-row{gap:10px}
+      .trigram-name{display:none}
+      .section-pad{padding:60px 0}
+    }
+
+
+    /* ══════════════════════════════
+       TAIYI HOME TEASER
+    ══════════════════════════════ */
+    #taiyi-home{background:var(--bg-mid)}
+    .taiyi-home-card{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border-gold);
+      border-radius:14px;
+      padding:clamp(28px,5vw,46px);
+      box-shadow:0 20px 48px rgba(0,0,0,.28);
       position:relative;
       overflow:hidden;
     }
-    .hero-copy::before{
-      content:"";
+    .taiyi-home-card::before{
+      content:'金華';
       position:absolute;
-      inset:auto -12% 12% auto;
-      width:240px;
-      height:240px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(106,216,210,.18), transparent 65%);
-      pointer-events:none;
-    }
-    .hero h1{
-      margin:18px 0 18px;
-      font-family:"Noto Serif TC",serif;
-      font-size:clamp(2.8rem, 6vw, 5rem);
-      line-height:1.1;
-      letter-spacing:.06em;
-    }
-    .hero p{
-      margin:0 0 28px;
-      max-width:700px;
-      color:var(--muted);
-      font-size:1.05rem;
-    }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      min-height:50px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:700;
-      letter-spacing:.04em;
-      transition:transform .18s ease, border-color .18s ease, background .18s ease;
-    }
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{
-      background:linear-gradient(135deg, #4076df, #2655b6);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .btn-secondary{
-      background:rgba(255,255,255,.02);
-      border:1px solid rgba(212,176,95,.28);
-      color:var(--gold-soft);
-    }
-    .hero-points{
-      margin:24px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:12px 18px;
-    }
-    .hero-points li{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .hero-panel{
-      display:grid;
-      gap:16px;
-      background:
-        linear-gradient(180deg, rgba(17,35,64,.95), rgba(8,15,29,.98));
-    }
-    .hero-panel h2{
-      margin:0;
-      font-size:1.08rem;
-      color:var(--gold-soft);
+      right:18px;top:8px;
+      font-family:'Noto Serif TC',serif;
+      font-size:5rem;
+      color:rgba(200,168,75,.05);
+      font-weight:900;
       letter-spacing:.08em;
     }
-    .signal{
-      padding:16px 18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.06);
-    }
-    .signal strong{
-      display:block;
-      margin-bottom:6px;
-      font-size:1rem;
-      color:var(--text);
-    }
-    .signal p{
-      margin:0;
-      color:var(--muted);
-      font-size:.94rem;
-    }
-
-    section{padding:38px 0}
-    .stats{
-      grid-template-columns:repeat(4, minmax(0, 1fr));
-      margin-top:26px;
-    }
-    .stat{
-      padding:22px;
-      text-align:center;
-    }
-    .stat strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:2rem;
-      color:var(--gold-soft);
-      font-family:"Noto Serif TC",serif;
-    }
-    .stat span{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    .services{
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      margin-top:26px;
-    }
-    .service{
-      padding:24px;
-    }
-    .service h3{
-      margin:0 0 10px;
-      font-family:"Noto Serif TC",serif;
-      font-size:1.34rem;
-      color:var(--gold-soft);
-    }
-    .service p{
-      margin:0 0 18px;
-      color:var(--muted);
-    }
-    .service ul{
-      margin:0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-
-    .article-layout{
+    .taiyi-home-grid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:22px;
+      grid-template-columns:1.2fr .9fr;
+      gap:26px;
       align-items:start;
-      margin-top:26px;
     }
-    .article-feed{
-      padding:24px;
+    .taiyi-home-card h3{
+      font-family:'Noto Serif TC',serif;
+      color:var(--white);
+      font-size:clamp(1.25rem,3vw,1.7rem);
+      margin-bottom:14px;
+      letter-spacing:.08em;
     }
-    .feed-list{
-      display:grid;
-      gap:16px;
-      margin-top:18px;
+    .taiyi-home-card p{
+      color:var(--white-dim);
+      font-size:clamp(.98rem,2vw,1.05rem);
+      line-height:2.06;
+      margin-bottom:14px;
     }
-    .feed-item{
-      padding:18px;
-      border-radius:18px;
+    .taiyi-home-points{display:grid;gap:12px}
+    .taiyi-home-point{
       background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:16px 18px;
     }
-    .feed-item .meta{
-      color:var(--teal);
-      font-size:.88rem;
-      margin-bottom:8px;
-    }
-    .feed-item h3{
-      margin:0 0 8px;
-      font-size:1.14rem;
-      line-height:1.45;
-    }
-    .feed-item p{
-      margin:0;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .feed-item a{
-      color:var(--text);
-    }
-    .article-side{
-      display:grid;
-      gap:18px;
-    }
-    .mini-panel{
-      padding:24px;
-    }
-    .mini-panel h3{
-      margin:0 0 12px;
-      font-size:1.08rem;
-      color:var(--gold-soft);
-    }
-    .mini-panel p,
-    .mini-panel li{
-      margin:0;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .mini-panel ul{
-      margin:0;
-      padding-left:18px;
-      display:grid;
-      gap:10px;
-    }
+    .taiyi-home-point strong{color:var(--gold-light);display:block;margin-bottom:6px;letter-spacing:.08em}
+    .taiyi-home-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+    @media(max-width:860px){.taiyi-home-grid{grid-template-columns:1fr}}
 
-    .cta-band{
-      padding:32px;
-      margin-top:26px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      background:
-        linear-gradient(135deg, rgba(212,176,95,.12), rgba(64,118,223,.16));
-    }
-    .cta-band h2{
-      margin:0 0 8px;
-      font-family:"Noto Serif TC",serif;
-      font-size:1.9rem;
-    }
-    .cta-band p{
-      margin:0;
-      color:var(--muted);
-    }
 
-    .contact-layout{
-      display:grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap:22px;
-      margin-top:26px;
+    /* ══════════════════════════════
+       HEXAGRAM DIVIDER
+    ══════════════════════════════ */
+    .hex-divider{
+      text-align:center;padding:28px 20px;
+      position:relative;z-index:2;
+      background:var(--bg-deepest);
     }
-    .contact-card,
-    .form-card{
-      padding:26px;
+    .hex-divider span{
+      font-size:clamp(1.5rem,4vw,2.4rem);
+      color:var(--gold);opacity:.35;
+      letter-spacing:clamp(8px,2vw,22px);
+      text-shadow:var(--glow-gold);
+      animation:hex-pulse 5s ease-in-out infinite alternate;
     }
-    .contact-methods{
-      display:grid;
-      gap:14px;
-      margin-top:18px;
-    }
-    .contact-method{
-      padding:16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.06);
-    }
-    .contact-method strong{
-      display:block;
-      margin-bottom:6px;
-      color:var(--text);
-    }
-    .contact-method span,
-    .contact-method a{
-      color:var(--muted);
-      word-break:break-word;
-    }
-    form{
-      display:grid;
-      gap:14px;
-    }
-    .field{
-      display:grid;
-      gap:8px;
-    }
-    label{
-      font-size:.92rem;
-      color:var(--muted);
-    }
-    input,
-    textarea,
-    select{
-      width:100%;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:14px;
-      background:rgba(3,8,16,.55);
-      color:var(--text);
-      padding:14px 16px;
-      font:inherit;
-    }
-    textarea{min-height:150px;resize:vertical}
-    .form-note,
-    .form-status{
-      color:var(--muted-2);
-      font-size:.9rem;
-      margin:0;
-    }
-    .form-status{
-      color:var(--teal);
-      display:none;
-    }
-
-    .footer{
-      padding:34px 0 48px;
-      color:var(--muted-2);
-      font-size:.92rem;
-    }
-    .footer-grid{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-      padding-top:22px;
-      border-top:1px solid rgba(255,255,255,.08);
-    }
-
-    @media (max-width: 960px){
-      .hero-grid,
-      .article-layout,
-      .contact-layout{
-        grid-template-columns:1fr;
-      }
-      .services,
-      .stats{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-      }
-      .cta-band{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-
-    @media (max-width: 640px){
-      .wrap{width:min(var(--max), calc(100% - 22px))}
-      .site-nav{
-        align-items:flex-start;
-        flex-direction:column;
-      }
-      .nav-links{
-        width:100%;
-      }
-      .hero-copy,
-      .hero-panel,
-      .service,
-      .article-feed,
-      .mini-panel,
-      .contact-card,
-      .form-card,
-      .cta-band{
-        padding:22px;
-      }
-      .services,
-      .stats,
-      .hero-points{
-        grid-template-columns:1fr;
-      }
-      .hero h1{
-        font-size:2.5rem;
-      }
+    @keyframes hex-pulse{
+      0%{opacity:.25;letter-spacing:clamp(8px,2vw,22px)}
+      100%{opacity:.55;letter-spacing:clamp(12px,3vw,30px)}
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap site-nav">
-      <a class="brand" href="index.html">隨緣堂<small>SUÌ YUÁN TÁNG</small></a>
-      <nav class="nav-links" aria-label="主導覽">
-        <a href="#about">關於</a>
-        <a href="#services">服務方向</a>
-        <a href="#articles">精選文章</a>
-        <a href="blog.html">全部文章</a>
-        <a href="yinfu-zhuanlan.html">陰符經專欄</a>
-        <a href="taiyi.html">太乙金華宗旨</a>
-        <a class="nav-cta" href="#contact">立即聯絡</a>
-      </nav>
+
+<!-- Canvas layers -->
+<canvas id="starfield"></canvas>
+<canvas id="particles"></canvas>
+
+<!-- Floating mystical symbols -->
+<div class="sym-layer" id="symLayer"></div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      隨緣堂
+      <span>SUÌ YUÁN TÁNG</span>
     </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="card hero-copy">
-          <span class="eyebrow">道法整理・修持閱讀・線上諮詢</span>
-          <h1>讓訪客先看懂你在做什麼，再決定要不要找你。</h1>
-          <p>隨緣堂目前已累積大量道法、養氣、清靜、陰符經與太乙金華宗旨文章。新版首頁把內容入口、服務方向與聯絡方式放在更清楚的位置，讓第一次進站的人不會迷路，也更容易轉成實際詢問。</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">填表聯絡</a>
-            <a class="btn btn-secondary" href="blog.html">閱讀全部文章</a>
-          </div>
-          <ul class="hero-points">
-            <li>清楚的主導覽與段落錨點</li>
-            <li>首頁可直接進到聯絡表單</li>
-            <li>強化 CTA，降低訪客猶豫</li>
-            <li>保留原有內容主題與氣質</li>
-          </ul>
-        </div>
-        <aside class="card hero-panel" aria-label="快速判斷">
-          <h2>適合哪些來訪者</h2>
-          <div class="signal">
-            <strong>想先了解觀點的人</strong>
-            <p>可以先看道法專欄、陰符經專欄與太乙金華宗旨頁面，快速理解網站內容脈絡。</p>
-          </div>
-          <div class="signal">
-            <strong>已有明確疑問的人</strong>
-            <p>可直接從聯絡區填寫問題、目前狀況與希望交流方向，減少往返確認時間。</p>
-          </div>
-          <div class="signal">
-            <strong>想知道是否適合諮詢的人</strong>
-            <p>首頁先說明常見議題與處理方式，幫助訪客自行判斷是否值得往下談。</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap">
-        <span class="eyebrow">網站定位</span>
-        <h2 class="section-title">這個網站現在更像一個可以被理解的入口</h2>
-        <p class="section-copy">原本網站文章很多，但首頁資訊量偏散，導致新訪客較難在短時間內知道「你提供什麼」、「推薦先讀哪裡」、「如何聯絡你」。這版首頁改成以導覽、內容分流與轉換動線為核心。</p>
-
-        <div class="grid stats">
-          <div class="card stat"><strong>55+</strong><span>已存在 HTML 頁面</span></div>
-          <div class="card stat"><strong>29</strong><span>道法文章資料已整理</span></div>
-          <div class="card stat"><strong>15</strong><span>陰符經專欄文章</span></div>
-          <div class="card stat"><strong>3</strong><span>主要內容入口頁</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <span class="eyebrow">服務方向</span>
-        <h2 class="section-title">把常見需求先分流，訪客比較知道該往哪走</h2>
-        <p class="section-copy">這裡不是硬塞很多服務名稱，而是先把使用者最常見的三種需求放出來。這樣比較符合網站第一次接觸的情境，也能減少訪客停在首頁卻不知道下一步要做什麼。</p>
-
-        <div class="grid services">
-          <article class="card service">
-            <h3>文章閱讀與自我理解</h3>
-            <p>適合想先透過內容建立理解的人，先讀再決定是否要進一步聯絡。</p>
-            <ul>
-              <li>道法專欄整理養氣、守中、清靜與家宅等主題</li>
-              <li>陰符經專欄適合喜歡經典義理的讀者</li>
-              <li>太乙金華宗旨頁面可作為單一主題深讀入口</li>
-            </ul>
-          </article>
-          <article class="card service">
-            <h3>狀況釐清與方向判斷</h3>
-            <p>適合目前卡住、困擾已經影響生活，想先確認問題該怎麼看的人。</p>
-            <ul>
-              <li>先描述你目前遇到的狀況與持續多久</li>
-              <li>可說明已經嘗試過哪些方法</li>
-              <li>讓後續回覆更聚焦，不用從零開始問</li>
-            </ul>
-          </article>
-          <article class="card service">
-            <h3>正式聯絡與諮詢意願</h3>
-            <p>適合已閱讀過網站內容，想直接進一步交流與安排後續的人。</p>
-            <ul>
-              <li>首頁 CTA 直接把人帶到聯絡區</li>
-              <li>提供表單與 Email 雙入口</li>
-              <li>聯絡內容可直接帶出你的主題與期待</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="articles">
-      <div class="wrap">
-        <span class="eyebrow">內容入口</span>
-        <h2 class="section-title">先看精選，再決定你想深入哪一條線</h2>
-        <p class="section-copy">首頁不需要塞下所有文章，只要把最有代表性的幾篇先放出來，讓訪客知道網站內容的質地和方向即可。完整內容則交給專欄頁承接。</p>
-
-        <div class="article-layout">
-          <div class="card article-feed">
-            <div class="feed-list" id="featuredArticles"></div>
-          </div>
-          <aside class="article-side">
-            <div class="card mini-panel">
-              <h3>推薦先看</h3>
-              <ul>
-                <li><a href="blog.html">道法專欄總覽</a>：適合第一次來訪，想快速了解文章主題分布的人。</li>
-                <li><a href="yinfu-zhuanlan.html">陰符經專欄</a>：適合對經典義理與應世心法有興趣的人。</li>
-                <li><a href="taiyi.html">太乙金華宗旨</a>：適合聚焦閱讀單一核心主題的人。</li>
-              </ul>
-            </div>
-            <div class="card mini-panel">
-              <h3>CTA 設計邏輯</h3>
-              <p>每個主要入口都能再回到聯絡區，避免使用者讀完後不知道下一步。這能比單純把 Email 放在頁尾更有效。</p>
-            </div>
-          </aside>
-        </div>
-
-        <div class="card cta-band">
-          <div>
-            <h2>如果你已經有明確問題，直接聯絡會比繼續亂找更快。</h2>
-            <p>把目前的困擾、持續時間、想了解的方向先寫下來，我會替你整理成可寄出的聯絡內容。</p>
-          </div>
-          <a class="btn btn-primary" href="#contact">前往聯絡表單</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <span class="eyebrow">聯絡入口</span>
-        <h2 class="section-title">提供按鈕、表單與直接寄信，讓人比較願意行動</h2>
-        <p class="section-copy">因為目前網站是靜態頁面，這份表單不會直接送進資料庫，而是會幫訪客整理成 Email 內容並開啟寄信。這比沒有表單更容易轉換，也不需要額外伺服器。</p>
-
-        <div class="contact-layout">
-          <aside class="card contact-card">
-            <h3>聯絡方式</h3>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <strong>Email</strong>
-                <a href="mailto:jackkok1388@gmail.com">jackkok1388@gmail.com</a>
-              </div>
-              <div class="contact-method">
-                <strong>建議先提供</strong>
-                <span>目前狀況、持續時間、是否已有看過哪些文章，以及你希望得到哪種回覆。</span>
-              </div>
-              <div class="contact-method">
-                <strong>快速入口</strong>
-                <a href="blog.html">先看道法文章</a><br />
-                <a href="yinfu-zhuanlan.html">先看陰符經專欄</a>
-              </div>
-            </div>
-          </aside>
-
-          <div class="card form-card">
-            <form id="contactForm">
-              <div class="field">
-                <label for="name">稱呼</label>
-                <input id="name" name="name" type="text" placeholder="例如：王先生 / 林小姐" required />
-              </div>
-              <div class="field">
-                <label for="email">聯絡 Email</label>
-                <input id="email" name="email" type="email" placeholder="name@example.com" required />
-              </div>
-              <div class="field">
-                <label for="topic">想談的方向</label>
-                <select id="topic" name="topic" required>
-                  <option value="">請選擇一個方向</option>
-                  <option value="文章閱讀後想進一步請教">文章閱讀後想進一步請教</option>
-                  <option value="目前生活狀況需要整理">目前生活狀況需要整理</option>
-                  <option value="想了解是否適合諮詢">想了解是否適合諮詢</option>
-                  <option value="其他主題">其他主題</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="message">目前情況</label>
-                <textarea id="message" name="message" placeholder="簡單描述你的狀況、持續多久，以及你希望先知道什麼。"></textarea>
-              </div>
-              <div class="hero-actions">
-                <button class="btn btn-primary" type="submit">整理成 Email 並寄出</button>
-                <a class="btn btn-secondary" href="mailto:jackkok1388@gmail.com">直接寫信</a>
-              </div>
-              <p class="form-note">送出後會開啟你的寄信程式。若你習慣手動寄信，也可以直接使用上方 Email。</p>
-              <p class="form-status" id="formStatus">已替你整理好內容，正在開啟 Email。</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer-grid">
-      <span>隨緣堂副本首頁改版</span>
-      <span><a href="blog.html">道法專欄</a> ・ <a href="yinfu-zhuanlan.html">陰符經專欄</a> ・ <a href="mailto:jackkok1388@gmail.com">jackkok1388@gmail.com</a></span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#channels">修行頻道</a></li>
+      <li><a href="#articles">玄門文章</a></li>
+      <li><a href="blog.html">道法專欄</a></li>
+      <li><a href="#fulu">符咒百科</a></li>
+      <li><a href="#oracle">每日法語</a></li>
+      <li><a href="#hexagrams">易經卦象</a></li>
+      <li><a href="yinfu-zhuanlan.html">陰符經專欄</a></li>
+      <li><a href="taiyi.html">太乙金華宗旨</a></li>
+      <li><a href="#pricing">價目表</a></li>
+      <li><a href="#contact" class="nav-cta">線上諮詢</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+      <span></span><span></span><span></span>
     </div>
-  </footer>
+  </div>
+</nav>
 
-  <script>
-    const featuredFallback = [
-      {
-        title: "九竅的重要性：道家三關九竅，決生死，處百病",
-        column: "道法",
-        date: "2025-12-31",
-        url: "jiuqiao-zhongyaoxing.html",
-        excerpt: "從三關、三丹田與九竅位置整理道家對人身結構與修持的核心理解。"
-      },
-      {
-        title: "道法與養生：為何真正的修行，最後都回到日常",
-        column: "道法",
-        date: "2025-12-30",
-        url: "daofa-yangsheng-richang.html",
-        excerpt: "說明養氣、收驚、祭改與修持最後如何回到日常節律與生活狀態。"
-      },
-      {
-        title: "元辰與運勢：人為何會感到卡住，如何重新開運",
-        column: "道法",
-        date: "2025-04-08",
-        url: "yuanchen-kaiyun.html",
-        excerpt: "從元辰、氣場與生活狀態切入，整理卡關感背後常見的幾種脈絡。"
-      }
-    ];
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="bagua-wrap">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    <div class="ring ring-4"></div>
+    <!-- Bagua symbols on ring -->
+    <span class="bagua-sym" style="top:2%;left:50%;transform:translate(-50%,0)">☰</span>
+    <span class="bagua-sym" style="top:16%;right:6%">☱</span>
+    <span class="bagua-sym" style="top:48%;right:1%;transform:translateY(-50%)">☲</span>
+    <span class="bagua-sym" style="bottom:16%;right:6%">☳</span>
+    <span class="bagua-sym" style="bottom:2%;left:50%;transform:translate(-50%,0)">☴</span>
+    <span class="bagua-sym" style="bottom:16%;left:6%">☵</span>
+    <span class="bagua-sym" style="top:48%;left:1%;transform:translateY(-50%)">☶</span>
+    <span class="bagua-sym" style="top:16%;left:6%">☷</span>
+    <!-- Energy lines at various angles -->
+    <div class="energy-line" style="transform-origin:left center;transform:translate(-50%,-50%) translateX(0) rotate(0deg);top:50%;left:50%"></div>
+    <div class="energy-line" style="transform-origin:left center;transform:translate(-50%,-50%) translateX(0) rotate(45deg);top:50%;left:50%;animation-delay:1s"></div>
+    <div class="energy-line" style="transform-origin:left center;transform:translate(-50%,-50%) translateX(0) rotate(90deg);top:50%;left:50%;animation-delay:2s"></div>
+    <div class="energy-line" style="transform-origin:left center;transform:translate(-50%,-50%) translateX(0) rotate(135deg);top:50%;left:50%;animation-delay:3s"></div>
+  </div>
+  <div class="taiji-centre">☯</div>
 
-    async function loadFeaturedArticles() {
-      const container = document.getElementById("featuredArticles");
-      try {
-        const response = await fetch("articles.json");
-        const items = await response.json();
-        renderFeatured(items.slice(0, 4));
-      } catch (error) {
-        renderFeatured(featuredFallback);
-      }
+  <div style="position:relative;z-index:2">
+    <p class="hero-tag">✦ 道門廣大　唯渡有緣 ✦</p>
+    <h1 class="hero-title">隨緣堂</h1>
+    <p class="hero-subtitle">修為・養氣・濟世・解厄</p>
+    <p class="hero-desc">
+      以正統道家玄學為本，融合內功修行與方術濟世，<br/>
+      冥陽兩利，廣渡有緣之士。<br/>
+      <em>「神行則氣行，神住則氣住。」</em>
+    </p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="scrollTo('channels')">探索修行之道</button>
+      <button class="btn-outline" onclick="scrollTo('consult')">預約諮詢</button>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>探索</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
 
-      function renderFeatured(items) {
-        container.innerHTML = items.map((item) => `
-          <article class="feed-item">
-            <div class="meta">${item.column} ・ ${item.date}</div>
-            <h3><a href="${item.url}">${item.title}</a></h3>
-            <p>${item.excerpt}</p>
-          </article>
-        `).join("");
+<!-- ═══ QUOTE BAR ═══ -->
+<div class="quote-bar">
+  <p>「致虛極，守靜篤，萬物並作，吾以觀復。」</p>
+  <span>—— 《道德經》第十六章</span>
+</div>
+
+<!-- ═══ CHANNELS ═══ -->
+<section id="channels" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☯ 三大頻道 ☯</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">道之體用，理事圓融</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">隨緣堂依「體、用、密」三大頻道，廣納修行者與求助者，提供由淺入深的道家玄學指引。</p>
+    </div>
+    <div class="channels-grid">
+      <div class="channel-card blue reveal">
+        <span class="channel-icon">🌿</span>
+        <div class="tag">核心頻道</div>
+        <h3 class="channel-title">清靜經緯</h3>
+        <p class="channel-en">INNER CULTIVATION</p>
+        <p class="channel-desc">以內功養氣為根本，引導真心求道者找回本來面目，建立修行的高度與深度。</p>
+        <ul class="channel-list">
+          <li>氣脈養生：胎息、吐納、四時養生</li>
+          <li>道家動功：八段錦、太極初階</li>
+          <li>心性修持：讀經、打坐、冥想</li>
+          <li>丹道初探：性命雙修、內丹學說</li>
+          <li>玄學基礎：陰陽五行、天人合一</li>
+        </ul>
+      </div>
+      <div class="channel-card teal reveal" style="transition-delay:.12s">
+        <span class="channel-icon">🔮</span>
+        <div class="tag">實務頻道</div>
+        <h3 class="channel-title">法露恩光</h3>
+        <p class="channel-en">RITUAL & REMEDY</p>
+        <p class="channel-desc">以法事科儀解決現實困境，幫助求助者撥亂反正、趨吉避凶、恢復生命磁場。</p>
+        <ul class="channel-list">
+          <li>收驚解厄：魂魄安撫、氣場修復</li>
+          <li>祭改化煞：流年不利、五鬼白虎</li>
+          <li>祈福延壽：禮斗、補財庫、安太歲</li>
+          <li>符咒請領：護身、鎮宅、招財</li>
+          <li>遠距諮詢：八字推衍、能量評估</li>
+        </ul>
+      </div>
+      <div class="channel-card gold reveal" style="transition-delay:.24s">
+        <span class="channel-icon">🌒</span>
+        <div class="tag">神秘頻道</div>
+        <h3 class="channel-title">幽冥通牒</h3>
+        <p class="channel-en">BEYOND THE VEIL</p>
+        <p class="channel-desc">以「先看醫學，後看玄學」的理性觀點，處理科學難解之疑難雜症，展現專業威儀。</p>
+        <ul class="channel-list">
+          <li>冤親債主：因果業力與和解之道</li>
+          <li>陰陽調和：宅居不安、陰魂干擾</li>
+          <li>疑難雜症：卡到、撞邪案例分析</li>
+          <li>超拔科儀：引魂安頓、冥陽兩利</li>
+          <li>個案研究：真實處理邏輯分享</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRIGRAMS ROW ═══ -->
+<div class="trigrams-row">
+  <div class="trigram-item"><span class="trigram-sym">☰</span><span class="trigram-name">乾・天</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☱</span><span class="trigram-name">兌・澤</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☲</span><span class="trigram-name">離・火</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☳</span><span class="trigram-name">震・雷</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☴</span><span class="trigram-name">巽・風</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☵</span><span class="trigram-name">坎・水</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☶</span><span class="trigram-name">艮・山</span></div>
+  <div class="trigram-item"><span class="trigram-sym">☷</span><span class="trigram-name">坤・地</span></div>
+</div>
+
+<!-- ═══ ARTICLES ═══ -->
+<section id="articles" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">📜 玄門深研 📜</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">玄門專欄</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">融合現代能量科學與正統道教玄學，以理性視角解讀千年道門智慧。</p>
+    </div>
+
+    <div class="article-full reveal">
+      <span class="tag">修行養氣</span>
+      <h2>玄門養氣：為何「氣」是修行者的生命之本？</h2>
+      <p class="article-meta">【清靜經緯】核心文章 ✦ 道教養生學</p>
+      <p>道教認為「人活一口氣」。然而這一口氣，絕非單純的氧分子，而是「先天炁」與「後天精氣」的融合體——前者是禀賦於天地之初、與道同源的宇宙生命能量；後者是人在後天呼吸飲食中所吸納的精微物質。兩者的充盈與和諧，決定了修行者能走多遠。</p>
+      <h3>一、修行的真正目的：聚精、會神、養氣</h3>
+      <p>許多人誤以為修行是為了追求神通異能。然而在正統道家的脈絡中，修行的終極目標始終是「聚精、會神、養氣」——讓生命能量不再因情慾耗散、思慮消耗而節節衰退，而是逆流而上，回歸本源。</p>
+      <p>《黃庭經》有言：「上有黃庭下關元，後有幽闕前命門。」人體就是一座完整的宇宙縮影，氣在其中按特定的軌道運行，滋養五臟六腑、精神魂魄。</p>
+      <div class="gold-quote"><p>「神行則氣行，神住則氣住。」</p></div>
+      <h3>二、內觀的重要性：向內找回失散的自己</h3>
+      <p>「內觀」是道家修行的核心功法。當大腦的雜訊停止，內在那個最敏銳的接收器才能開始工作。現代神經科學的研究也印證：持續的內觀訓練能顯著強化前額葉皮質的自我調節能力，這與道家「定能生慧」的理論高度吻合。</p>
+      <div class="highlight"><p>✦ 每日靜坐實踐：選一個安靜處端坐，雙目微閉，舌抵上齶。用十個深長呼吸放鬆全身，再將注意力引導至下丹田（臍下三寸），感受氣息在腹腔間的起伏。每日十五分鐘，三十天後，你將明顯感受到氣的存在。</p></div>
+    </div>
+
+    <div class="article-full reveal">
+      <span class="tag">祭改化煞</span>
+      <h2>祭改並非迷信：淺談時空能量的「撥亂反正」</h2>
+      <p class="article-meta">【法露恩光】核心文章 ✦ 道教科儀學</p>
+      <h3>一、何謂「煞」？宇宙中不協調的頻率</h3>
+      <p>「煞」並非鬼怪的代名詞。在道家玄學的宇宙觀中，「煞」是指宇宙中某種強度過盛、方向失序的能量流，當這種能量與個人的生命磁場產生負面共振時，便會在生活的各個層面引發連鎖的不順——事業受阻、健康衰退、人際生嫌。</p>
+      <h3>二、祭改科儀的本質：能量場的重新校準</h3>
+      <p>祭改的本質，是透過特定科儀——聲音（咒語共振）、符咒（高頻能量載體）、方位（空間能量導引）——將個人紊亂的能量場重新調回正軌。這套系統在形式上雖然古老，但其底層邏輯與現代的頻率調諧、生物磁場療法在原理上有著驚人的相似性。</p>
+      <div class="highlight"><p>✦ 服務流程：透過提供生辰八字，貧道先行推算當前流年的能量狀態，釐清煞星的性質與強度，再對症設計相應的祭改科儀，精準化解——而非籠統的「做一場法事了事」。</p></div>
+      <div class="gold-quote"><p>「積善之家，必有餘慶。」—— 《易經・坤卦》</p></div>
+    </div>
+
+    <div class="article-full reveal">
+      <span class="tag">符咒能量學</span>
+      <h2>從能量共振看符咒：收驚與驅陰的運作原理</h2>
+      <p class="article-meta">【玄門密義】深度專欄 ✦ 符籙學 × 能量動力學</p>
+      <h3>一、收驚符：魂魄的「重啟與歸位」</h3>
+      <p>道教認為人有三魂七魄，分別對應人體的精神、意識與生理官能。當人受到巨大的外力驚嚇時，原本穩定的生物磁場會產生劇烈震盪，導致魂魄的頻率與肉體脫節——民俗所說的「失魂落魄」，在神經科學層面對應的是自律神經系統的急性失調。</p>
+      <p>收驚符上的符文代表著宇宙中最穩定的原始頻率。經過法師充能的符咒，其能量場會與患者紊亂的磁場產生同頻共振，將游離在外的散亂能量重新吸引回肉體中心點，同時修復受損的氣場邊界。</p>
+      <h3>二、驅陰處靈：能量的「排斥與轉化」</h3>
+      <p>陰魂的本質是帶有強烈低頻負面情緒（如怨、恨、悲、執）的能量殘留。正統驅邪符的核心能量來自「純陽」，高頻陽剛能量與低頻陰森能量無法在同一空間共存，符咒被催動時會瞬間產生強大的「能量光壓」。</p>
+      <div class="gold-quote"><p>「符咒如帆，修行如舵，有帆無舵，難抵彼岸。」</p></div>
+    </div>
+
+    <div class="article-full reveal">
+      <span class="tag">天人合一</span>
+      <h2>打坐如何開啟元神與宇宙的「無障礙溝通」？</h2>
+      <p class="article-meta">【玄門專欄】修行實踐 ✦ 元神論 × 生物信息場</p>
+      <h3>一、識神與元神</h3>
+      <p>道家將人的意識分為「識神」與「元神」。識神是我們日常的邏輯、情緒與慾望——它像是一台充滿雜訊的收音機，整天播放著煩惱與執著。元神是與生俱來的先天靈光，本質與宇宙的「道」同頻，不具形體，卻具備感知萬物、超越時空的本能。</p>
+      <h3>二、打坐的三層運作原理</h3>
+      <p>其一為<strong style="color:var(--teal)">頻率的同步</strong>：打坐時的「調息」與「養氣」，是為了將人體雜亂的生物電場調整至與自然界一致的低頻波段（腦波的θ波或δ波）。當頻率同步時，天人之間的連結便自動發生。</p>
+      <p>其二為<strong style="color:var(--teal)">移除「自我」的屏障</strong>：「我執」是溝通最大的阻礙。在「坐忘」中忘記了身份、軀體，元神便不再受限於肉身的牢籠。正如滴水入海，水滴消失了，卻擁有了整片海洋的信息。</p>
+      <div class="gold-quote"><p>「致虛極，守靜篤。」—— 《道德經》</p></div>
+      <div class="highlight"><p>✦ 五分鐘元神靜心法：自然端坐，脊背挺直，雙手置膝。閉目凝神，舌抵上齶，自然呼吸。意守下丹田，如凝視遠方的清澈湖面。當雜念浮起，不追不斥，輕輕將注意力拉回湖面。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHI FLOW ═══ -->
+<div class="chi-flow-section">
+  <div class="container">
+    <div class="ornament center">
+      <div class="ornament-line"></div>
+      <span class="ornament-sym">✦ 炁脈流轉 ✦</span>
+      <div class="ornament-line"></div>
+    </div>
+    <h2 class="section-title">陰陽炁場運行圖</h2>
+    <p class="section-sub" style="margin-bottom:0">觀炁流轉，感受道之運行，萬物皆在無聲中循環。</p>
+    <div class="chi-canvas-wrap">
+      <canvas id="chiCanvas"></canvas>
+    </div>
+    <p class="chi-label">「一陰一陽之謂道」—— 《易傳・繫辭上》</p>
+  </div>
+</div>
+
+<!-- ═══ HEX DIVIDER ═══ -->
+<div class="hex-divider">
+  <span>☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷</span>
+</div>
+
+<!-- ═══ FULU ═══ -->
+<section id="fulu" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">🔱 符籙百科 🔱</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">符咒功能大系</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">符咒（符籙）乃上聖高真之信物，溝通宇宙能量的精密頻率系統。</p>
+    </div>
+    <div class="fulu-intro reveal">
+      <p>道門符咒之功，歸納不外乎：<strong style="color:var(--gold)">「召神、遣將、避邪、治病、養生、送厄」</strong>六大範疇。符咒要發揮效力，需具備三要素：<strong style="color:var(--teal)">法（法師修為）、墨（材質媒介）、神（觀想意念）</strong>——三者缺一，能量便無法完整傳導。</p>
+    </div>
+    <div class="fulu-grid">
+      <div class="fulu-card reveal">
+        <div class="fulu-icon">🛡️</div>
+        <div class="fulu-name">護身符</div>
+        <div class="fulu-en">PERSONAL PROTECTION</div>
+        <p class="fulu-desc">封閉個人周圍的負能量干擾，強化自身元神氣場，使邪煞無從附著。適合長期在外奔波、磁場較弱或常感疲憊者。</p>
+        <span class="fulu-attr">五行屬性：金（屬主正氣）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.08s">
+        <div class="fulu-icon">🏠</div>
+        <div class="fulu-name">鎮宅符</div>
+        <div class="fulu-en">SPACE PROTECTION</div>
+        <p class="fulu-desc">調和家宅陰陽能量，防止路煞、土煞或外邪入侵。住宅採光不足、地理位置特殊或居住者長期運勢不佳者尤為有效。</p>
+        <span class="fulu-attr">五行屬性：土（穩定坤元）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.16s">
+        <div class="fulu-icon">✨</div>
+        <div class="fulu-name">收驚符</div>
+        <div class="fulu-en">SOUL-CALMING</div>
+        <p class="fulu-desc">專針對受驚嚇導致魂魄不穩者，安撫植物神經系統，回攝游離的魂魄碎片，修復受損的氣場邊界。</p>
+        <span class="fulu-attr">五行屬性：水（滋陰安神）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.24s">
+        <div class="fulu-icon">💫</div>
+        <div class="fulu-name">五路財神符</div>
+        <div class="fulu-en">WEALTH ATTRACTION</div>
+        <p class="fulu-desc">引導四方財氣灌注，增進事業運勢與財帛能量流動。需搭配善行積德，才能使財氣長期穩定。</p>
+        <span class="fulu-attr">五行屬性：木（生發疏通）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.32s">
+        <div class="fulu-icon">🌙</div>
+        <div class="fulu-name">破邪符</div>
+        <div class="fulu-en">EXORCISM</div>
+        <p class="fulu-desc">針對受到陰邪干擾、卡到陰等狀況，以純陽高頻能量壓制低頻負能量體，具備較強的驅趕與淨化作用。</p>
+        <span class="fulu-attr">五行屬性：火（純陽之力）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.40s">
+        <div class="fulu-icon">📚</div>
+        <div class="fulu-name">文昌符</div>
+        <div class="fulu-en">WISDOM ENHANCEMENT</div>
+        <p class="fulu-desc">開發智慧，讓學子及各行業人士神識清明，思路敏捷。考試期間或重要決策前請領效果尤佳。</p>
+        <span class="fulu-attr">五行屬性：木（啟智生慧）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.48s">
+        <div class="fulu-icon">🌸</div>
+        <div class="fulu-name">和合符</div>
+        <div class="fulu-en">HARMONY</div>
+        <p class="fulu-desc">調和人際關係、夫妻感情，化解彼此之間的戾氣與誤解。強調須在正道範圍內使用，以雙方真誠為前提。</p>
+        <span class="fulu-attr">五行屬性：土（調和中道）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.56s">
+        <div class="fulu-icon">🌊</div>
+        <div class="fulu-name">淨符</div>
+        <div class="fulu-en">PURIFICATION</div>
+        <p class="fulu-desc">用於出入陰氣較重之地後的淨化。焚化於水中洗浴，化除外在穢氣，重建個人能量邊界。</p>
+        <span class="fulu-attr">五行屬性：水（清洗滌穢）</span>
+      </div>
+      <div class="fulu-card reveal" style="transition-delay:.64s">
+        <div class="fulu-icon">🌺</div>
+        <div class="fulu-name">安胎符</div>
+        <div class="fulu-en">PREGNANCY PROTECTION</div>
+        <p class="fulu-desc">保護孕婦與胎兒的生命磁場穩定，防止外邪驚擾與氣場波動。使母子在能量層面皆能安然度過妊娠期。</p>
+        <span class="fulu-attr">五行屬性：土（厚德載物）</span>
+      </div>
+    </div>
+    <div class="fulu-principles">
+      <div class="principle-box reveal">
+        <h4>⚡ 法（法師傳承）</h4>
+        <p>畫符者的修為深淺決定了能量灌注的力道。正統符咒需來自有師承的傳法者，其多年養氣修行所積累的元神能量，是符咒得以「活化」的根本電力。</p>
+      </div>
+      <div class="principle-box reveal" style="transition-delay:.1s">
+        <h4>🖊️ 墨（材質媒介）</h4>
+        <p>硃砂（硫化汞）含有特殊的電磁頻率，自古被視為「避邪神砂」；墨汁中的碳素能良好導電。材質本身即具備天然的能量特性，是符咒的物質基礎。</p>
+      </div>
+      <div class="principle-box reveal" style="transition-delay:.2s">
+        <h4>🌟 神（觀想意念）</h4>
+        <p>畫符時的觀想深度與氣感強度，決定了這張紙是「真符」還是「廢紙」。意念是最純粹的能量形式，法師畫符時需進入特定的意識狀態，方能完成能量的注入。</p>
+      </div>
+    </div>
+    <div class="warning-box">
+      <p>「符咒乃輔助之功，非萬能之藥。身體有疾應先求醫，運勢有阻應先修心。<br/>符咒如帆，修行如舵，有帆無舵，難抵彼岸。」</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORACLE ═══ -->
+<section id="oracle" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">🌙 每日法語 🌙</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">道家修心語錄</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">每日以一句道家語錄，滋養心靈，清淨識神。</p>
+    </div>
+    <div class="oracle-widget reveal">
+      <p class="oracle-date" id="oracleDate"></p>
+      <div class="oracle-text" id="oracleText">「知人者智，自知者明。勝人者有力，自勝者強。」</div>
+      <p class="oracle-source" id="oracleSource">—— 《道德經》第三十三章</p>
+      <button class="btn-oracle" onclick="newOracle()">✦ 再求一語 ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BALANCE ═══ -->
+<section id="balance" class="section-pad" style="background:var(--bg-dark)">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☯ 自我評量 ☯</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">陰陽失衡自我診斷</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">勾選近期符合的症狀，評估您目前的陰陽能量狀態，以便獲得最精準的調理建議。</p>
+    </div>
+    <div class="balance-grid">
+      <div class="balance-col yang">
+        <h4>☀️ 陽亢失調症狀</h4>
+        <div id="yangItems">
+          <div class="check-item" onclick="toggleCheck(this,'yang')"><div class="check-box"></div><span class="check-label">長期焦慮、難以放鬆</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yang')"><div class="check-box"></div><span class="check-label">失眠或睡眠品質極差</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yang')"><div class="check-box"></div><span class="check-label">容易發怒、情緒激動</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yang')"><div class="check-box"></div><span class="check-label">頭部燥熱、口乾舌燥</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yang')"><div class="check-box"></div><span class="check-label">思慮過多、停不下來</span></div>
+        </div>
+      </div>
+      <div class="balance-col yin">
+        <h4>🌙 陰盛傷陽症狀</h4>
+        <div id="yinItems">
+          <div class="check-item" onclick="toggleCheck(this,'yin')"><div class="check-box"></div><span class="check-label">手腳長期冰冷</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yin')"><div class="check-box"></div><span class="check-label">慢性疲勞、提不起勁</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yin')"><div class="check-box"></div><span class="check-label">情緒低落、意志消沉</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yin')"><div class="check-box"></div><span class="check-label">代謝緩慢、體重增加</span></div>
+          <div class="check-item" onclick="toggleCheck(this,'yin')"><div class="check-box"></div><span class="check-label">夜間多夢、容易驚醒</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="balance-result">
+      <div class="balance-bar-wrap">
+        <span class="balance-label" style="color:#e8a040">陽</span>
+        <div class="balance-bar"><div class="balance-fill fill-yang" id="yangBar" style="width:0%"></div></div>
+        <span style="font-size:var(--fs-small);color:var(--white-faint);min-width:36px" id="yangPct">0%</span>
+      </div>
+      <div class="balance-bar-wrap">
+        <span class="balance-label" style="color:var(--teal)">陰</span>
+        <div class="balance-bar"><div class="balance-fill fill-yin" id="yinBar" style="width:0%"></div></div>
+        <span style="font-size:var(--fs-small);color:var(--white-faint);min-width:36px" id="yinPct">0%</span>
+      </div>
+      <p class="balance-msg" id="balanceMsg">請勾選上方症狀以獲得評估結果</p>
+      <p class="balance-service" id="balanceService"></p>
+    </div>
+    <div class="disclaimer">
+      <p><strong>⚠️ 重要聲明：</strong>以上陰陽評量僅供心靈輔助參考，<strong>身體不適請務必優先尋求專業醫療協助</strong>。隨緣堂的玄學服務定位為能量輔助與心靈慰藉，無法取代任何醫療行為。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PRICING ═══ -->
+<section id="pricing" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">✦ 科儀價目 ✦</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">玄學科儀服務價目表</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">這是一份為隨緣堂專業經營所整理的玄學科儀服務價目表，方便有緣者依自身需求了解服務方向與收費範圍。</p>
+    </div>
+
+    <div class="pricing-intro reveal">
+      價目表內容以服務性質、科儀複雜度與所需物品為基準整理。實際個案仍會依現場狀況、距離、時程與特殊需求做細部說明，所有服務皆以溝通清楚、雙方確認後進行。
+    </div>
+
+    <div class="pricing-board reveal" style="transition-delay:.08s">
+      <div class="pricing-scroll">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>分類</th>
+              <th>服務項目</th>
+              <th>價格</th>
+              <th>說明</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pricing-group">一、能量清理（清）</td>
+              <td class="pricing-service">專業收驚</td>
+              <td class="pricing-price">$3,600</td>
+              <td>穩定受驚魂魄，適用於失眠、心神不寧、孩童啼哭。</td>
+              <td class="pricing-note">現場或寄衣服皆可</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">一、能量清理（清）</td>
+              <td class="pricing-service">淨化空間／灑淨</td>
+              <td class="pricing-price">$8,800</td>
+              <td>針對新居、二手屋或宅氣不安，進行空間能量淨化與安定。</td>
+              <td class="pricing-note">特殊情況另計</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">一、能量清理（清）</td>
+              <td class="pricing-service">個人氣場淨化</td>
+              <td class="pricing-price">$6,600</td>
+              <td>以符令與法水洗浴，去除近期霉運與晦氣。</td>
+              <td class="pricing-note">適合運勢卡關者</td>
+            </tr>
+
+            <tr>
+              <td class="pricing-group">二、元神調理（調）</td>
+              <td class="pricing-service">安魂定魄儀軌</td>
+              <td class="pricing-price">$6,000</td>
+              <td>找回失散元神，適合意外、術後或精神渙散者。</td>
+              <td class="pricing-note">需備當事人衣服</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">二、元神調理（調）</td>
+              <td class="pricing-service">七星燈（法事）</td>
+              <td class="pricing-price">$26,000</td>
+              <td>點燃北斗燈陣補足元神，適合病重、重大關卡或運勢低迷時使用。</td>
+              <td class="pricing-note">含燈油與護燈勞務</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">二、元神調理（調）</td>
+              <td class="pricing-service">探元辰宮（代觀）</td>
+              <td class="pricing-price">$6,800</td>
+              <td>查看並整理靈魂居所，改善健康、財富、姻緣觀。</td>
+              <td class="pricing-note">需八字庚帖</td>
+            </tr>
+
+            <tr>
+              <td class="pricing-group">三、消災解厄（去）</td>
+              <td class="pricing-service">年度／單項祭改</td>
+              <td class="pricing-price">$6,600</td>
+              <td>針對流年煞星（太歲、五鬼、官符）進行化解與轉運。</td>
+              <td class="pricing-note">含替身與祭品</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">三、消災解厄（去）</td>
+              <td class="pricing-service">冤親債主化解</td>
+              <td class="pricing-price">$36,000 起</td>
+              <td>調解因果債務，協助當事人減少長期牽扯與反覆阻礙。</td>
+              <td class="pricing-note">視債務輕重定價</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">三、消災解厄（去）</td>
+              <td class="pricing-service">斬桃花／離小人</td>
+              <td class="pricing-price">$36,000 起</td>
+              <td>切斷不正當緣分或職場強力小人糾纏。</td>
+              <td class="pricing-note">涉及業力，需個案評估</td>
+            </tr>
+
+            <tr>
+              <td class="pricing-group">四、增益補強（補）</td>
+              <td class="pricing-service">補財庫／補運</td>
+              <td class="pricing-price">$6,600</td>
+              <td>補足先天資糧不足，協助整體運勢回穩、財氣回流。</td>
+              <td class="pricing-note">適合財運停滯者</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">四、增益補強（補）</td>
+              <td class="pricing-service">開光點眼（隨身物）</td>
+              <td class="pricing-price">$3,600</td>
+              <td>為玉珮、貔貅等招財物賦予靈性與守護力。</td>
+              <td class="pricing-note">需擇日開光</td>
+            </tr>
+            <tr>
+              <td class="pricing-group">四、增益補強（補）</td>
+              <td class="pricing-service">文昌／催官加持</td>
+              <td class="pricing-price">$8,800</td>
+              <td>針對考試、升遷與仕途佈局，含符令與特定方位啟動。</td>
+              <td class="pricing-note">配合文昌位佈局</td>
+            </tr>
+
+            <tr>
+              <td class="pricing-group">五、家宅民俗（護）</td>
+              <td class="pricing-service">入厝安宅／家宅安定科儀</td>
+              <td class="pricing-price">$16,000</td>
+              <td>適用於入厝、新宅啟用，或家宅長期不安、氣場不穩時進行整體安定。</td>
+              <td class="pricing-note">依坪數與現場狀況調整</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pricing-foot">
+        以上內容為隨緣堂玄學科儀服務之公開參考價。若為跨區服務、急件處理、特殊法事或需額外備品者，將另行說明。玄學服務以心靈支持與民俗科儀為主，身體不適仍建議優先就醫。
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ 太乙金華宗旨 ═══ -->
+<section id="taiyi-home" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☉ 太乙金華宗旨 ☉</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">回光守中，直提性功</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">首頁只放簡介，完整原文與逐章整理另外獨立成 <strong style="color:var(--gold-light)">taiyi.html</strong>，方便長期閱讀與搜尋。</p>
+    </div>
+
+    <div class="taiyi-home-card reveal">
+      <div class="taiyi-home-grid">
+        <div>
+          <span class="tag">完整專欄入口</span>
+          <h3>《太乙金華宗旨》：道家性命修煉的重要典籍</h3>
+          <p>《太乙金華宗旨》核心在於<strong style="color:var(--gold-light)">天心、元神、識神、回光守中、回光調息、百日築基</strong>。它不是追逐神秘感應的書，而是一部把神光收回、讓心息相依、使元神重新作主的實修典籍。</p>
+          <p>我已經另外做成獨立完整頁 <strong style="color:var(--teal)">taiyi.html</strong>，裡面包含：完整原文、首頁風格延伸版排版、SEO、OG、canonical，以及可直接放上 GitHub Pages 的完整結構。</p>
+          <div class="taiyi-home-btns">
+            <a class="btn-primary" href="taiyi.html">閱讀完整太乙金華宗旨</a>
+    <a class="btn-outline" href="#contact">預約諮詢</a>
+          </div>
+        </div>
+        <div class="taiyi-home-points">
+          <div class="taiyi-home-point">
+            <strong>天心</strong>
+            回光工夫的核心，中樞歸位則周身之氣皆上朝。
+          </div>
+          <div class="taiyi-home-point">
+            <strong>元神與識神</strong>
+            辨明誰在主導你的生命，從外馳分別回到本來靈明。
+          </div>
+          <div class="taiyi-home-point">
+            <strong>回光守中</strong>
+            把原本外散的神光、氣機與注意力重新收回中宮。
+          </div>
+          <div class="taiyi-home-point">
+            <strong>回光調息</strong>
+            治昏沉與散亂，使心息相依，由粗入細。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CONSULT ═══ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="text-center">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">✉ 在線諮詢 ✉</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">預約初診</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">描述您的困境，讓貧道以道家玄學的視角為您診斷與引導。</p>
+    </div>
+    <div class="consult-wrap">
+      <div class="consult-info reveal">
+        <h3>諮詢服務說明</h3>
+        <p>「隨緣堂」提供遠距與實體兩種諮詢形式。每次初診均包含：生辰八字能量評估、當前運勢診斷，以及個人化的調理建議。</p>
+        <ul class="consult-steps">
+          <li><span class="step-num">1</span>填寫初診表單，描述您的困境與需求</li>
+          <li><span class="step-num">2</span>貧道審閱後，以LINE或Email回覆初步評估</li>
+          <li><span class="step-num">3</span>確認諮詢方式（視訊 / 實體 / 純文字）</li>
+          <li><span class="step-num">4</span>正式諮詢，提供完整的調理方案</li>
+          <li><span class="step-num">5</span>後續追蹤，確保能量調理效果</li>
+        </ul>
+        <br/>
+        <p style="font-size:1rem;color:var(--teal)">📞 聯絡方式<br/>
+        LINE / GitHub：<strong style="color:var(--white)">jackkok1388</strong><br/>
+        Email：<strong style="color:var(--white)">jackkok1388@gmail.com</strong></p>
+      </div>
+      <div class="form-card reveal" style="transition-delay:.15s">
+        <form id="consultForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">法名 / 姓名 *</label>
+              <input type="text" class="form-input" placeholder="您的稱呼" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">聯絡方式 *</label>
+              <input type="text" class="form-input" placeholder="LINE ID 或 Email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">農曆 / 國曆生辰</label>
+              <input type="text" class="form-input" placeholder="例：1990年5月10日 午時" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">性別</label>
+              <select class="form-select">
+                <option value="">請選擇</option>
+                <option>男（陽命）</option>
+                <option>女（陰命）</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">諮詢類別 *</label>
+            <select class="form-select" required>
+              <option value="">請選擇最相符的困境</option>
+              <option>收驚安神（驚嚇、失眠、心神不寧）</option>
+              <option>祭改化煞（流年不利、事業受阻）</option>
+              <option>家宅調理（宅居不安、陰氣過重）</option>
+              <option>陰魂處理（卡到、撞邪、冤親債主）</option>
+              <option>招財改運（財運不順、補財庫）</option>
+              <option>修行指引（打坐、養氣、丹道）</option>
+              <option>其他問題</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">困境描述 *</label>
+            <textarea class="form-textarea" placeholder="請簡述您目前遇到的困境、持續時間，以及您希望得到的幫助……" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">✦ 提交初診申請 ✦</button>
+          <p class="form-disclaimer">提交即代表您同意我們以提供玄學輔助為目的使用您的資料。<br/>玄學服務為心靈慰藉，不替代專業醫療。</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <p>🌙 申請已收到</p>
+          <p style="font-size:1rem;color:var(--white-dim);margin-top:12px">貧道將在三個工作天內與您聯繫。<br/>福生無量天尊。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>隨緣堂</h2>
+        <p>道門廣大，唯渡有緣。以正統道家玄學為本，融合修行養氣與方術濟世，廣度十方有緣眾生。</p>
+      </div>
+      <div class="footer-col">
+        <h4>修行頻道</h4>
+        <ul>
+          <li><a href="#articles">氣脈養生</a></li>
+          <li><a href="#articles">心性修持</a></li>
+          <li><a href="#articles">丹道初探</a></li>
+          <li><a href="#oracle">每日法語</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>濟世服務</h4>
+        <ul>
+          <li><a href="#contact">收驚解厄</a></li>
+          <li><a href="#contact">祭改化煞</a></li>
+          <li><a href="#pricing">服務價目表</a></li>
+          <li><a href="yinfu-zhuanlan.html">陰符經專欄</a></li>
+          <li><a href="taiyi.html">太乙金華宗旨</a></li>
+          <li><a href="#fulu">符咒百科</a></li>
+          <li><a href="#contact">在線諮詢</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>聯絡資訊</h4>
+        <div class="footer-contact">
+          <p>LINE / GitHub<br/><a href="https://github.com/jackkok1388" target="_blank">jackkok1388</a></p>
+          <p style="margin-top:10px">Email<br/><a href="mailto:jackkok1388@gmail.com">jackkok1388@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 隨緣堂 Suì Yuán Táng · 版權所有 · 玄學服務僅供心靈輔助，不替代專業醫療</p>
+      <p class="footer-mantra">福生無量天尊</p>
+    </div>
+  </div>
+</footer>
+
+<button class="fab-consult" onclick="scrollTo('consult')">✦ 立即諮詢</button>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+/* ── Starfield ── */
+(function(){
+  const c=document.getElementById('starfield'),ctx=c.getContext('2d');
+  let W,H,stars=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  function init(){
+    stars=[];
+    for(let i=0;i<260;i++)
+      stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.2,a:Math.random(),s:Math.random()*.007+.002});
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    stars.forEach(s=>{
+      s.a+=s.s; if(s.a>1||s.a<0)s.s*=-1;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(160,200,255,${s.a*.75})`;ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>{resize();init()});
+  resize();init();draw();
+})();
+
+/* ── Floating Energy Particles ── */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let W,H,pts=[];
+  const COLS=['rgba(42,109,217,','rgba(58,202,212,','rgba(200,168,75,'];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  function init(){
+    pts=[];
+    for(let i=0;i<55;i++){
+      const col=COLS[Math.floor(Math.random()*COLS.length)];
+      pts.push({
+        x:Math.random()*W,y:Math.random()*H,
+        vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,
+        r:Math.random()*2.5+.5,
+        col,a:Math.random()*.5+.1,
+        pulse:Math.random()*Math.PI*2,ps:Math.random()*.02+.01
+      });
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      p.pulse+=p.ps;
+      const a=p.a*(0.5+0.5*Math.sin(p.pulse));
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.col+a+')';ctx.fill();
+      /* glow */
+      const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*5);
+      g.addColorStop(0,p.col+(a*.4)+')');
+      g.addColorStop(1,p.col+'0)');
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r*5,0,Math.PI*2);
+      ctx.fillStyle=g;ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>{resize();init()});
+  resize();init();draw();
+})();
+
+/* ── Floating Symbols ── */
+(function(){
+  const syms=['☯','☰','☱','☲','☳','☴','☵','☶','☷','卍','⊕','✦','◈','⬡'];
+  const layer=document.getElementById('symLayer');
+  function spawnSym(){
+    const el=document.createElement('span');
+    el.className='sym';
+    el.textContent=syms[Math.floor(Math.random()*syms.length)];
+    el.style.left=Math.random()*95+'%';
+    el.style.top=(55+Math.random()*40)+'%';
+    el.style.fontSize=(1+Math.random()*2)+'rem';
+    const dur=12+Math.random()*14;
+    el.style.animationDuration=dur+'s';
+    el.style.animationDelay=(Math.random()*6)+'s';
+    // random colour
+    const cs=['var(--gold)','var(--teal)','rgba(42,109,217,.8)'];
+    el.style.color=cs[Math.floor(Math.random()*cs.length)];
+    layer.appendChild(el);
+    setTimeout(()=>el.remove(),(dur+6)*1000);
+  }
+  for(let i=0;i<18;i++) setTimeout(spawnSym,i*900);
+  setInterval(spawnSym,1800);
+})();
+
+/* ── Chi Canvas ── */
+(function(){
+  const canvas=document.getElementById('chiCanvas');
+  const ctx=canvas.getContext('2d');
+  let W,H,t=0;
+  function resize(){
+    const wrap=canvas.parentElement;
+    W=canvas.width=wrap.clientWidth;
+    H=canvas.height=wrap.clientHeight;
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const cx=W/2,cy=H/2,R=Math.min(W,H)*.38;
+    t+=.008;
+    /* outer ring */
+    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);
+    ctx.strokeStyle='rgba(200,168,75,.2)';ctx.lineWidth=1;ctx.stroke();
+    /* inner ring */
+    ctx.beginPath();ctx.arc(cx,cy,R*.6,0,Math.PI*2);
+    ctx.strokeStyle='rgba(42,109,217,.18)';ctx.lineWidth=1;ctx.stroke();
+
+    /* flowing energy paths – yin/yang spirals */
+    for(let side=0;side<2;side++){
+      const dir=side===0?1:-1;
+      ctx.beginPath();
+      for(let i=0;i<360;i++){
+        const angle=(i/180*Math.PI)+t*dir;
+        const wave=Math.sin(i/30+t*2)*R*.08;
+        const r=R*.45+wave;
+        const x=cx+Math.cos(angle)*r*Math.cos(i/360*Math.PI);
+        const y=cy+Math.sin(angle)*r+Math.sin(i/360*Math.PI*dir)*R*.4;
+        i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
       }
+      const g=ctx.createLinearGradient(cx-R,cy,cx+R,cy);
+      if(side===0){g.addColorStop(0,'rgba(200,168,75,0)');g.addColorStop(.5,'rgba(200,168,75,.6)');g.addColorStop(1,'rgba(200,168,75,0)');}
+      else{g.addColorStop(0,'rgba(58,202,212,0)');g.addColorStop(.5,'rgba(58,202,212,.55)');g.addColorStop(1,'rgba(58,202,212,0)');}
+      ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.stroke();
     }
 
-    document.getElementById("contactForm").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const topic = document.getElementById("topic").value;
-      const message = document.getElementById("message").value.trim();
-      const status = document.getElementById("formStatus");
+    /* rotating dots on outer ring */
+    for(let i=0;i<8;i++){
+      const angle=i/8*Math.PI*2+t*.8;
+      const x=cx+Math.cos(angle)*R,y=cy+Math.sin(angle)*R;
+      const pulse=0.4+0.6*Math.abs(Math.sin(t*2+i));
+      ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);
+      ctx.fillStyle=`rgba(200,168,75,${pulse})`;ctx.fill();
+      /* glow */
+      const grd=ctx.createRadialGradient(x,y,0,x,y,12);
+      grd.addColorStop(0,`rgba(200,168,75,${pulse*.4})`);grd.addColorStop(1,'rgba(200,168,75,0)');
+      ctx.beginPath();ctx.arc(x,y,12,0,Math.PI*2);ctx.fillStyle=grd;ctx.fill();
+    }
+    /* counter-rotating inner dots */
+    for(let i=0;i<6;i++){
+      const angle=i/6*Math.PI*2-t*1.2;
+      const x=cx+Math.cos(angle)*R*.6,y=cy+Math.sin(angle)*R*.6;
+      const pulse=0.4+0.6*Math.abs(Math.sin(t*3+i));
+      ctx.beginPath();ctx.arc(x,y,2.5,0,Math.PI*2);
+      ctx.fillStyle=`rgba(58,202,212,${pulse})`;ctx.fill();
+    }
 
-      const subject = encodeURIComponent(`隨緣堂網站聯絡｜${topic}｜${name}`);
-      const body = encodeURIComponent(
-        `稱呼：${name}\n` +
-        `聯絡 Email：${email}\n` +
-        `主題：${topic}\n\n` +
-        `目前情況：\n${message || "尚未填寫"}\n`
-      );
+    /* taiji centre symbol */
+    ctx.save();
+    ctx.translate(cx,cy);ctx.rotate(t*.3);
+    ctx.font=`bold ${R*.4}px serif`;ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillStyle=`rgba(200,168,75,${0.12+0.06*Math.sin(t*1.5)})`;
+    ctx.fillText('☯',0,0);
+    ctx.restore();
 
-      status.style.display = "block";
-      window.location.href = `mailto:jackkok1388@gmail.com?subject=${subject}&body=${body}`;
-    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>resize());
+  resize();draw();
+})();
 
-    loadFeaturedArticles();
-  </script>
+/* ── Nav ── */
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+function scrollTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').style.background=window.scrollY>60?'rgba(4,7,15,.97)':'rgba(4,7,15,.88)';
+});
+
+/* ── Scroll reveal ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ── Oracle ── */
+const oracles=[
+  {text:'「知人者智，自知者明。勝人者有力，自勝者強。」',src:'《道德經》第三十三章'},
+  {text:'「為學日益，為道日損。損之又損，以至於無為。」',src:'《道德經》第四十八章'},
+  {text:'「上善若水。水善利萬物而不爭，處眾人之所惡，故幾於道。」',src:'《道德經》第八章'},
+  {text:'「致虛極，守靜篤。萬物並作，吾以觀復。」',src:'《道德經》第十六章'},
+  {text:'「曲則全，枉則直，窪則盈，弊則新，少則得，多則惑。」',src:'《道德經》第二十二章'},
+  {text:'「天下莫柔弱於水，而攻堅強者莫之能勝，以其無以易之。」',src:'《道德經》第七十八章'},
+  {text:'「為而不爭。夫唯不爭，故天下莫能與之爭。」',src:'《道德經》第八十一章'},
+  {text:'「信言不美，美言不信。善者不辯，辯者不善。」',src:'《道德經》第八十一章'},
+  {text:'「道可道，非常道。名可名，非常名。無名天地之始，有名萬物之母。」',src:'《道德經》第一章'},
+  {text:'「人法地，地法天，天法道，道法自然。」',src:'《道德經》第二十五章'},
+  {text:'「飄風不終朝，驟雨不終日。天地尚不能久，而況於人乎？」',src:'《道德經》第二十三章'},
+  {text:'「自見者不明；自是者不彰；自伐者無功；自矜者不長。」',src:'《道德經》第二十四章'},
+  {text:'「勝人者有力，自勝者強。知足者富。強行者有志。」',src:'《道德經》第三十三章'},
+  {text:'「聖人不積，既以為人己愈有，既以與人己愈多。」',src:'《道德經》第八十一章'},
+  {text:'「大方無隅，大器晚成，大音希聲，大象無形，道隱無名。」',src:'《道德經》第四十一章'},
+];
+let lastIdx=-1;
+function newOracle(){
+  let idx;do{idx=Math.floor(Math.random()*oracles.length)}while(idx===lastIdx);
+  lastIdx=idx;
+  const el=document.getElementById('oracleText');
+  el.style.opacity='0';
+  setTimeout(()=>{
+    el.textContent=oracles[idx].text;
+    document.getElementById('oracleSource').textContent='—— '+oracles[idx].src;
+    el.style.transition='opacity .5s';el.style.opacity='1';
+  },260);
+}
+(function(){
+  const d=new Date();
+  const days=['日','一','二','三','四','五','六'];
+  document.getElementById('oracleDate').textContent=
+    `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日　星期${days[d.getDay()]}`;
+})();
+
+/* ── Balance ── */
+function toggleCheck(item){
+  item.querySelector('.check-box').classList.toggle('checked');
+  updateBalance();
+}
+function updateBalance(){
+  const yC=document.querySelectorAll('#yangItems .check-box.checked').length;
+  const nC=document.querySelectorAll('#yinItems .check-box.checked').length;
+  document.getElementById('yangBar').style.width=(yC/5*100)+'%';
+  document.getElementById('yinBar').style.width=(nC/5*100)+'%';
+  document.getElementById('yangPct').textContent=Math.round(yC/5*100)+'%';
+  document.getElementById('yinPct').textContent=Math.round(nC/5*100)+'%';
+  const msg=document.getElementById('balanceMsg'),svc=document.getElementById('balanceService');
+  if(yC===0&&nC===0){msg.textContent='請勾選上方症狀以獲得評估結果';svc.textContent='';return;}
+  if(yC>nC+1){msg.textContent='⚡ 陽氣偏亢，心火過旺——建議靜心養氣調理';svc.innerHTML='推薦：<a href="#articles">打坐養氣課程</a> ／ <a href="#contact">能量調理諮詢</a>';}
+  else if(nC>yC+1){msg.textContent='🌙 陰氣偏盛，元陽不足——建議祭改收驚調理';svc.innerHTML='推薦：<a href="#contact">收驚安神</a> ／ <a href="#contact">祭改化煞</a>';}
+  else if(yC>0&&nC>0){msg.textContent='☯ 陰陽俱有失調——建議全面能量診斷';svc.innerHTML='推薦：<a href="#contact">完整初診評估</a>';}
+  else if(yC>0){msg.textContent='微有陽亢跡象，建議適度調整作息';svc.innerHTML='推薦：<a href="#oracle">每日道家法語</a>';}
+  else{msg.textContent='輕微陰盛，注意保暖補陽';svc.innerHTML='推薦：<a href="#articles">氣脈養生專區</a>';}
+}
+
+/* ── Form ── */
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('consultForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script>
 </body>
 </html>
