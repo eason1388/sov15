@@ -458,6 +458,67 @@
       letter-spacing:.06em;
     }
     .path-card p{color:var(--muted);font-size:.98rem}
+    .path-card ul{
+      margin-top:18px;
+      display:grid;
+      gap:10px;
+      color:var(--muted);
+      font-size:.93rem;
+      line-height:1.8;
+      padding-left:18px;
+    }
+
+    #channels{background:rgba(6,11,20,.74)}
+    .depth-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:22px;
+    }
+    .depth-card{
+      background:linear-gradient(180deg,rgba(15,24,45,.96),rgba(8,13,24,.99));
+      border:1px solid rgba(201,167,76,.12);
+      border-radius:28px;
+      padding:28px 24px;
+      box-shadow:var(--shadow-soft);
+      position:relative;
+      overflow:hidden;
+    }
+    .depth-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(201,167,76,.1), transparent 34%);
+      pointer-events:none;
+    }
+    .depth-card small{
+      display:block;
+      margin-bottom:12px;
+      color:var(--teal-soft);
+      letter-spacing:.22em;
+      font-size:.76rem;
+      text-transform:uppercase;
+    }
+    .depth-card h3{
+      font-family:"Noto Serif TC",serif;
+      color:var(--gold-soft);
+      font-size:1.3rem;
+      margin-bottom:12px;
+      line-height:1.45;
+    }
+    .depth-card p{
+      color:var(--muted);
+      line-height:1.9;
+      margin-bottom:14px;
+      font-size:.95rem;
+    }
+    .depth-card ul{
+      padding-left:18px;
+      display:grid;
+      gap:8px;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.8;
+    }
 
     #articles{background:var(--bg)}
     .article-grid{
@@ -493,6 +554,61 @@
       color:var(--gold-soft);
       letter-spacing:.12em;
       font-size:.9rem;
+    }
+
+    #fulu{background:rgba(7,13,25,.74)}
+    .fulu-home-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;
+      margin-bottom:24px;
+    }
+    .fulu-home-card{
+      background:linear-gradient(180deg,rgba(15,25,47,.96),rgba(8,13,24,.99));
+      border:1px solid rgba(70,120,210,.18);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow-soft);
+    }
+    .fulu-home-card h3{
+      font-family:"Noto Serif TC",serif;
+      color:var(--gold-soft);
+      font-size:1.24rem;
+      margin-bottom:10px;
+    }
+    .fulu-home-card p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:.94rem;
+      margin-bottom:12px;
+    }
+    .fulu-home-card span{
+      display:inline-block;
+      color:var(--teal-soft);
+      font-size:.82rem;
+      letter-spacing:.16em;
+    }
+    .principles-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;
+    }
+    .principle-card{
+      background:rgba(10,16,30,.9);
+      border:1px solid rgba(201,167,76,.12);
+      border-radius:22px;
+      padding:24px;
+    }
+    .principle-card h4{
+      color:var(--white);
+      font-size:1.02rem;
+      letter-spacing:.08em;
+      margin-bottom:10px;
+    }
+    .principle-card p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:.92rem;
     }
 
     #oracle{background:rgba(6,11,20,.76)}
@@ -715,6 +831,109 @@
       font-size:1.04rem;
       letter-spacing:.08em;
     }
+    .pricing-detail-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:20px;
+      margin-top:24px;
+    }
+    .pricing-detail-card{
+      background:rgba(9,15,28,.88);
+      border:1px solid rgba(201,167,76,.12);
+      border-radius:22px;
+      padding:24px;
+    }
+    .pricing-detail-card h4{
+      font-family:"Noto Serif TC",serif;
+      color:var(--gold-soft);
+      margin-bottom:10px;
+      font-size:1.16rem;
+    }
+    .pricing-detail-card p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:.92rem;
+      margin-bottom:12px;
+    }
+    .pricing-detail-card strong{
+      color:var(--white);
+      letter-spacing:.08em;
+      font-size:.92rem;
+    }
+
+    #insight{background:rgba(6,11,20,.78)}
+    .insight-grid{
+      display:grid;
+      grid-template-columns:1.06fr .94fr;
+      gap:24px;
+      align-items:start;
+    }
+    .insight-card{
+      background:linear-gradient(180deg,rgba(15,25,46,.96),rgba(8,13,24,.99));
+      border:1px solid rgba(70,120,210,.16);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow-soft);
+    }
+    .insight-card h3{
+      font-family:"Noto Serif TC",serif;
+      color:var(--gold-soft);
+      font-size:1.4rem;
+      margin-bottom:14px;
+    }
+    .insight-card p{
+      color:var(--muted);
+      line-height:1.95;
+      margin-bottom:16px;
+    }
+    .insight-columns{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    .insight-columns h4{
+      color:var(--white);
+      margin-bottom:10px;
+      font-size:1rem;
+      letter-spacing:.08em;
+    }
+    .insight-columns ul{
+      padding-left:18px;
+      display:grid;
+      gap:8px;
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.8;
+    }
+    .insight-note{
+      margin-top:18px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid rgba(201,167,76,.14);
+      background:rgba(255,255,255,.02);
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.85;
+    }
+    .contact-steps{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .contact-step{
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.06);
+      background:rgba(255,255,255,.02);
+      color:var(--muted);
+      line-height:1.8;
+    }
+    .contact-step strong{
+      display:block;
+      color:var(--white);
+      margin-bottom:4px;
+      letter-spacing:.06em;
+    }
 
     #contact{background:rgba(7,12,21,.78)}
     .contact-shell{
@@ -821,8 +1040,10 @@
     }
 
     @media (max-width: 1024px){
-      .path-grid,.article-grid{grid-template-columns:1fr}
+      .path-grid,.article-grid,.fulu-home-grid,.principles-grid,.pricing-detail-grid{grid-template-columns:1fr}
+      .depth-grid,.insight-columns{grid-template-columns:1fr}
       .pricing-stage,.contact-shell{grid-template-columns:1fr}
+      .insight-grid{grid-template-columns:1fr}
       .hero-shell::before,.hero-shell::after{display:none}
       .hero-gate{width:min(760px,100%)}
     }
@@ -1071,6 +1292,58 @@
     </div>
   </section>
 
+  <section id="channels" class="section-pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">道之體用</span>
+        <h2 class="section-title">原本站的重要內容，這裡重新展開。</h2>
+        <p class="section-sub">你原本的首頁不只是入口，也有完整的內容骨架。這一區把修行、科儀、陰陽與太乙金華宗旨四條主線補回來，讓首頁恢復厚度，但排版仍保持乾淨。</p>
+      </div>
+      <div class="depth-grid">
+        <article class="depth-card reveal">
+          <small>Inner Cultivation</small>
+          <h3>清靜經緯</h3>
+          <p>以修心、養氣、靜坐與內觀為本，談的是如何先把自己收回來，讓神氣不再外散。</p>
+          <ul>
+            <li>陰陽五行、天人合一、內觀與守心</li>
+            <li>打坐、調息、聚精、會神與養氣</li>
+            <li>元神與識神如何分辨與回收</li>
+          </ul>
+        </article>
+        <article class="depth-card reveal" style="transition-delay:.08s">
+          <small>Ritual Remedy</small>
+          <h3>法露恩光</h3>
+          <p>收驚、祭改、護宅、調頻與開運，重點在於辨明狀況後再施作，不以神秘感取代判斷。</p>
+          <ul>
+            <li>祭改、收驚、淨宅、護身與鎮宅</li>
+            <li>先分清時運、環境、心神還是外擾問題</li>
+            <li>遠距與實體科儀都可按需求安排</li>
+          </ul>
+        </article>
+        <article class="depth-card reveal" style="transition-delay:.16s">
+          <small>Yin Yang</small>
+          <h3>幽冥通牒</h3>
+          <p>針對家宅不安、陰陽失衡、靈性干擾等情況，以理性玄學的方式重新辨證，不鼓吹恐嚇式說法。</p>
+          <ul>
+            <li>家宅氣場沉滯、睡眠異常、長期壓迫感</li>
+            <li>陰陽調和：環境、身心與時運一起看</li>
+            <li>處理前先評估，不讓做法變成例行公事</li>
+          </ul>
+        </article>
+        <article class="depth-card reveal" style="transition-delay:.24s">
+          <small>Taiyi</small>
+          <h3>太乙金華宗旨</h3>
+          <p>這條主線代表網站真正的修持根骨。它不只談玄，也談回光守中、性命雙修與元神作主。</p>
+          <ul>
+            <li>天心、元神、識神與回光守中</li>
+            <li>回光調息、百日築基與性功實修</li>
+            <li>首頁保留導引，長文則延伸到專頁閱讀</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="articles" class="section-pad">
     <div class="container">
       <div class="section-head reveal">
@@ -1096,6 +1369,47 @@
           <h3>太乙金華宗旨</h3>
           <p>完整原文與回光守中的核心路徑，適合長讀與反覆讀。</p>
           <a class="article-link" href="taiyi.html">閱讀全文 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fulu" class="section-pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">符咒百科</span>
+        <h2 class="section-title">符咒不是道具，是法、墨、神三者合一。</h2>
+        <p class="section-sub">原首頁有一整塊符咒功能大系，這裡把它收斂成更好讀的首頁版本。讓訪客知道符咒的類型、用途與使用邏輯，不會只看到服務名稱卻不知道差別。</p>
+      </div>
+      <div class="fulu-home-grid">
+        <article class="fulu-home-card reveal">
+          <h3>護身與收驚</h3>
+          <p>適合心神不定、受驚、氣場鬆散、夜裡不安或近期明顯容易受外界干擾的人。</p>
+          <span>個人護持・魂魄歸位・穩定氣場</span>
+        </article>
+        <article class="fulu-home-card reveal" style="transition-delay:.08s">
+          <h3>鎮宅與淨宅</h3>
+          <p>用於家宅採光不足、氣場沉重、搬遷後不安、長期口角或居住者狀態反覆不順的情況。</p>
+          <span>空間防護・家宅調和・外邪隔絕</span>
+        </article>
+        <article class="fulu-home-card reveal" style="transition-delay:.16s">
+          <h3>招財與開運</h3>
+          <p>不是暴衝型發財幻想，而是讓人的決斷、氣場與行運節奏重新對位，減少阻滯與耗散。</p>
+          <span>行運導正・事業助力・財氣調頻</span>
+        </article>
+      </div>
+      <div class="principles-grid">
+        <article class="principle-card reveal">
+          <h4>法師修為</h4>
+          <p>符咒能否起作用，首先看傳法者的修持與定力。沒有長期養氣與正統法脈，符文就容易只剩形式。</p>
+        </article>
+        <article class="principle-card reveal" style="transition-delay:.08s">
+          <h4>材質媒介</h4>
+          <p>硃砂、墨、紙、筆不只是材料，它們同時也是承載與引導能量的媒介，關係到符令能否穩定留存。</p>
+        </article>
+        <article class="principle-card reveal" style="transition-delay:.16s">
+          <h4>觀想與神意</h4>
+          <p>真正的符咒不是寫完就算，而是法、墨、神三者一體。觀想與意念不正，能量就無法完整貫通。</p>
         </article>
       </div>
     </div>
@@ -1192,6 +1506,69 @@
           </article>
         </div>
       </div>
+      <div class="pricing-detail-grid">
+        <article class="pricing-detail-card reveal">
+          <h4>祭改科儀</h4>
+          <p>用於時運受阻、反覆破局、流年壓力沉重、整體能量節奏失衡者，重點在於重新校準而非單次求快。</p>
+          <strong>依個案狀態與科儀複雜度評估</strong>
+        </article>
+        <article class="pricing-detail-card reveal" style="transition-delay:.08s">
+          <h4>收驚安神</h4>
+          <p>適合受驚、容易心悸、睡眠反覆、兒童驚啼或成人長期神不守舍的狀況，先穩神，再談下一步。</p>
+          <strong>可搭配護身符與後續調理</strong>
+        </article>
+        <article class="pricing-detail-card reveal" style="transition-delay:.16s">
+          <h4>護宅淨宅</h4>
+          <p>家宅久住不寧、搬家後狀態變差、空間沉重或常有爭執時，會從格局、氣場與居住者互動一起判讀。</p>
+          <strong>視距離、坪數與現場條件安排</strong>
+        </article>
+        <article class="pricing-detail-card reveal" style="transition-delay:.24s">
+          <h4>符令請領</h4>
+          <p>護身、平安、招財、鎮宅與安神等皆屬不同用途，不會以單一符令套用所有狀況，而是依需求開立。</p>
+          <strong>先辨用途，再決定符種與方式</strong>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="insight" class="section-pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">辨證與修持</span>
+        <h2 class="section-title">有些內容不該從首頁消失，只是需要換一種排法。</h2>
+        <p class="section-sub">你先前圈掉的區塊我沒有原樣放回來，但它們承載的資訊量仍然重要。這裡把陰陽辨證與太乙金華宗旨，用更收斂的方式整合回首頁。</p>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card reveal">
+          <h3>陰陽失衡的常見徵象</h3>
+          <p>這不是醫療診斷，而是一種玄學上的辨證入口。目的是幫來訪者先看自己目前偏向陽亢、陰盛，還是身心與環境一起失衡。</p>
+          <div class="insight-columns">
+            <div>
+              <h4>偏陽亢時</h4>
+              <ul>
+                <li>長期焦躁、難以放鬆、容易發怒</li>
+                <li>睡眠品質差、頭部燥熱、口乾舌躁</li>
+                <li>做事衝得快，但心神不容易收回</li>
+              </ul>
+            </div>
+            <div>
+              <h4>偏陰盛時</h4>
+              <ul>
+                <li>手腳冰冷、慢性疲憊、提不起勁</li>
+                <li>情緒低落、意志消沉、睡不飽</li>
+                <li>空間與身體都覺得沉、冷、悶</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight-note">重要提醒：身體不適仍應優先求醫。隨緣堂提供的是能量輔助與方向建議，不取代醫療判斷。</div>
+        </article>
+        <article class="insight-card reveal" style="transition-delay:.08s">
+          <h3>太乙金華宗旨的首頁位置</h3>
+          <p>《太乙金華宗旨》不能完全從首頁退場，因為它代表這個網站真正的修行深度。只是它不必再像公告牌那樣單獨佔大塊，而是以核心概念留在首頁。</p>
+          <p>天心、元神、識神、回光守中、回光調息與百日築基，指向的是把神光收回、讓心息相依、使元神重新作主。這也說明為什麼隨緣堂不是只談法事，而是同時談修煉。</p>
+          <a class="btn-outline" href="taiyi.html">進入太乙金華宗旨專頁</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -1217,6 +1594,20 @@
             <div class="contact-point">
               <strong>聯絡方式</strong>
               LINE / Email：`jackkok1388` / `jackkok1388@gmail.com`
+            </div>
+          </div>
+          <div class="contact-steps">
+            <div class="contact-step">
+              <strong>1. 先說明情況</strong>
+              把近期發生的事、最困擾的點，以及你想知道的是什麼先寫清楚。
+            </div>
+            <div class="contact-step">
+              <strong>2. 再判斷方向</strong>
+              先分辨這是適合諮詢、適合修持，還是需要進一步科儀處理的情況。
+            </div>
+            <div class="contact-step">
+              <strong>3. 選擇方式</strong>
+              可依狀況安排純文字、遠距或實體，不讓處理方式一開始就過重。
             </div>
           </div>
         </div>
