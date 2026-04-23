@@ -443,6 +443,7 @@
       text-align:center;
       position:relative;
       overflow:hidden;
+      isolation:isolate;
     }
     .hexagram-result::before{
       content:'䷀';
@@ -453,6 +454,73 @@
       color:rgba(200,168,75,.05);
       line-height:1;
       pointer-events:none;
+    }
+    .hexagram-result::after{
+      content:'';
+      position:absolute;
+      inset:14px;
+      border:1px solid rgba(200,168,75,.08);
+      border-radius:22px;
+      pointer-events:none;
+      opacity:.8;
+    }
+    .hexagram-ritual{
+      position:absolute;
+      inset:22px;
+      display:grid;
+      place-items:center;
+      pointer-events:none;
+      opacity:.55;
+      z-index:0;
+    }
+    .hexagram-ring,
+    .hexagram-core{
+      position:absolute;
+      border-radius:50%;
+      border:1px solid rgba(200,168,75,.16);
+    }
+    .hexagram-ring{
+      width:min(72vw,420px);
+      height:min(72vw,420px);
+      box-shadow:0 0 34px rgba(200,168,75,.06),inset 0 0 34px rgba(42,109,217,.08);
+    }
+    .hexagram-ring::before,
+    .hexagram-ring::after{
+      content:'';
+      position:absolute;
+      inset:22px;
+      border-radius:50%;
+      border:1px solid rgba(58,202,212,.12);
+    }
+    .hexagram-ring::after{
+      inset:54px;
+      border-color:rgba(200,168,75,.12);
+    }
+    .hexagram-core{
+      width:130px;
+      height:130px;
+      border-color:rgba(58,202,212,.18);
+      box-shadow:0 0 44px rgba(58,202,212,.08);
+    }
+    .hexagram-sigil{
+      position:absolute;
+      color:rgba(200,168,75,.65);
+      text-shadow:0 0 14px rgba(200,168,75,.24);
+      font-size:1.2rem;
+      animation:ritualOrbit 11s linear infinite;
+      transform-origin:center;
+    }
+    .hexagram-sigil.s1{top:2%;left:49%;animation-duration:8s}
+    .hexagram-sigil.s2{top:16%;right:12%;animation-duration:10s}
+    .hexagram-sigil.s3{top:47%;right:2%;animation-duration:9s}
+    .hexagram-sigil.s4{bottom:16%;right:14%;animation-duration:12s}
+    .hexagram-sigil.s5{bottom:2%;left:49%;animation-duration:7s}
+    .hexagram-sigil.s6{bottom:15%;left:12%;animation-duration:10s}
+    .hexagram-sigil.s7{top:47%;left:2%;animation-duration:11s}
+    .hexagram-sigil.s8{top:15%;left:13%;animation-duration:9s}
+    .hexagram-content{
+      position:relative;
+      z-index:1;
     }
     .hexagram-number{
       color:var(--teal);
@@ -515,28 +583,101 @@
       opacity:0;
       transition:opacity .35s ease;
     }
+    .hexagram-plain{
+      margin:18px auto 0;
+      max-width:620px;
+      padding:18px 20px;
+      border-radius:16px;
+      border:1px solid rgba(58,202,212,.14);
+      background:linear-gradient(180deg,rgba(8,25,45,.48),rgba(8,25,45,.18));
+      color:var(--white-dim);
+      line-height:1.9;
+      transition:opacity .45s ease,transform .45s ease;
+    }
+    .hexagram-reading-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin-top:20px;
+      text-align:left;
+      transition:opacity .45s ease,transform .45s ease;
+    }
+    .hexagram-reading-card{
+      position:relative;
+      padding:18px 18px 16px;
+      border-radius:16px;
+      border:1px solid rgba(200,168,75,.14);
+      background:linear-gradient(180deg,rgba(9,21,40,.78),rgba(9,21,40,.46));
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+      overflow:hidden;
+    }
+    .hexagram-reading-card::before{
+      content:'';
+      position:absolute;
+      inset:0 auto 0 0;
+      width:3px;
+      background:linear-gradient(180deg,var(--gold-light),rgba(58,202,212,.8));
+      opacity:.7;
+    }
+    .hexagram-reading-label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold-light);
+      font-family:'Noto Serif TC',serif;
+      font-size:1rem;
+      margin-bottom:10px;
+      letter-spacing:.08em;
+    }
+    .hexagram-reading-card p{
+      margin:0;
+      color:var(--white-dim);
+      line-height:1.9;
+      font-size:.98rem;
+    }
     .hexagram-result.is-casting::after{
       content:'';
       position:absolute;
       inset:0;
-      background:linear-gradient(120deg,transparent 0%,rgba(85,229,255,.08) 45%,rgba(255,220,140,.14) 50%,transparent 58%);
+      background:
+        radial-gradient(circle at center,rgba(255,220,140,.16) 0%,rgba(255,220,140,0) 42%),
+        linear-gradient(120deg,transparent 0%,rgba(85,229,255,.12) 44%,rgba(255,220,140,.26) 50%,transparent 58%);
       transform:translateX(-120%);
-      animation:hexagramSweep 1.15s linear infinite;
+      animation:hexagramSweep 1.05s linear infinite;
       pointer-events:none;
     }
     .hexagram-result.is-casting .hexagram-number,
     .hexagram-result.is-casting .hexagram-title,
     .hexagram-result.is-casting .hexagram-judgment,
-    .hexagram-result.is-casting .hexagram-oracle{
+    .hexagram-result.is-casting .hexagram-oracle,
+    .hexagram-result.is-casting .hexagram-plain,
+    .hexagram-result.is-casting .hexagram-reading-grid{
       opacity:.26;
       transform:translateY(6px);
     }
     .hexagram-result.is-casting .hexagram-symbol{
-      animation:hexagramPulse .55s ease-in-out infinite;
-      filter:blur(1.2px);
+      animation:hexagramPulse .4s ease-in-out infinite;
+      filter:blur(2px);
+    }
+    .hexagram-result.is-casting .hexagram-ring{
+      animation:ritualSpin 3.2s linear infinite;
+      border-color:rgba(200,168,75,.3);
+      box-shadow:0 0 50px rgba(200,168,75,.12),inset 0 0 38px rgba(42,109,217,.18);
+    }
+    .hexagram-result.is-casting .hexagram-core{
+      animation:corePulse 1.1s ease-in-out infinite;
+    }
+    .hexagram-result.is-casting .hexagram-sigil{
+      opacity:1;
+      text-shadow:0 0 18px rgba(255,220,140,.45);
     }
     .hexagram-result.is-casting .hexagram-casting{
       opacity:1;
+    }
+    .hexagram-result.is-revealing .hexagram-oracle,
+    .hexagram-result.is-revealing .hexagram-plain,
+    .hexagram-result.is-revealing .hexagram-reading-grid{
+      animation:hexagramReveal .6s ease both;
     }
     .hexagram-actions .btn-primary[disabled]{
       opacity:.72;
@@ -548,7 +689,23 @@
     }
     @keyframes hexagramPulse{
       0%,100%{transform:scale(.94);opacity:.78}
-      50%{transform:scale(1.04);opacity:1}
+      50%{transform:scale(1.08);opacity:1}
+    }
+    @keyframes ritualSpin{
+      from{transform:rotate(0deg)}
+      to{transform:rotate(360deg)}
+    }
+    @keyframes corePulse{
+      0%,100%{transform:scale(.92);opacity:.6}
+      50%{transform:scale(1.18);opacity:1}
+    }
+    @keyframes ritualOrbit{
+      0%,100%{transform:scale(.95) rotate(0deg);opacity:.45}
+      50%{transform:scale(1.1) rotate(180deg);opacity:1}
+    }
+    @keyframes hexagramReveal{
+      from{opacity:0;transform:translateY(12px)}
+      to{opacity:1;transform:translateY(0)}
     }
     .hexagram-actions{
       display:flex;
@@ -570,6 +727,11 @@
       color:var(--white-faint);
       font-size:var(--fs-small);
       line-height:1.85;
+    }
+    @media(max-width:720px){
+      .hexagram-reading-grid{grid-template-columns:1fr}
+      .hexagram-ring{width:min(84vw,360px);height:min(84vw,360px)}
+      .hexagram-core{width:108px;height:108px}
     }
 
     /* ══════════════════════════════
@@ -1279,15 +1441,51 @@
     </div>
     <div class="hexagrams-cast reveal">
       <div class="hexagram-result">
-        <p class="hexagram-number" id="hexagramNumber">第 1 卦</p>
-        <div class="hexagram-symbol" id="hexagramSymbol">䷀</div>
-        <h3 class="hexagram-title" id="hexagramTitle">乾為天</h3>
-        <p class="hexagram-judgment" id="hexagramJudgment">元亨利貞，宜主動開局，剛健自持，明定方向後再往前推進。</p>
-        <div class="hexagram-oracle" id="hexagramOracleWrap">
-          <span class="hexagram-oracle-label">卦辭</span>
-          <p id="hexagramOracle">元亨利貞。</p>
+        <div class="hexagram-ritual" aria-hidden="true">
+          <div class="hexagram-ring"></div>
+          <div class="hexagram-core"></div>
+          <span class="hexagram-sigil s1">☯</span>
+          <span class="hexagram-sigil s2">✶</span>
+          <span class="hexagram-sigil s3">☵</span>
+          <span class="hexagram-sigil s4">☲</span>
+          <span class="hexagram-sigil s5">☷</span>
+          <span class="hexagram-sigil s6">☰</span>
+          <span class="hexagram-sigil s7">卦</span>
+          <span class="hexagram-sigil s8">炁</span>
         </div>
-        <p class="hexagram-casting" id="hexagramCasting">起卦中</p>
+        <div class="hexagram-content">
+          <p class="hexagram-number" id="hexagramNumber">第 1 卦</p>
+          <div class="hexagram-symbol" id="hexagramSymbol">䷀</div>
+          <h3 class="hexagram-title" id="hexagramTitle">乾為天</h3>
+          <p class="hexagram-judgment" id="hexagramJudgment">元亨利貞，宜主動開局，剛健自持，明定方向後再往前推進。</p>
+          <div class="hexagram-oracle" id="hexagramOracleWrap">
+            <span class="hexagram-oracle-label">卦辭</span>
+            <p id="hexagramOracle">元亨利貞。</p>
+          </div>
+          <div class="hexagram-plain">
+            <span class="hexagram-oracle-label">白話解釋</span>
+            <p id="hexagramPlain">這一卦主陽氣充盈，適合先定方向，再用穩定的節奏往前推動。</p>
+          </div>
+          <div class="hexagram-reading-grid" id="hexagramReadingGrid">
+            <div class="hexagram-reading-card">
+              <div class="hexagram-reading-label">♡ 感情</div>
+              <p id="hexagramLove">感情上宜坦白真心，主動但不躁進，關係會慢慢明朗。</p>
+            </div>
+            <div class="hexagram-reading-card">
+              <div class="hexagram-reading-label">✦ 事業</div>
+              <p id="hexagramCareer">事業上適合開局定策，只要方向清楚，就能穩步推進。</p>
+            </div>
+            <div class="hexagram-reading-card">
+              <div class="hexagram-reading-label">☼ 健康</div>
+              <p id="hexagramHealth">健康重點在作息規律與養神，精神穩住，身體氣機才會順。</p>
+            </div>
+            <div class="hexagram-reading-card">
+              <div class="hexagram-reading-label">₪ 財運</div>
+              <p id="hexagramWealth">財運可求正財，宜靠實力累積，不宜心急冒進。</p>
+            </div>
+          </div>
+          <p class="hexagram-casting" id="hexagramCasting">起卦中</p>
+        </div>
       </div>
       <div class="hexagram-actions">
         <p class="hexagram-tip">靜心三息，心中只問一事，再按下「卜一掛」。</p>
@@ -2134,14 +2332,95 @@ const hexagramDeck=[
 let currentHexagram=0;
 let hexagramCastingTimer=null;
 let hexagramCastingFinishTimer=null;
+const hexagramArchetypes=[
+  {
+    match:/乾|泰|大有|晉|升|益|豐/,
+    plain:'眼前的氣勢偏旺，表示局面有可為之處，但越順越要守住分寸，先立意、再行事，才能把旺氣留住。',
+    love:'感情上適合主動釋出善意，但別急著逼答案；以誠意帶動節奏，關係反而更容易開展。',
+    career:'事業運偏向開展與推進，適合定方向、提方案、爭取機會，只要不躁進，進展會比想像中快。',
+    health:'健康上重點在陽氣與精神的調整，避免熬夜耗神，讓身心維持穩定輸出。',
+    wealth:'財運以正財與可持續收入較佳，趁勢布局可以，但不宜貪快、貪大。'
+  },
+  {
+    match:/坤|謙|比|家人|中孚|萃/,
+    plain:'這一卦重在承載、配合與凝聚，不是硬衝的時候，而是把人心、秩序和根基安頓好。',
+    love:'感情上宜多傾聽、多陪伴，關係需要安全感與穩定感，柔和比強勢更有力量。',
+    career:'事業上適合整合團隊、支援他人、穩住基本盤，先讓結構成形，再談擴張。',
+    health:'健康上要照顧脾胃、睡眠與情緒，不要長期把壓力悶在心裡。',
+    wealth:'財運重在守成與累積，適合穩穩收斂資源，不宜冒險式操作。'
+  },
+  {
+    match:/屯|蒙|蹇|困|未濟|剝|否/,
+    plain:'此卦顯示當下仍有阻滯，並非不能動，而是要先看清阻礙在哪裡，少一分躁，多一分明，就會慢慢通。',
+    love:'感情容易出現誤會或停滯，先把話說清楚，不要帶著猜測往前走。',
+    career:'事業上先處理卡點與盲區，比盲目衝刺有效；此時宜調整策略，不宜硬上。',
+    health:'健康上要留意疲勞累積、睡眠品質與壓力性不適，先養氣再求效率。',
+    wealth:'財運暫時不宜激進，守住現金流、少犯錯，比追逐短期機會更重要。'
+  },
+  {
+    match:/需|漸|恆|大畜|頤|井|節/,
+    plain:'這一卦在提醒你，真正的力量來自持續養成。慢不是慢，而是在為之後的成勢鋪路。',
+    love:'感情適合慢慢培養，不必急著定義關係，穩定互動比短暫熱度更重要。',
+    career:'事業上宜累積作品、能力與信用，現在多做一分扎實，未來就少一分反覆。',
+    health:'健康上適合規律作息、固定運動與溫和調養，持續會比猛補更有效。',
+    wealth:'財運宜做長線規畫，穩定儲蓄、分段累積，會比投機更有成果。'
+  },
+  {
+    match:/革|夬|噬嗑|解|無妄|革故|革/,
+    plain:'此卦帶有斷開、清理與重整的氣象，很多事不是不能成，而是先要把不合的部分剔除。',
+    love:'感情上該說的要說、該斷的要斷，不清不楚只會拖長消耗。',
+    career:'事業上適合整頓流程、修正舊問題、做關鍵決斷，越拖反而越亂。',
+    health:'健康上宜戒掉耗氣的習慣，例如久坐、熬夜、暴飲暴食，先清再補。',
+    wealth:'財運上先處理漏財點與不必要支出，整理財務比急著衝收入更有效。'
+  },
+  {
+    match:/咸|隨|姤|歸妹|旅|睽/,
+    plain:'這一卦主感應與際遇，表示外界變數較多，關鍵不是跟著亂，而是辨別什麼值得你回應。',
+    love:'感情上有機會出現互動或新緣分，但要辨別真心與一時熱度，別過早投入全部。',
+    career:'事業上會有合作、邀約或變動訊號，先看人品與方向，再決定是否跟進。',
+    health:'健康上注意旅途、作息變動與情緒牽動的疲勞，讓節奏回穩很重要。',
+    wealth:'財運有外來機會，但真偽混雜，先評估風險，不宜因一時衝動下決定。'
+  },
+  {
+    match:/坎|離|觀|復|明夷|艮|震/,
+    plain:'這一卦偏重內觀與覺察，提醒你先把心定住，當你看清自己在怕什麼、執什麼，局就開始變了。',
+    love:'感情上先看見自己的需求與執著，關係會因你的清明而變得更穩。',
+    career:'事業上宜先觀勢、再出手，當你搞清楚局面脈絡，判斷會更準。',
+    health:'健康重點在安神、舒壓與調息，心一靜，很多身體訊號才會慢慢回正。',
+    wealth:'財運宜審慎觀察，不被表象牽引，越看得明白，越不容易失手。'
+  }
+];
+const defaultHexagramReading={
+  plain:'這一卦提醒你，凡事看氣機而行。眼前不是單純的吉或凶，而是要先順勢辨位，再決定如何動。',
+  love:'感情上宜真誠相待，不急著定勝負，讓關係在自然節奏裡慢慢顯形。',
+  career:'事業上先穩住節奏與判斷，找對時機再推進，比一味加速更有力。',
+  health:'健康上要先養神定氣，作息、睡眠與情緒安定了，整體狀態就會回升。',
+  wealth:'財運以穩中求進為宜，先守住基本盤，再看適合自己的出手時點。'
+};
+function getHexagramReading(item){
+  const archetype=hexagramArchetypes.find(profile=>profile.match.test(item.name)||profile.match.test(item.judgment))||defaultHexagramReading;
+  return {
+    plain:item.plain||archetype.plain,
+    love:item.love||archetype.love,
+    career:item.career||archetype.career,
+    health:item.health||archetype.health,
+    wealth:item.wealth||archetype.wealth
+  };
+}
 function renderHexagram(index){
   currentHexagram=index;
   const item=hexagramDeck[index];
+  const reading=getHexagramReading(item);
   document.getElementById('hexagramNumber').textContent=`第 ${index+1} 卦`;
   document.getElementById('hexagramSymbol').textContent=String.fromCodePoint(0x4DC0+index);
   document.getElementById('hexagramTitle').textContent=item.name;
   document.getElementById('hexagramJudgment').textContent=item.judgment;
   document.getElementById('hexagramOracle').textContent=item.oracle;
+  document.getElementById('hexagramPlain').textContent=reading.plain;
+  document.getElementById('hexagramLove').textContent=reading.love;
+  document.getElementById('hexagramCareer').textContent=reading.career;
+  document.getElementById('hexagramHealth').textContent=reading.health;
+  document.getElementById('hexagramWealth').textContent=reading.wealth;
 }
 function castHexagram(skipAnimation=false){
   const resultCard=document.querySelector('.hexagram-result');
@@ -2156,29 +2435,42 @@ function castHexagram(skipAnimation=false){
   }
   clearInterval(hexagramCastingTimer);
   clearTimeout(hexagramCastingFinishTimer);
+  resultCard.classList.remove('is-revealing');
   resultCard.classList.add('is-casting');
   castButton.disabled=true;
-  castingLabel.textContent='起卦中';
+  castingLabel.textContent='焚香定炁';
+  const castingPhases=['焚香定炁','符光聚盤','卦象將現'];
+  let phaseIndex=0;
   hexagramCastingTimer=setInterval(()=>{
     const previewIndex=Math.floor(Math.random()*hexagramDeck.length);
     document.getElementById('hexagramNumber').textContent=`第 ${previewIndex+1} 卦`;
     document.getElementById('hexagramSymbol').textContent=String.fromCodePoint(0x4DC0+previewIndex);
-    document.getElementById('hexagramTitle').textContent='氣機流轉中';
-    document.getElementById('hexagramJudgment').textContent='靜心守意，讓卦象自行浮現。';
-    document.getElementById('hexagramOracle').textContent='...';
-  },120);
+    document.getElementById('hexagramTitle').textContent='天機流轉中';
+    document.getElementById('hexagramJudgment').textContent='心息放慢，讓雜念退開，卦盤正在聚象。';
+    document.getElementById('hexagramOracle').textContent='符氣縈回，尚未定形。';
+    document.getElementById('hexagramPlain').textContent='此刻先守一念，不必急著追問答案，讓場域慢慢凝聚。';
+    document.getElementById('hexagramLove').textContent='感情氣機翻動中';
+    document.getElementById('hexagramCareer').textContent='事業氣機翻動中';
+    document.getElementById('hexagramHealth').textContent='健康氣機翻動中';
+    document.getElementById('hexagramWealth').textContent='財運氣機翻動中';
+    phaseIndex=(phaseIndex+1)%castingPhases.length;
+    castingLabel.textContent=castingPhases[phaseIndex];
+  },110);
   hexagramCastingFinishTimer=setTimeout(()=>{
     clearInterval(hexagramCastingTimer);
     const finalIndex=Math.floor(Math.random()*hexagramDeck.length);
     renderHexagram(finalIndex);
     resultCard.classList.remove('is-casting');
+    resultCard.classList.add('is-revealing');
     castButton.disabled=false;
     castingLabel.textContent='卦象已現';
-  },1700);
+    setTimeout(()=>resultCard.classList.remove('is-revealing'),700);
+  },2600);
 }
 function copyHexagramResult(){
   const item=hexagramDeck[currentHexagram];
-  const result=`${document.getElementById('hexagramNumber').textContent} ${item.name} ${String.fromCodePoint(0x4DC0+currentHexagram)}\n卦辭：${item.oracle}\n解意：${item.judgment}`;
+  const reading=getHexagramReading(item);
+  const result=`${document.getElementById('hexagramNumber').textContent} ${item.name} ${String.fromCodePoint(0x4DC0+currentHexagram)}\n卦辭：${item.oracle}\n白話：${reading.plain}\n感情：${reading.love}\n事業：${reading.career}\n健康：${reading.health}\n財運：${reading.wealth}\n解意：${item.judgment}`;
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(result);
   }
