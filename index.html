@@ -417,6 +417,92 @@
       color:var(--white-dim);letter-spacing:.1em;
     }
 
+    .hexagrams-section{
+      background:linear-gradient(180deg,var(--bg-mid),var(--bg-deepest));
+      position:relative;z-index:2;
+    }
+    .hexagrams-section .trigrams-row{
+      border-top:none;
+    }
+    .hexagrams-cast{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(280px,.8fr);
+      gap:24px;
+      align-items:stretch;
+      margin-top:42px;
+    }
+    .hexagram-result,
+    .hexagram-actions{
+      background:linear-gradient(135deg,var(--bg-card),var(--bg-card2));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 18px 48px rgba(0,0,0,.24);
+    }
+    .hexagram-result{
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .hexagram-result::before{
+      content:'䷀';
+      position:absolute;
+      top:-18px;
+      right:20px;
+      font-size:7rem;
+      color:rgba(200,168,75,.05);
+      line-height:1;
+      pointer-events:none;
+    }
+    .hexagram-number{
+      color:var(--teal);
+      font-size:var(--fs-small);
+      letter-spacing:.18em;
+      margin-bottom:12px;
+    }
+    .hexagram-symbol{
+      font-size:clamp(4.4rem,10vw,7.2rem);
+      line-height:1;
+      color:var(--gold-light);
+      text-shadow:var(--glow-gold);
+      margin-bottom:18px;
+    }
+    .hexagram-title{
+      font-family:'Noto Serif TC',serif;
+      font-size:clamp(1.6rem,3.8vw,2.4rem);
+      color:var(--white);
+      letter-spacing:.08em;
+      margin-bottom:12px;
+    }
+    .hexagram-judgment{
+      max-width:560px;
+      margin:0 auto;
+      color:var(--white-dim);
+      font-size:clamp(1rem,2.1vw,1.08rem);
+      line-height:2;
+    }
+    .hexagram-actions{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:18px;
+    }
+    .hexagram-tip{
+      color:var(--gold-light);
+      font-family:'Noto Serif TC',serif;
+      font-size:1.02rem;
+      line-height:1.9;
+    }
+    .hexagram-actions .btn-primary,
+    .hexagram-actions .btn-outline{
+      width:100%;
+    }
+    .hexagram-note{
+      color:var(--white-faint);
+      font-size:var(--fs-small);
+      line-height:1.85;
+    }
+
     /* ══════════════════════════════
        ARTICLES
     ══════════════════════════════ */
@@ -864,6 +950,7 @@
       .footer-top{grid-template-columns:1fr 1fr}
       .form-row{grid-template-columns:1fr}
       .balance-grid{grid-template-columns:1fr}
+      .hexagrams-cast{grid-template-columns:1fr}
     }
     @media(max-width:560px){
       .footer-top{grid-template-columns:1fr}
@@ -1099,16 +1186,44 @@
 </section>
 
 <!-- ═══ TRIGRAMS ROW ═══ -->
-<div id="hexagrams" class="trigrams-row">
-  <div class="trigram-item"><span class="trigram-sym">☰</span><span class="trigram-name">乾・天</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☱</span><span class="trigram-name">兌・澤</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☲</span><span class="trigram-name">離・火</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☳</span><span class="trigram-name">震・雷</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☴</span><span class="trigram-name">巽・風</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☵</span><span class="trigram-name">坎・水</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☶</span><span class="trigram-name">艮・山</span></div>
-  <div class="trigram-item"><span class="trigram-sym">☷</span><span class="trigram-name">坤・地</span></div>
-</div>
+<section id="hexagrams" class="hexagrams-section">
+  <div class="trigrams-row">
+    <div class="trigram-item"><span class="trigram-sym">☰</span><span class="trigram-name">乾・天</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☱</span><span class="trigram-name">兌・澤</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☲</span><span class="trigram-name">離・火</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☳</span><span class="trigram-name">震・雷</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☴</span><span class="trigram-name">巽・風</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☵</span><span class="trigram-name">坎・水</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☶</span><span class="trigram-name">艮・山</span></div>
+    <div class="trigram-item"><span class="trigram-sym">☷</span><span class="trigram-name">坤・地</span></div>
+  </div>
+  <div class="container section-pad">
+    <div class="text-center reveal">
+      <div class="ornament center">
+        <div class="ornament-line"></div>
+        <span class="ornament-sym">☯ 易經卦象 ☯</span>
+        <div class="ornament-line"></div>
+      </div>
+      <h2 class="section-title">靜心卜一掛</h2>
+      <div class="glow-divider"></div>
+      <p class="section-sub">六十四卦隨機起卦。先收心、定意，再按下按鈕，取一卦觀其氣象與當下提醒。</p>
+    </div>
+    <div class="hexagrams-cast reveal">
+      <div class="hexagram-result">
+        <p class="hexagram-number" id="hexagramNumber">第 1 卦</p>
+        <div class="hexagram-symbol" id="hexagramSymbol">䷀</div>
+        <h3 class="hexagram-title" id="hexagramTitle">乾為天</h3>
+        <p class="hexagram-judgment" id="hexagramJudgment">元亨利貞，宜主動開局，剛健自持，明定方向後再往前推進。</p>
+      </div>
+      <div class="hexagram-actions">
+        <p class="hexagram-tip">靜心三息，心中只問一事，再按下「卜一掛」。</p>
+        <button class="btn-primary" type="button" onclick="castHexagram()">卜一掛</button>
+        <button class="btn-outline" type="button" onclick="copyHexagramResult()">複製結果</button>
+        <p class="hexagram-note">本功能作為修持與自省的入口，卦意供參考，不取代你對現實處境的判斷。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ ARTICLES ═══ -->
 <section id="articles" class="section-pad">
@@ -1876,6 +1991,90 @@ const obs=new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 /* ── Oracle ── */
+const hexagramDeck=[
+  {name:'乾為天',judgment:'元亨利貞，宜主動開局，剛健自持，明定方向後再推進。'},
+  {name:'坤為地',judgment:'厚德載物，宜先承接與穩住根基，以柔順養成大局。'},
+  {name:'水雷屯',judgment:'萬事初難，先理清頭緒與步驟，切忌心急躁進。'},
+  {name:'山水蒙',judgment:'當前宜學習請益，先破迷障，再談行動與判斷。'},
+  {name:'水天需',judgment:'時機尚未全熟，守正待時，養氣蓄勢比硬闖更吉。'},
+  {name:'天水訟',judgment:'對立漸起，宜收鋒芒，先釐清是非與立場。'},
+  {name:'地水師',judgment:'先整隊伍與規矩，內部穩住後，外務才有力量。'},
+  {name:'水地比',judgment:'得人者興，宜以真誠結盟，團結合作可成事。'},
+  {name:'風天小畜',judgment:'小有積蓄，宜守成聚氣，等待更好的擴張時機。'},
+  {name:'天澤履',judgment:'履險如夷，關鍵在守禮知止，步步謹慎自能無咎。'},
+  {name:'地天泰',judgment:'陰陽交泰，氣機漸順，可穩步推展原定計畫。'},
+  {name:'天地否',judgment:'閉塞未通，宜縮守觀變，暫不適合強行突破。'},
+  {name:'天火同人',judgment:'同心協力之象，利於找同道、談合作、共成其事。'},
+  {name:'火天大有',judgment:'資源已聚，宜光明正大地運用，不可驕盈失守。'},
+  {name:'地山謙',judgment:'謙退反得助力，低姿態反而能為你打開後路。'},
+  {name:'雷地豫',judgment:'喜氣將動，宜先定節奏，莫因順勢而流於散亂。'},
+  {name:'澤雷隨',judgment:'順勢而為可得助援，但仍要守住你的核心原則。'},
+  {name:'山風蠱',judgment:'舊弊待治，先清積垢與拖累，才能迎來新局。'},
+  {name:'地澤臨',judgment:'機緣漸近，宜主動接近與關懷，把握眼前窗口。'},
+  {name:'風地觀',judgment:'此時宜多觀察少躁動，先看全局，再決定下一步。'},
+  {name:'火雷噬嗑',judgment:'該斷則斷，立規矩、去阻礙，局勢才會重新運轉。'},
+  {name:'山火賁',judgment:'外在可修飾，但重點仍在內實，切勿只顧表面。'},
+  {name:'山地剝',judgment:'舊局剝落之象，宜斷捨離，保住真正重要的核心。'},
+  {name:'地雷復',judgment:'一陽來復，轉機已現，適合回正、重啟、返本。'},
+  {name:'天雷無妄',judgment:'守真勿妄，不要被猜測牽引，順理而行則吉。'},
+  {name:'山天大畜',judgment:'厚積待發之時，先養德蓄力，不急著立刻出手。'},
+  {name:'山雷頤',judgment:'慎言慎食，先養自身之氣，外求自然會穩下來。'},
+  {name:'澤風大過',judgment:'當前承載偏重，宜調整結構，切忌硬撐到底。'},
+  {name:'坎為水',judgment:'考驗重重，守心定氣、步步為營，就是過關之道。'},
+  {name:'離為火',judgment:'重在明辨與照見，依附於正，則光明自顯。'},
+  {name:'澤山咸',judgment:'感應已起，宜以真心互動，不要過度造作與操控。'},
+  {name:'雷風恆',judgment:'持之以恆方能見效，最忌三分鐘熱度與反覆不定。'},
+  {name:'天山遯',judgment:'退一步反而保全氣力，此時藏鋒避勢更為有利。'},
+  {name:'雷天大壯',judgment:'氣勢很強，但越強越要節制，不可一味逞盛。'},
+  {name:'火地晉',judgment:'運勢漸升，可求表現與推進，但仍須守正不躁。'},
+  {name:'地火明夷',judgment:'光明受傷之象，宜藏鋒守志，等待局勢回暖。'},
+  {name:'風火家人',judgment:'先正內部再談外事，家齊則外局自然較穩。'},
+  {name:'火澤睽',judgment:'分歧漸顯，宜求同存異，先化解對立再前行。'},
+  {name:'水山蹇',judgment:'前路有阻，宜繞道求解，不可硬衝硬破。'},
+  {name:'雷水解',judgment:'困局可解，先鬆開壓力與糾結，再安排後續。'},
+  {name:'山澤損',judgment:'先做減法才能聚焦，去掉冗餘後反而更有力。'},
+  {name:'風雷益',judgment:'助力漸增，利於合作、布施、學習與長進。'},
+  {name:'澤天夬',judgment:'決斷時刻已到，宜坦明立場，果斷去除弊端。'},
+  {name:'天風姤',judgment:'突來之遇未必皆吉，先辨良莠，再決定是否承接。'},
+  {name:'澤地萃',judgment:'人事匯聚，利於凝心聚力，把散亂之氣收回來。'},
+  {name:'地風升',judgment:'穩步上升之象，慢慢來反而快，根基最重要。'},
+  {name:'澤水困',judgment:'身心受困時，先守中養神，不要在亂中再亂。'},
+  {name:'水風井',judgment:'回到根本、修復本位，長遠之利將從這裡生出。'},
+  {name:'澤火革',judgment:'局面待變，宜更新舊法，革故鼎新才能通達。'},
+  {name:'火風鼎',judgment:'新器已成，可正位任事，利於整合資源與人心。'},
+  {name:'震為雷',judgment:'突發震動來臨，先定神再應變，莫被驚氣牽著走。'},
+  {name:'艮為山',judgment:'止而後定，收心守靜，此時不宜躁求與亂動。'},
+  {name:'風山漸',judgment:'循序漸進最吉，慢就是快，切勿妄想一步登天。'},
+  {name:'雷澤歸妹',judgment:'關係與結盟之事仍未穩固，宜多審慎少衝動。'},
+  {name:'雷火豐',judgment:'光盛事多，越在高點越要守分寸，勿被盛象沖昏。'},
+  {name:'火山旅',judgment:'行旅未定之象，宜輕裝前行，借勢而行莫戀舊。'},
+  {name:'巽為風',judgment:'柔入而進，比強攻更有效，溝通與滲透是關鍵。'},
+  {name:'兌為澤',judgment:'以悅應人利於交流，但不可浮泛失其真誠。'},
+  {name:'風水渙',judgment:'鬱結可散，先疏通氣機與情緒，再談聚焦與行動。'},
+  {name:'水澤節',judgment:'立下界線與節度，收束資源，局面才能長久。'},
+  {name:'風澤中孚',judgment:'以誠感人最有力量，真心真意自然能得回應。'},
+  {name:'雷山小過',judgment:'小事可為，大事宜慎，現在重點在細節與尺度。'},
+  {name:'水火既濟',judgment:'事情接近完成，越到尾聲越要謹慎，莫鬆懈。'},
+  {name:'火水未濟',judgment:'尚未竟全功，留一口氣再收尾，切莫半途自滿。'}
+];
+let currentHexagram=0;
+function castHexagram(){
+  currentHexagram=Math.floor(Math.random()*hexagramDeck.length);
+  const item=hexagramDeck[currentHexagram];
+  document.getElementById('hexagramNumber').textContent=`第 ${currentHexagram+1} 卦`;
+  document.getElementById('hexagramSymbol').textContent=String.fromCodePoint(0x4DC0+currentHexagram);
+  document.getElementById('hexagramTitle').textContent=item.name;
+  document.getElementById('hexagramJudgment').textContent=item.judgment;
+}
+function copyHexagramResult(){
+  const item=hexagramDeck[currentHexagram];
+  const result=`${document.getElementById('hexagramNumber').textContent} ${item.name} ${String.fromCodePoint(0x4DC0+currentHexagram)}\n${item.judgment}`;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(result);
+  }
+}
+castHexagram();
+
 const oracles=[
   {text:'「知人者智，自知者明。勝人者有力，自勝者強。」',src:'《道德經》第三十三章'},
   {text:'「為學日益，為道日損。損之又損，以至於無為。」',src:'《道德經》第四十八章'},
