@@ -1069,55 +1069,7 @@
       gap:22px;
     }
     #fulu{position:relative;overflow:hidden}
-    #fulu .container{position:relative;z-index:3}
-    #fulu .taoist-bg{
-      position:absolute;
-      inset:-6% 0 -10% 0;
-      pointer-events:none;
-      z-index:2;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      opacity:.34;
-      mix-blend-mode:screen;
-      filter:drop-shadow(0 22px 60px rgba(0,0,0,.38)) blur(.15px);
-    }
-    #fulu .taoist-bg svg{
-      width:min(920px, 96vw);
-      height:auto;
-      transform:translateY(0);
-    }
-    #fulu .taoist-float{
-      transform-origin:center;
-      animation:taoistFloat 6.4s ease-in-out infinite;
-      will-change:transform;
-    }
-    #fulu .taoist-whisk{
-      transform-box:fill-box;
-      transform-origin:20% 78%;
-      animation:whiskWave 1.6s ease-in-out infinite;
-      will-change:transform;
-    }
-    #fulu .taoist-glow{
-      animation:taoistGlow 3.2s ease-in-out infinite;
-      transform-origin:center;
-    }
-    @keyframes taoistFloat{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-10px)}
-    }
-    @keyframes whiskWave{
-      0%,100%{transform:rotate(-10deg)}
-      45%{transform:rotate(14deg)}
-      70%{transform:rotate(-4deg)}
-    }
-    @keyframes taoistGlow{
-      0%,100%{opacity:.75;filter:blur(0px)}
-      50%{opacity:1;filter:blur(.25px)}
-    }
-    @media (prefers-reduced-motion: reduce){
-      #fulu .taoist-float,#fulu .taoist-whisk,#fulu .taoist-glow{animation:none!important}
-    }
+    #fulu .container{position:relative;z-index:2}
     .fulu-card{
       background:var(--bg-card);border:1px solid var(--border);
       border-radius:10px;padding:30px 26px;
@@ -1973,57 +1925,6 @@
 
 <!-- ═══ FULU ═══ -->
 <section id="fulu" class="section-pad">
-  <div class="taoist-bg" aria-hidden="true">
-    <svg viewBox="0 0 1200 700" role="presentation" aria-hidden="true">
-      <defs>
-        <radialGradient id="halo" cx="50%" cy="40%" r="55%">
-          <stop offset="0%" stop-color="rgba(50,209,223,.26)"/>
-          <stop offset="45%" stop-color="rgba(217,185,93,.18)"/>
-          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-        </radialGradient>
-        <linearGradient id="robe" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="rgba(22,38,72,.92)"/>
-          <stop offset="55%" stop-color="rgba(12,22,44,.92)"/>
-          <stop offset="100%" stop-color="rgba(8,14,29,.92)"/>
-        </linearGradient>
-        <linearGradient id="ink" x1="0" x2="1">
-          <stop offset="0%" stop-color="rgba(217,185,93,.65)"/>
-          <stop offset="55%" stop-color="rgba(50,209,223,.55)"/>
-          <stop offset="100%" stop-color="rgba(217,185,93,.45)"/>
-        </linearGradient>
-      </defs>
-
-      <g class="taoist-float">
-        <ellipse class="taoist-glow" cx="600" cy="320" rx="420" ry="320" fill="url(#halo)"/>
-        <path d="M290 640 C360 560, 450 520, 600 520 C750 520, 840 560, 910 640 C820 660, 710 680, 600 680 C490 680, 380 660, 290 640 Z" fill="rgba(2,6,16,.55)"/>
-
-        <path d="M420 615 C465 520, 520 468, 600 468 C680 468, 735 520, 780 615 C720 640, 665 655, 600 655 C535 655, 480 640, 420 615 Z" fill="url(#robe)" stroke="rgba(217,185,93,.18)" stroke-width="2"/>
-        <path d="M520 610 C545 565, 570 540, 600 540 C630 540, 655 565, 680 610" fill="none" stroke="rgba(50,209,223,.18)" stroke-width="3" stroke-linecap="round"/>
-
-        <circle cx="600" cy="360" r="54" fill="rgba(240,244,255,.92)" opacity=".82"/>
-        <path d="M570 350 Q600 332 630 350" fill="none" stroke="rgba(20,30,55,.55)" stroke-width="4" stroke-linecap="round"/>
-        <path d="M578 374 Q600 392 622 374" fill="none" stroke="rgba(20,30,55,.52)" stroke-width="4" stroke-linecap="round"/>
-        <path d="M548 360 Q565 320 600 312 Q635 320 652 360" fill="none" stroke="rgba(217,185,93,.18)" stroke-width="6" stroke-linecap="round"/>
-
-        <path d="M455 595 C480 540, 520 520, 560 512" fill="none" stroke="rgba(217,185,93,.18)" stroke-width="18" stroke-linecap="round"/>
-        <path d="M745 595 C720 540, 680 520, 640 512" fill="none" stroke="rgba(217,185,93,.18)" stroke-width="18" stroke-linecap="round"/>
-
-        <g class="taoist-whisk">
-          <path d="M680 532 C730 520, 770 510, 815 500" fill="none" stroke="rgba(240,244,255,.55)" stroke-width="10" stroke-linecap="round"/>
-          <path d="M812 498 C858 508, 900 530, 932 560" fill="none" stroke="url(#ink)" stroke-width="10" stroke-linecap="round"/>
-          <path d="M812 498 C860 526, 892 560, 914 600" fill="none" stroke="rgba(217,185,93,.24)" stroke-width="7" stroke-linecap="round" opacity=".85"/>
-          <path d="M812 498 C854 540, 882 590, 892 640" fill="none" stroke="rgba(50,209,223,.18)" stroke-width="6" stroke-linecap="round" opacity=".75"/>
-          <path d="M812 498 C846 548, 860 612, 858 668" fill="none" stroke="rgba(240,244,255,.20)" stroke-width="5" stroke-linecap="round" opacity=".75"/>
-          <circle cx="682" cy="532" r="10" fill="rgba(240,244,255,.62)"/>
-        </g>
-
-        <path d="M330 520 C410 460, 505 430, 600 430 C695 430, 790 460, 870 520" fill="none" stroke="rgba(217,185,93,.14)" stroke-width="2"/>
-        <path d="M360 540 C430 490, 510 465, 600 465 C690 465, 770 490, 840 540" fill="none" stroke="rgba(50,209,223,.12)" stroke-width="2"/>
-
-        <path d="M560 520 Q600 500 640 520" fill="none" stroke="rgba(240,244,255,.18)" stroke-width="3" stroke-linecap="round"/>
-      </g>
-    </svg>
-  </div>
   <div class="container">
     <div class="text-center">
       <div class="ornament center">
