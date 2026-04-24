@@ -899,12 +899,89 @@
     .hexagram-actions .btn-outline{
       width:100%;
     }
+    .hexagram-mobile-actions{
+      display:none;
+      gap:12px;
+      margin:18px auto 0;
+      max-width:560px;
+    }
+    .hexagram-mobile-actions .btn-primary,
+    .hexagram-mobile-actions .btn-outline{
+      width:100%;
+    }
+    .hexagram-mobile-tip{
+      color:var(--gold-light);
+      font-family:'Noto Serif TC',serif;
+      font-size:.94rem;
+      line-height:1.8;
+      text-align:center;
+    }
     .hexagram-note{
       color:var(--white-faint);
       font-size:var(--fs-small);
       line-height:1.85;
     }
     @media(max-width:720px){
+      .hexagrams-cast{
+        gap:16px;
+        margin-top:28px;
+      }
+      .hexagram-result,
+      .hexagram-actions{
+        padding:20px 16px;
+        border-radius:16px;
+      }
+      .hexagram-result::after{
+        inset:10px;
+        border-radius:18px;
+      }
+      .hexagram-ritual{
+        inset:10px;
+      }
+      .hexagram-veil{
+        padding:22px 16px;
+      }
+      .hexagram-coins{
+        gap:12px;
+      }
+      .hexagram-coin{
+        width:60px;
+        height:60px;
+      }
+      .hexagram-coin::before,
+      .hexagram-coin::after{
+        font-size:1.2rem;
+      }
+      .hexagram-number{
+        margin-bottom:8px;
+      }
+      .hexagram-symbol{
+        font-size:clamp(3rem,18vw,5rem);
+        margin-bottom:12px;
+      }
+      .hexagram-title{
+        margin-bottom:8px;
+      }
+      .hexagram-judgment{
+        line-height:1.8;
+      }
+      .hexagram-oracle,
+      .hexagram-plain{
+        margin-top:14px;
+        padding:14px;
+      }
+      .hexagram-reading-grid{
+        margin-top:14px;
+      }
+      .hexagram-reading-card{
+        padding:14px 14px 13px;
+      }
+      .hexagram-mobile-actions{
+        display:grid;
+      }
+      .hexagram-actions{
+        display:none;
+      }
       .hexagram-reading-grid{grid-template-columns:1fr}
       .hexagram-ring{width:min(84vw,360px);height:min(84vw,360px)}
       .hexagram-core{width:108px;height:108px}
@@ -1646,6 +1723,11 @@
           <div class="hexagram-symbol" id="hexagramSymbol">䷀</div>
           <h3 class="hexagram-title" id="hexagramTitle">乾為天</h3>
           <p class="hexagram-judgment" id="hexagramJudgment">元亨利貞，宜主動開局，剛健自持，明定方向後再往前推進。</p>
+          <div class="hexagram-mobile-actions">
+            <p class="hexagram-mobile-tip">手機版可直接在這裡卜卦，不用往下滑就能看到動畫。</p>
+            <button class="btn-primary" id="castHexagramButtonMobile" type="button" onclick="castHexagram()">卜一掛</button>
+            <button class="btn-outline" type="button" onclick="copyHexagramResult()">複製結果</button>
+          </div>
           <div class="hexagram-oracle" id="hexagramOracleWrap">
             <span class="hexagram-oracle-label">卦辭</span>
             <p id="hexagramOracle">元亨利貞。</p>
@@ -2303,7 +2385,7 @@
   </div>
 </footer>
 
-<button class="fab-consult" onclick="scrollTo('consult')">✦ 立即諮詢</button>
+<button class="fab-consult" onclick="scrollToSection('consult')">✦ 立即諮詢</button>
 
 <!-- ══════════════════════════════════════
      JAVASCRIPT
@@ -2474,7 +2556,7 @@
 
 /* ── Nav ── */
 function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
-function scrollTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})}
+function scrollToSection(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').style.background=window.scrollY>60?'rgba(4,7,15,.97)':'rgba(4,7,15,.88)';
 });
@@ -2648,7 +2730,10 @@ function renderHexagram(index){
 }
 function castHexagram(skipAnimation=false){
   const resultCard=document.querySelector('.hexagram-result');
-  const castButton=document.getElementById('castHexagramButton');
+  const castButtons=[
+    document.getElementById('castHexagramButton'),
+    document.getElementById('castHexagramButtonMobile')
+  ].filter(Boolean);
   const castingLabel=document.getElementById('hexagramCasting');
   const veilStatus=document.getElementById('hexagramVeilStatus');
   const veilSub=document.getElementById('hexagramVeilSub');
@@ -2656,7 +2741,7 @@ function castHexagram(skipAnimation=false){
     renderHexagram(currentHexagram);
     resultCard.classList.remove('is-casting');
     resultCard.classList.remove('is-blackout');
-    castButton.disabled=false;
+    castButtons.forEach(button=>button.disabled=false);
     castingLabel.textContent='起卦中';
     return;
   }
@@ -2666,7 +2751,7 @@ function castHexagram(skipAnimation=false){
   resultCard.classList.remove('is-revealing');
   resultCard.classList.remove('is-blackout');
   resultCard.classList.add('is-casting');
-  castButton.disabled=true;
+  castButtons.forEach(button=>button.disabled=true);
   castingLabel.textContent='搖卦起勢';
   veilStatus.textContent='搖卦起勢';
   veilSub.textContent='三枚銅錢正在翻轉，請守一念，讓氣機自己結成卦象。';
@@ -2707,7 +2792,7 @@ function castHexagram(skipAnimation=false){
     resultCard.classList.remove('is-blackout');
     resultCard.classList.remove('is-casting');
     resultCard.classList.add('is-revealing');
-    castButton.disabled=false;
+    castButtons.forEach(button=>button.disabled=false);
     castingLabel.textContent='卦象已現';
     veilStatus.textContent='卦象已現';
     veilSub.textContent='金光揭示已完成，請依卦辭與四象解讀觀照當下。';
