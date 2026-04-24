@@ -1086,7 +1086,76 @@
       box-shadow:var(--glow-gold);
       transform:translateY(-4px);
     }
-    .fulu-icon{font-size:2.5rem;margin-bottom:14px}
+    .fulu-icon{
+      width:58px;height:58px;
+      display:inline-grid;place-items:center;
+      margin-bottom:14px;
+      border-radius:18px;
+      border:1px solid rgba(200,168,75,.28);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(50,209,223,.14), transparent 56%),
+        radial-gradient(circle at 70% 70%, rgba(217,185,93,.16), transparent 58%),
+        linear-gradient(180deg, rgba(14,26,48,.94), rgba(10,18,36,.96));
+      color:var(--gold);
+      font-family:'Noto Serif TC',serif;
+      font-weight:900;
+      font-size:1.45rem;
+      letter-spacing:.12em;
+      text-shadow:
+        0 0 18px rgba(50,209,223,.18),
+        0 0 22px rgba(217,185,93,.14);
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      animation:sigilFloat 3.6s ease-in-out infinite,sigilPulse 2.1s ease-in-out infinite;
+      transform:translateZ(0);
+    }
+    .fulu-icon::before{
+      content:'';
+      position:absolute;
+      inset:-14px;
+      background:
+        radial-gradient(circle at 18% 26%, rgba(50,209,223,.52), transparent 34%),
+        radial-gradient(circle at 78% 64%, rgba(217,185,93,.46), transparent 36%),
+        radial-gradient(circle at 54% 12%, rgba(255,255,255,.20), transparent 40%),
+        radial-gradient(circle at 32% 84%, rgba(255,255,255,.14), transparent 44%);
+      opacity:.35;
+      filter:blur(1px);
+      animation:sigilDrift 2.9s ease-in-out infinite alternate;
+      z-index:-1;
+    }
+    .fulu-icon::after{
+      content:'';
+      position:absolute;
+      inset:-10px;
+      border-radius:22px;
+      background:conic-gradient(from 0deg,
+        transparent 0 16%,
+        rgba(50,209,223,.22) 16% 28%,
+        transparent 28% 52%,
+        rgba(217,185,93,.20) 52% 66%,
+        transparent 66% 100%);
+      filter:blur(8px);
+      opacity:.7;
+      animation:sigilSpin 4.8s linear infinite;
+      z-index:-2;
+    }
+    @keyframes sigilFloat{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-4px)}
+    }
+    @keyframes sigilPulse{
+      0%,100%{box-shadow:0 0 0 rgba(217,185,93,0),0 0 18px rgba(50,209,223,.08)}
+      50%{box-shadow:0 0 26px rgba(217,185,93,.12),0 0 26px rgba(50,209,223,.12)}
+    }
+    @keyframes sigilSpin{to{transform:rotate(360deg)}}
+    @keyframes sigilDrift{
+      0%{transform:translate(-2px,-2px) scale(1)}
+      100%{transform:translate(2px,2px) scale(1.05)}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .fulu-icon,.fulu-icon::before,.fulu-icon::after{animation:none!important}
+    }
     .fulu-name{
       font-family:'Noto Serif TC',serif;
       font-size:clamp(1.05rem,2.5vw,1.2rem);
@@ -1870,63 +1939,63 @@
     </div>
     <div class="fulu-grid">
       <div class="fulu-card reveal">
-        <div class="fulu-icon">🛡️</div>
+        <div class="fulu-icon" aria-hidden="true">護</div>
         <div class="fulu-name">護身符</div>
         <div class="fulu-en">PERSONAL PROTECTION</div>
         <p class="fulu-desc">封閉個人周圍的負能量干擾，強化自身元神氣場，使邪煞無從附著。適合長期在外奔波、磁場較弱或常感疲憊者。</p>
         <span class="fulu-attr">五行屬性：金（屬主正氣）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.08s">
-        <div class="fulu-icon">🏠</div>
+        <div class="fulu-icon" aria-hidden="true">鎮</div>
         <div class="fulu-name">鎮宅符</div>
         <div class="fulu-en">SPACE PROTECTION</div>
         <p class="fulu-desc">調和家宅陰陽能量，防止路煞、土煞或外邪入侵。住宅採光不足、地理位置特殊或居住者長期運勢不佳者尤為有效。</p>
         <span class="fulu-attr">五行屬性：土（穩定坤元）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.16s">
-        <div class="fulu-icon">✨</div>
+        <div class="fulu-icon" aria-hidden="true">驚</div>
         <div class="fulu-name">收驚符</div>
         <div class="fulu-en">SOUL-CALMING</div>
         <p class="fulu-desc">專針對受驚嚇導致魂魄不穩者，安撫植物神經系統，回攝游離的魂魄碎片，修復受損的氣場邊界。</p>
         <span class="fulu-attr">五行屬性：水（滋陰安神）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.24s">
-        <div class="fulu-icon">💫</div>
+        <div class="fulu-icon" aria-hidden="true">財</div>
         <div class="fulu-name">五路財神符</div>
         <div class="fulu-en">WEALTH ATTRACTION</div>
         <p class="fulu-desc">引導四方財氣灌注，增進事業運勢與財帛能量流動。需搭配善行積德，才能使財氣長期穩定。</p>
         <span class="fulu-attr">五行屬性：木（生發疏通）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.32s">
-        <div class="fulu-icon">🌙</div>
+        <div class="fulu-icon" aria-hidden="true">破</div>
         <div class="fulu-name">破邪符</div>
         <div class="fulu-en">EXORCISM</div>
         <p class="fulu-desc">針對受到陰邪干擾、卡到陰等狀況，以純陽高頻能量壓制低頻負能量體，具備較強的驅趕與淨化作用。</p>
         <span class="fulu-attr">五行屬性：火（純陽之力）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.40s">
-        <div class="fulu-icon">📚</div>
+        <div class="fulu-icon" aria-hidden="true">昌</div>
         <div class="fulu-name">文昌符</div>
         <div class="fulu-en">WISDOM ENHANCEMENT</div>
         <p class="fulu-desc">開發智慧，讓學子及各行業人士神識清明，思路敏捷。考試期間或重要決策前請領效果尤佳。</p>
         <span class="fulu-attr">五行屬性：木（啟智生慧）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.48s">
-        <div class="fulu-icon">🌸</div>
+        <div class="fulu-icon" aria-hidden="true">合</div>
         <div class="fulu-name">和合符</div>
         <div class="fulu-en">HARMONY</div>
         <p class="fulu-desc">調和人際關係、夫妻感情，化解彼此之間的戾氣與誤解。強調須在正道範圍內使用，以雙方真誠為前提。</p>
         <span class="fulu-attr">五行屬性：土（調和中道）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.56s">
-        <div class="fulu-icon">🌊</div>
+        <div class="fulu-icon" aria-hidden="true">淨</div>
         <div class="fulu-name">淨符</div>
         <div class="fulu-en">PURIFICATION</div>
         <p class="fulu-desc">用於出入陰氣較重之地後的淨化。焚化於水中洗浴，化除外在穢氣，重建個人能量邊界。</p>
         <span class="fulu-attr">五行屬性：水（清洗滌穢）</span>
       </div>
       <div class="fulu-card reveal" style="transition-delay:.64s">
-        <div class="fulu-icon">🌺</div>
+        <div class="fulu-icon" aria-hidden="true">胎</div>
         <div class="fulu-name">安胎符</div>
         <div class="fulu-en">PREGNANCY PROTECTION</div>
         <p class="fulu-desc">保護孕婦與胎兒的生命磁場穩定，防止外邪驚擾與氣場波動。使母子在能量層面皆能安然度過妊娠期。</p>
