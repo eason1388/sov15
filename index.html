@@ -297,8 +297,9 @@
       font-family:'Noto Serif TC',serif;
       font-size:clamp(4rem,14vw,8.5rem);
       font-weight:900;color:var(--white);
-      letter-spacing:.18em;line-height:1.1;
-      margin-bottom:12px;
+      letter-spacing:.12em;line-height:1.04;
+      margin:0 auto 18px;
+      white-space:nowrap;
       text-shadow:0 0 60px rgba(42,109,217,.7),0 0 120px rgba(42,109,217,.3);
       position:relative;z-index:2;
     }
@@ -1508,9 +1509,33 @@
       .hexagrams-cast{grid-template-columns:1fr}
     }
     @media(max-width:560px){
+      #hero{padding:110px 16px 86px}
+      .bagua-wrap{width:min(560px,106vw);height:min(560px,106vw)}
+      .hero-tag{
+        font-size:.9rem;
+        letter-spacing:.28em;
+        margin-bottom:20px;
+        white-space:nowrap;
+      }
+      .hero-title{
+        font-size:clamp(2.95rem,12.4vw,3.55rem);
+        letter-spacing:.045em;
+        line-height:1;
+        max-width:100%;
+      }
+      .hero-subtitle{
+        font-size:1.02rem;
+        letter-spacing:.24em;
+        margin-bottom:26px;
+      }
+      .hero-desc{
+        font-size:.98rem;
+        line-height:2.05;
+        max-width:340px;
+        margin-bottom:38px;
+      }
       .footer-top{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column;text-align:center}
-      .hero-title{letter-spacing:.12em}
       .trigrams-row{gap:10px}
       .trigram-name{display:none}
       .section-pad{padding:60px 0}
