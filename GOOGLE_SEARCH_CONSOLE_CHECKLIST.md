@@ -1,10 +1,10 @@
 # Google Search Console Checklist
 
 網站網址：
-`https://eason1388.github.io/sov13/`
+`https://eason1388.github.io/sov15/`
 
 Sitemap：
-`https://eason1388.github.io/sov13/sitemap.xml`
+`https://eason1388.github.io/sov15/sitemap.xml`
 
 ## 第一步
 到 Google Search Console 新增資源：
@@ -14,7 +14,7 @@ Sitemap：
 `網址前置字元`
 
 填入：
-`https://eason1388.github.io/sov13/`
+`https://eason1388.github.io/sov15/`
 
 ## 第二步
 完成擁有權驗證。
@@ -29,21 +29,21 @@ GitHub Pages 最常用的方法：
 進入 `網站地圖`。
 
 提交：
-`https://eason1388.github.io/sov13/sitemap.xml`
+`https://eason1388.github.io/sov15/sitemap.xml`
 
 ## 第四步
 用 `網址檢查` 測試這幾頁，並逐頁要求建立索引：
-1. `https://eason1388.github.io/sov13/`
-2. `https://eason1388.github.io/sov13/blog.html`
-3. `https://eason1388.github.io/sov13/yinfu-zhuanlan.html`
-4. `https://eason1388.github.io/sov13/taiyi.html`
+1. `https://eason1388.github.io/sov15/`
+2. `https://eason1388.github.io/sov15/blog.html`
+3. `https://eason1388.github.io/sov15/yinfu-zhuanlan.html`
+4. `https://eason1388.github.io/sov15/taiyi.html`
 
 ## 第五步
 優先手動送出新文章頁：
-1. `https://eason1388.github.io/sov13/daojiao-dazuo-zhidao.html`
-2. `https://eason1388.github.io/sov13/daojiao-qilun-benyuan.html`
-3. `https://eason1388.github.io/sov13/daojiao-fulu-gantong.html`
-4. `https://eason1388.github.io/sov13/daodejing-xuanxue-tanjiu.html`
+1. `https://eason1388.github.io/sov15/daojiao-dazuo-zhidao.html`
+2. `https://eason1388.github.io/sov15/daojiao-qilun-benyuan.html`
+3. `https://eason1388.github.io/sov15/daojiao-fulu-gantong.html`
+4. `https://eason1388.github.io/sov15/daodejing-xuanxue-tanjiu.html`
 
 ## 第六步
 之後每次新增文章時都做這兩件事：
